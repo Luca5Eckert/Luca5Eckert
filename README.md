@@ -27,18 +27,17 @@
 
 ## 💡 Atualmente
 
-- 🚀 Focado em aprimorar minhas habilidades em <strong>Programação</strong>.
-- 🏗️ Trabalhando em um projeto pessoal para aprender APIRest com Spring Boot.
+- 🚀 Focado em aprimorar minhas habilidades em **Java**.
+- 🏗️ Trabalhando em um projeto pessoal para aprender **APIRest com Spring Boot**.
+
 ---
 
 <div align="center">
 <a href="https://github.com/Luca5Eckert">
   <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=dracula" alt="Top Languages - Luca5Eckert"/>
-  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" alt="GitHub Stats - Luca5Eckert"/>
+  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&cache_seconds=1800" alt="GitHub Stats - Luca5Eckert"/>
 </a>
 </div>
-
----
 
 ---
 
