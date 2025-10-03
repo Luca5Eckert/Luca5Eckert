@@ -1,16 +1,60 @@
-## Hi there 👋
+<h1 align="center">👋 Hello! Welcome to my Github profile.</h1>
 
-<!--
-**Luca5Eckert/Luca5Eckert** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="center">
+  <h2>Meu nome é Luca Eckert!</h2>
+</div>
 
-Here are some ideas to get you started:
+<p align="center">
+  Dev aprendendo aos poucos, com foco em <strong>Backend</strong> e <strong>Desenvolvimento de Software</strong>.
+  Sou apaixonado por <strong>Java</strong> e busco transformar ideias em soluções de código limpo e eficiente.
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🛠️ Skills & Ferramentas Principais
+
+<p align="center">
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="40" height="40" alt="Java" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" width="40" height="40" alt="CSS3" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="40" height="40" alt="Git" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg" width="40" height="40" alt="Railway" />
+</p>
+
+---
+
+## 💡 Atualmente
+
+- 🚀 Focado em aprimorar minhas habilidades em <strong>Programação</strong>.
+- 🏗️ Trabalhando em um projeto pessoal para aprender APIRest com Spring Boot.
+---
+
+<div align="center">
+<a href="https://github.com/Luca5Eckert">
+  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=dracula" alt="Top Languages - Luca5Eckert"/>
+  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" alt="GitHub Stats - Luca5Eckert"/>
+</a>
+</div>
+
+---
+
+---
+
+<div align="center">
+  <h3>Conecte-se Comigo!</h3>
+  
+  <a href="https://linkedin.com/in/lucaseckert" target="_blank">
+    <img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="LinkedIn">
+  </a>
+  <a href="mailto:ecklukatv@email.com">
+    <img loading="lazy" src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Email">
+  </a>
+  
+  <p>Obrigado pela visita! Sinta-se à vontade para explorar meus repositórios.</p>
+</div>
+
+<p align="center">
+  <img loading="lazy" src="https://komarev.com/ghpvc/?username=Luca5Eckert&label=Visitas%20ao%20Perfil&color=blue&style=flat" alt="Contador de Visitas"/>
+</p>
