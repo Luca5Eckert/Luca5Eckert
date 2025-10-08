@@ -1,7 +1,7 @@
 <h1 align="center">👋 Hello! Welcome to my Github profile.</h1>
 
 <div align="center">
-  <h2>Meu nome é Luca Eckert!</h2>
+  <h2>Meu nome é Lucas Eckert!</h2>
 </div>
 
 <p align="center">
