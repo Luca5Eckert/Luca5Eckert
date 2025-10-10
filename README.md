@@ -39,6 +39,7 @@
 <br>
 
 <div align="center">
+<br> 
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=shadow-blue&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
   
@@ -56,6 +57,7 @@
   <a href="https://linkedin.com/in/lucaseckert" target="_blank">
     <img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="LinkedIn">
   </a>
+  
   <a href="mailto:ecklukatv@email.com">
     <img loading="lazy" src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Email">
   </a>
