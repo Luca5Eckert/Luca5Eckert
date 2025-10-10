@@ -36,6 +36,16 @@
 <a href="https://github.com/Luca5Eckert">
   <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=dracula" alt="Top Languages - Luca5Eckert"/>
 </a>
+<br>
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=shadow-blue&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+  
+</div>
+
+<br> 
+
 </div>
 
 ---
