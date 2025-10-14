@@ -1,4 +1,4 @@
-<h1 align="center">👋 Hello! Welcome to my Github profile.</h1>
+<h1 align="center">👋 Olá! Seja bem vindo ao meu perfil do GitHub.</h1>
 
 <div align="center">
   <h2>Meu nome é Lucas Eckert!</h2>
