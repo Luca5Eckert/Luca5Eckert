@@ -41,7 +41,7 @@
 <div align="center">
 <br> 
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=shadow-blue&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=shadow-blue)](https://git.io/streak-stats)
   
 </div>
 
