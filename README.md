@@ -11,24 +11,75 @@
 
 ---
 
-## 🛠️ Skills & Ferramentas Principais
+## 🛠️ Skills & Ferramentas
 
+### Backend
 <p align="center">
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="40" height="40" alt="Java" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" width="40" height="40" alt="Spring Boot" />
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" />
+</p>
+
+### Frontend
+<p align="center">
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" width="40" height="40" alt="CSS3" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
+</p>
+
+### Ferramentas & DevOps
+<p align="center">
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="40" height="40" alt="Git" />
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code" />
   <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg" width="40" height="40" alt="Railway" />
+  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" width="40" height="40" alt="Maven" />
 </p>
 
 ---
 
 ## 💡 Atualmente
 
-- 🚀 Focado em aprimorar minhas habilidades em **Java**.
-- 🏗️ Trabalhando em um projeto pessoal para aprender **APIRest com Spring Boot**.
+- 🚀 Focado em aprimorar minhas habilidades em **Java** e **Spring Boot**.
+- 🏗️ Desenvolvendo projetos com **Clean Architecture** e **Domain Driven Design (DDD)**.
+- 📚 Estudando **algoritmos**, resolvendo questões do **LeetCode** e aperfeiçoando estruturas de dados.
+- 🔧 Praticando **testes unitários** e conceitos de **JDBC** para persistência de dados.
+- 🌐 Explorando **JavaScript** e desenvolvimento web moderno.
+
+---
+
+## 🚀 Projetos em Destaque
+
+### 📱 [app-movel](https://github.com/Luca5Eckert/app-movel)
+Projeto desenvolvido para aplicar **Clean Architecture** e **Domain Driven Design (DDD)**, incluindo conceitos de **API REST** com Spring Boot e **testes unitários**.
+
+### 📝 [blog-api](https://github.com/Luca5Eckert/blog-api)
+API para um sistema de blog, utilizando **Java** e **Spring Boot** com boas práticas de desenvolvimento.
+
+### 🎯 [aeso-source](https://github.com/Luca5Eckert/aeso-source)
+Sistema desenvolvido em **Java** aplicando conceitos de engenharia de software e arquitetura.
+
+### 🔧 [sistema-de-logistica-de-entrega](https://github.com/Luca5Eckert/sistema-de-logistica-de-entrega)
+Projeto aplicando **POO**, **JDBC** e **Clean Architecture** em um sistema de logística.
+
+### 💬 [Chat-Spring-Boot](https://github.com/Luca5Eckert/Chat-Spring-Boot)
+Aplicação de chat desenvolvida para testar e explorar as funcionalidades do **Spring Boot**.
+
+### 🧮 [AlgorithmsAndLeetCodeQuestions](https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions)
+Repositório dedicado a questões do **LeetCode** e estudo de **algoritmos** e estruturas de dados em Java.
+
+---
+
+## 🏗️ Arquitetura & Padrões de Design
+
+Nos meus projetos, aplico conceitos modernos de arquitetura e design:
+
+- **Clean Architecture**: Separação de responsabilidades e independência de frameworks
+- **Domain Driven Design (DDD)**: Modelagem focada no domínio do negócio
+- **MVC (Model-View-Controller)**: Organização em camadas para aplicações web
+- **REST API**: Desenvolvimento de APIs seguindo princípios RESTful
+- **SOLID Principles**: Código limpo e manutenível
+- **Repository Pattern**: Abstração da camada de persistência
+- **Testes Unitários**: Garantia de qualidade com JUnit
 
 ---
 
