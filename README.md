@@ -34,14 +34,14 @@
 
 <div align="center">
 <a href="https://github.com/Luca5Eckert">
-  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=city_lights" alt="Top Languages - Luca5Eckert"/>
+  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=graywhite" alt="Top Languages - Luca5Eckert"/>
 </a>
 <br>
 
 <div align="center">
 <br> 
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=shadow-blue)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=graywhite)](https://git.io/streak-stats)
   
 </div>
 
