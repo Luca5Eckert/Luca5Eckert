@@ -1,3 +1,8 @@
+<!-- 
+  TODO: Adicione sua URL do LinkedIn nos badges abaixo (linhas 18 e 128)
+  Substitua href="" por href="https://linkedin.com/in/seu-perfil"
+-->
+
 <h1 align="center">👋 Olá! Bem-vindo ao meu perfil</h1>
 
 <div align="center">
