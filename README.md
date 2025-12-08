@@ -2,7 +2,7 @@
   
 # 👋 Olá, eu sou Lucas Eckert
 
-### Desenvolvedor Backend Java | Estudante de Engenharia de Software
+### Desenvolvedor Backend Java | Aprendiz em análise e desenvolvimento de sistemas
 
 <p align="center">
   <a href="mailto:ecklukatv@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
