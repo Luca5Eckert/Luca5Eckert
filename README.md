@@ -1,70 +1,140 @@
-<h1 align="center">👋 Olá! Seja bem vindo ao meu perfil do GitHub.</h1>
+<h1 align="center">👋 Olá! Bem-vindo ao meu perfil</h1>
 
 <div align="center">
-  <h2>Meu nome é Lucas Eckert!</h2>
+  <h2>Lucas Eckert</h2>
+  <p><strong>Backend Developer | Software Engineer</strong></p>
 </div>
 
 <p align="center">
-  Dev aprendendo aos poucos, com foco em <strong>Backend</strong> e <strong>Desenvolvimento de Software</strong>.
-  Sou apaixonado por <strong>Java</strong> e busco transformar ideias em soluções de código limpo e eficiente.
+  Desenvolvedor backend especializado em <strong>Java</strong> e <strong>Spring Boot</strong>, focado em criar soluções escaláveis e eficientes.
+  <br>
+  Apaixonado por arquitetura de software, princípios SOLID e desenvolvimento de APIs RESTful.
+</p>
+
+<p align="center">
+  <a href="mailto:ecklukatv@email.com">
+    <img src="https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
 </p>
 
 ---
 
-## 🛠️ Skills & Ferramentas Principais
+## 🚀 Projetos em Destaque
 
-<p align="center">
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="40" height="40" alt="Java" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" width="40" height="40" alt="CSS3" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="40" height="40" alt="Git" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code" />
-  <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg" width="40" height="40" alt="Railway" />
+### [📚 SyncoApi](https://github.com/Luca5Eckert/SyncoApi) ⭐ 2 stars
+> **API REST para gestão acadêmica**  
+> Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
+> - **Stack**: Java, Spring Boot, MySQL
+> - **Status**: Em desenvolvimento ativo
+
+### [👥 AESO Source](https://github.com/Luca5Eckert/aeso-source)
+> **Sistema de Gestão de Recursos Humanos**  
+> Desenvolvido como desafio prático em 16 horas, demonstrando capacidade de entrega sob pressão.
+> - **Stack**: Java, Spring Boot
+> - **Destaque**: 30 issues gerenciadas
+
+### [📝 TextSense API](https://github.com/Luca5Eckert/textsense-api-java)
+> **API de análise de texto com NLP**  
+> Serviço stateless para processamento de texto com análise de sentimentos usando Stanford CoreNLP.
+> - **Stack**: Java, Spring Boot, Stanford CoreNLP
+> - **Características**: Análise de sentimentos, extração de keywords
+
+### [💻 App Móvel](https://github.com/Luca5Eckert/app-movel)
+> **Arquitetura limpa com DDD**  
+> Projeto aplicando Clean Architecture e Domain Driven Design com testes unitários.
+> - **Stack**: Java, Spring Boot
+> - **Foco**: Arquitetura, Testes
+
+---
+
+## 🛠️ Stack Tecnológica
+
+### Backend
+<p>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate"/>
+</p>
+
+### Frontend
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+</p>
+
+### Database & Tools
+<p>
+  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" alt="Railway"/>
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code"/>
 </p>
 
 ---
 
 ## 💡 Atualmente
 
-- 🚀 Focado em aprimorar minhas habilidades em **Java**.
-- 🏗️ Trabalhando em um projeto pessoal para aprender **APIRest com Spring Boot**.
+- 🎯 Desenvolvendo o **SyncoApi** - plataforma de gestão acadêmica com Spring Boot
+- 📚 Estudando **Clean Architecture** e **Domain Driven Design**
+- 🔍 Aprofundando conhecimentos em **princípios SOLID** e design patterns
+- 🌱 Expandindo para **JavaScript** e desenvolvimento fullstack
 
 ---
 
-<div align="center">
-<a href="https://github.com/Luca5Eckert">
-  <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=7&theme=graywhite" alt="Top Languages - Luca5Eckert"/>
-</a>
-<br>
+## 📊 Estatísticas GitHub
 
 <div align="center">
-<br> 
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Luca5Eckert&theme=graywhite)](https://git.io/streak-stats)
-  
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&langs_count=8&theme=tokyonight" alt="Top Languages"/>
 </div>
 
-<br> 
-
+<div align="center">
+  <br>
+  <img src="https://streak-stats.demolab.com?user=Luca5Eckert&theme=tokyonight&hide_border=false&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak"/>
 </div>
 
 ---
 
-<div align="center">
-  <h3>Conecte-se Comigo!</h3>
-  
-  <a href="" target="_blank">
-    <img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="LinkedIn">
-  </a>
-  
-  <a href="mailto:ecklukatv@email.com">
-    <img loading="lazy" src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Email">
-  </a>
-  
-  <p>Obrigado pela visita! Sinta-se à vontade para explorar meus repositórios.</p>
-</div>
+## 🎯 Conhecimentos Técnicos
 
-<p align="center">
-  <img loading="lazy" src="https://komarev.com/ghpvc/?username=Luca5Eckert&label=Visitas%20ao%20Perfil&color=blue&style=flat" alt="Contador de Visitas"/>
-</p>
+```text
+Backend          ████████████████████░   95%
+Java/Spring      ████████████████████░   90%
+MySQL/Database   ██████████████████░░░   85%
+Clean Code       ████████████████░░░░░   80%
+JavaScript       ████████████░░░░░░░░░   60%
+```
+
+---
+
+## 🏆 Destaques
+
+- 🌟 **2 estrelas** no projeto SyncoApi
+- 📝 **46 issues** gerenciadas em projetos ativos
+- 🎓 Aplicação prática de **princípios SOLID** em projetos dedicados
+- 🔧 **33 repositórios** públicos demonstrando evolução contínua
+- 💡 Experiência com **algoritmos** e resolução de problemas (LeetCode)
+
+---
+
+## 📫 Conecte-se Comigo
+
+<div align="center">
+  
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+  [![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ecklukatv@email.com)
+  [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Luca5Eckert)
+  
+  <br>
+  
+  <p><em>"Transformando ideias em código limpo e eficiente"</em></p>
+  
+  <br>
+  
+  ![Profile Views](https://komarev.com/ghpvc/?username=Luca5Eckert&label=Visualizações&color=0e75b6&style=flat)
+  
+</div>
