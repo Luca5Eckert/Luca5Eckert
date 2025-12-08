@@ -1,11 +1,11 @@
 <div align="center">
-  
+
 # 👋 Olá, eu sou Lucas Eckert
 
 ### Desenvolvedor Backend Java | Aprendiz em análise e desenvolvimento de sistemas
 
 <p align="center">
-  <a href="mailto:ecklukatv@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="mailto:lucasismaeleckert@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://github.com/Luca5Eckert"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
@@ -86,12 +86,16 @@
 ## 📈 Estatísticas GitHub
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&theme=radical&hide_border=true&bg_color=0d1117"/>
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=default&include_all_commits=true&count_private=true&hide_border=true&bg_color=ffffff)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&theme=default&hide_border=true&bg_color=ffffff)
+
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=radical&hide_border=true&background=0d1117" alt="GitHub Streak"/>
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff)
+
 </div>
 
 ---
