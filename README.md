@@ -37,7 +37,7 @@
 ### <a href="https://github.com/Luca5Eckert/aeso-source">👥 AESO Source</a>
 > **Sistema de Gestão de Recursos Humanos**  
 > Desenvolvido como desafio prático em 16 horas, demonstrando capacidade de entrega sob pressão.
-> - **Stack**: Java, Spring Boot
+> - **Stack**: Java, JDBC
 > - **Destaque**: 30 issues gerenciadas
 
 ### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
