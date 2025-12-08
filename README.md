@@ -22,73 +22,29 @@
 
 ## 🚀 Projetos em Destaque
 
-<table>
-<tr>
-<td width="50%">
+### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a> ⭐ 2 stars
+> **API REST para gestão acadêmica**  
+> Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
+> - **Stack**: Java, Spring Boot, MySQL
+> - **Status**: Em desenvolvimento ativo
 
-### 🎓 [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
-**API REST para Gestão Acadêmica** ⭐ 2 Stars
+### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
+> **Algoritmos e Estruturas de Dados**  
+> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
+> - **Stack**: Java
+> - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
 
-Plataforma backend completa para gestão acadêmica, focada em centralizar dados e fortalecer a comunicação em ambientes educacionais.
+### <a href="https://github.com/Luca5Eckert/aeso-source">👥 AESO Source</a>
+> **Sistema de Gestão de Recursos Humanos**  
+> Desenvolvido como desafio prático em 16 horas, demonstrando capacidade de entrega sob pressão.
+> - **Stack**: Java, Spring Boot
+> - **Destaque**: 30 issues gerenciadas
 
-**Tech Stack:**
-- Java 17 | Spring Boot
-- MySQL | JPA/Hibernate
-- RESTful API
-
-**Status:** 🟢 Desenvolvimento Ativo (16 issues abertas)
-
-</td>
-<td width="50%">
-
-### 📊 [Studying JavaScript](https://github.com/Luca5Eckert/studying-javascript)
-**Repositório de Estudos JavaScript**
-
-Projetos práticos e estudos em JavaScript, incluindo manipulação de DOM, eventos e interatividade.
-
-**Tech Stack:**
-- JavaScript (ES6+)
-- HTML5 & CSS3
-- DOM Manipulation
-
-**Status:** 🟢 Atualizado recentemente
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### 🔍 [SOLID Principles](https://github.com/Luca5Eckert?tab=repositories&q=principle)
-**Implementações Práticas dos Princípios SOLID**
-
-Repositórios dedicados a demonstrar cada princípio SOLID com exemplos práticos em Java.
-
-**Princípios Implementados:**
-- ✅ Single Responsibility
-- ✅ Open/Closed
-- ✅ Liskov Substitution
-
-**Status:** 🟢 3 princípios completos
-
-</td>
-<td width="50%">
-
-### 💡 [AlgorithmsAndLeetCode](https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions)
-**Algoritmos e Estruturas de Dados**
-
-Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
-
-**Tópicos:**
-- Estruturas de Dados
-- Algoritmos de Ordenação
-- Resolução de Problemas
-
-**Status:** 🟡 Em evolução contínua
-
-</td>
-</tr>
-</table>
+### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
+> **API de análise de texto com NLP**  
+> Serviço stateless para processamento de texto com análise de sentimentos usando Stanford CoreNLP.
+> - **Stack**: Java, Spring Boot, Stanford CoreNLP
+> - **Características**: Análise de sentimentos, extração de keywords
 
 ---
 
