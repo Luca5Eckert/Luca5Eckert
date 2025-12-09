@@ -88,13 +88,6 @@
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=default&include_all_commits=true&count_private=true&hide_border=true&bg_color=ffffff)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&theme=default&hide_border=true&bg_color=ffffff)
-
-</div>
-
-<div align="center">
-
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff)
 
 </div>
