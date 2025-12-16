@@ -87,7 +87,7 @@
 🎯 Projeto Principal: Media Recommendation System - plataforma event-driven com Kafka e Docker
 📚 Estudando: Clean Architecture, Domain-Driven Design e arquitetura orientada a eventos
 🔨 Praticando: Princípios SOLID, Design Patterns e consumo/produção de mensagens Kafka
-🌱 Aprendendo: Recomendação aplicada ao Media Recommendation System e fundamentos de DSA
+🌱 Aprendendo: Mensageira, e fundamentos de DSA
 ```
 
 ---
