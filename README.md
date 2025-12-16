@@ -36,8 +36,8 @@
 > - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
 
 ### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
-> **Plataforma de recomendacoes orientada a eventos**  
-> Microsservicos com Kafka e Docker para ingestao, processamento e entrega de recomendacoes em tempo real.
+> **Plataforma de recomendações orientada a eventos**  
+> Microsserviços com Kafka e Docker para ingestão, processamento e entrega de recomendações em tempo real.
 > - **Stack**: Java, Spring Boot, Kafka, Docker, PostgreSQL
 > - **Arquitetura**: Event-driven, mensageria e consumer groups
 
