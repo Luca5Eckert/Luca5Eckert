@@ -11,8 +11,9 @@
   <a href="https://drive.google.com/file/d/1qSHzO_hmeVhd22_qKNw1DO-nmNazvqA6/view?usp=sharing"><img src="https://img.shields.io/badge/Currículo_(PDF)-4169E1?style=for-the-badge&logo=googledrive&logoColor=white" /></a>
 </p>
 
-<p>
+<p align="center">
 💻 Apaixonado por desenvolvimento backend e arquitetura de software<br>
+🔄 Vivência com sistemas orientados a eventos (Kafka) e ambientes containerizados com Docker<br>
 🎯 Focado em Java, Spring Boot e boas práticas de código<br>
 📚 Estudando princípios SOLID e Clean Architecture
 </p>
@@ -35,11 +36,11 @@
 > - **Stack**: Java
 > - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
 
-### <a href="https://github.com/Luca5Eckert/aeso-source">👥 AESO Source</a>
-> **Sistema de Gestão de Recursos Humanos**  
-> Desenvolvido como desafio prático em 16 horas, demonstrando capacidade de entrega sob pressão.
-> - **Stack**: Java, JDBC
-> - **Destaque**: 30 issues gerenciadas
+### 🎬 Media Recommendation Service (em andamento)
+> **Serviço de recomendação orientado a eventos**  
+> Microserviço assíncrono para ingestão, processamento e recomendação de mídia usando mensageria.
+> - **Stack**: Java, Spring Boot, Kafka, Docker
+> - **Arquitetura**: Event-driven, pipelines de consumo e escalabilidade horizontal
 
 ### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
 > **API de análise de texto com NLP**  
@@ -80,8 +81,8 @@
 ## 💼 Foco Atual
 
 ```yaml
-🎯 Projeto Principal: SyncoApi - Plataforma de gestão acadêmica com Spring Boot
-📚 Estudando: Clean Architecture, Domain-Driven Design e Microserviços
+🎯 Projeto Principal: Media Recommendation Service - recomendações em tempo real com Kafka e Docker
+📚 Estudando: Clean Architecture, Domain-Driven Design e Arquiteturas Orientadas a Eventos
 🔨 Praticando: Princípios SOLID e Design Patterns
 🌱 Aprendendo: JavaScript moderno e desenvolvimento fullstack
 ```
