@@ -29,12 +29,6 @@
 > - **Stack**: Java, Spring Boot, MySQL
 > - **Status**: Em desenvolvimento ativo
 
-### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
-> **Algoritmos e Estruturas de Dados**  
-> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
-> - **Stack**: Java
-> - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
-
 ### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
 > **Plataforma de recomendações orientada a eventos**  
 > Microsserviços com Kafka e Docker para ingestão, processamento e entrega de recomendações em tempo real.
@@ -46,6 +40,12 @@
 > Serviço stateless para processamento de texto com análise de sentimentos usando Stanford CoreNLP.
 > - **Stack**: Java, Spring Boot, Stanford CoreNLP
 > - **Características**: Análise de sentimentos, extração de keywords
+
+### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
+> **Algoritmos e Estruturas de Dados**  
+> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
+> - **Stack**: Java
+> - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
 
 ---
 
