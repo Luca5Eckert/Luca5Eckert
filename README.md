@@ -35,11 +35,11 @@
 > - **Stack**: Java
 > - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
 
-### <a href="https://github.com/Luca5Eckert/aeso-source">👥 AESO Source</a>
-> **Sistema de Gestão de Recursos Humanos**  
-> Desenvolvido como desafio prático em 16 horas, demonstrando capacidade de entrega sob pressão.
-> - **Stack**: Java, JDBC
-> - **Destaque**: 30 issues gerenciadas
+### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
+> **Plataforma de recomendações orientada a eventos**  
+> Microsserviços com Kafka e Docker para ingestão, processamento e entrega de recomendações em tempo real.
+> - **Stack**: Java, Spring Boot, Kafka, Docker, PostgreSQL
+> - **Arquitetura**: Event-driven, mensageria e consumer groups
 
 ### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
 > **API de análise de texto com NLP**  
@@ -80,10 +80,10 @@
 ## 💼 Foco Atual
 
 ```yaml
-🎯 Projeto Principal: SyncoApi - Plataforma de gestão acadêmica com Spring Boot
-📚 Estudando: Clean Architecture, Domain-Driven Design e Microserviços
-🔨 Praticando: Princípios SOLID e Design Patterns
-🌱 Aprendendo: JavaScript moderno e desenvolvimento fullstack
+🎯 Projeto Principal: Media Recommendation System - plataforma event-driven com Kafka e Docker
+📚 Estudando: Clean Architecture, Domain-Driven Design e arquitetura orientada a eventos
+🔨 Praticando: Princípios SOLID, Design Patterns e consumo/produção de mensagens Kafka
+🌱 Aprendendo: Observabilidade, monitoramento e otimização de pipelines de dados
 ```
 
 ---
