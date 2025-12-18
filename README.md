@@ -23,7 +23,7 @@
 
 ## 🚀 Projetos em Destaque
 
-### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a> ⭐ 2 stars
+### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a>
 > **API REST para gestão acadêmica**  
 > Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
 > - **Stack**: Java, Spring Boot, MySQL
