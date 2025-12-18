@@ -23,169 +23,46 @@
 
 ## 🚀 Projetos em Destaque
 
-<details open>
-<summary><h3>📚 <a href="https://github.com/Luca5Eckert/SyncoApi">SyncoApi</a> — API REST para Gestão Acadêmica</h3></summary>
+### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a>
+> **API REST para Gestão Acadêmica**
 
-> Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem. Atua como um ponto central de informação (*Single Source of Truth*) para coordenadores, professores e alunos.
+Plataforma backend que resolve o problema da comunicação fragmentada entre coordenação e alunos. Informações cruciais como horários, avisos e controle de faltas frequentemente se perdem em grupos de WhatsApp ou e-mails não lidos. O SyncoApi cria um ponto central de informação (*Single Source of Truth*) onde todas as interações são registradas e disponibilizadas de forma organizada e confiável.
 
-<table>
-  <tr>
-    <td><strong>🛠️ Stack</strong></td>
-    <td>Java 21, Spring Boot 3.3, Spring Security, Spring Data JPA, MySQL, H2, JWT</td>
-  </tr>
-  <tr>
-    <td><strong>🏗️ Arquitetura</strong></td>
-    <td>Clean Architecture com Repository Pattern, Use Cases e Value Objects</td>
-  </tr>
-  <tr>
-    <td><strong>📊 Status</strong></td>
-    <td><img src="https://img.shields.io/badge/Em%20Desenvolvimento-yellow?style=flat-square" /></td>
-  </tr>
-</table>
+- **Stack**: Java 21 · Spring Boot · Spring Security · MySQL · JWT
+- **Desafio**: Implementar autenticação segura com controle de acesso baseado em roles seguindo Clean Architecture
+- **Status**: Em desenvolvimento ativo
 
-**🔑 Funcionalidades Principais:**
-- 🔐 Autenticação e autorização com JWT (24h expiry)
-- 👥 CRUD completo de usuários com roles (USER/ADMIN)
-- 📚 Gerenciamento de cursos
-- 📋 Gestão de faltas e feedback de ambiente (planejado)
-- 📢 Mural de avisos oficiais (planejado)
+---
 
-<details>
-<summary><strong>📡 Endpoints da API</strong></summary>
+### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
+> **Plataforma de Recomendações Event-Driven**
 
-| Método | Endpoint | Descrição | Auth |
-|:------:|----------|-----------|:----:|
-| `POST` | `/api/auth/register` | Registrar novo usuário | ❌ |
-| `POST` | `/api/auth/login` | Autenticar usuário | ❌ |
-| `PATCH` | `/api/auth/password` | Alterar senha | ✅ |
-| `GET` | `/api/users` | Listar usuários | ✅ |
-| `GET` | `/api/users/{id}` | Buscar usuário por ID | ✅ |
-| `POST` | `/api/users` | Criar usuário | 🔒 ADMIN |
-| `GET` | `/api/courses` | Listar cursos | ✅ |
-| `POST` | `/api/courses` | Criar curso | 🔒 ADMIN |
+Sistema de recomendação de mídia inspirado em plataformas como Netflix e Spotify. O projeto explora arquitetura de microsserviços com comunicação assíncrona, onde eventos de interação do usuário (visualizações, likes, ratings) são processados em tempo real para gerar recomendações personalizadas.
 
-</details>
+- **Stack**: Java 21 · Spring Boot · PostgreSQL · Apache Kafka · Docker
+- **Desafio**: Orquestrar múltiplos microsserviços com mensageria Kafka e manter isolamento de dados (Database per Service)
+- **Status**: Fase de infraestrutura/MVP
 
-</details>
+---
 
-<details open>
-<summary><h3>🎬 <a href="https://github.com/Luca5Eckert/media-recommendation-system">Media Recommendation System</a> — Plataforma Event-Driven</h3></summary>
+### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
+> **API de Análise de Texto com NLP**
 
-> Sistema de recomendação de mídia inspirado em Netflix e Spotify, construído com arquitetura de microsserviços e comunicação assíncrona via Apache Kafka.
+Serviço stateless para processamento de linguagem natural em tempo real. A API recebe textos e retorna estatísticas detalhadas (contagem de palavras, sentenças, tempo de leitura) junto com análise de sentimentos, identificando se o conteúdo é positivo, negativo ou neutro.
 
-<table>
-  <tr>
-    <td><strong>🛠️ Stack</strong></td>
-    <td>Java 21, Spring Boot 4.0, PostgreSQL 15, Apache Kafka 7.3, Docker</td>
-  </tr>
-  <tr>
-    <td><strong>🏗️ Arquitetura</strong></td>
-    <td>Microsserviços com Event-Driven Architecture e Database per Service</td>
-  </tr>
-  <tr>
-    <td><strong>📊 Status</strong></td>
-    <td><img src="https://img.shields.io/badge/MVP%20|%20Infraestrutura-orange?style=flat-square" /></td>
-  </tr>
-</table>
+- **Stack**: Java 21 · Spring Boot · Stanford CoreNLP
+- **Desafio**: Integrar biblioteca de NLP (Stanford CoreNLP) mantendo a API leve e com baixa latência
+- **Status**: Completo
 
-**🧩 Microsserviços:**
+---
 
-| Serviço | Responsabilidade | Banco de Dados |
-|---------|------------------|----------------|
-| 🔐 **User Service** | Autenticação, perfis e preferências | `user_db` |
-| 📚 **Catalog Service** | Catálogo de filmes e séries | `catalog_db` |
-| 💡 **Engagement Service** | Tracking de interações (views, likes, ratings) → Kafka | `engagement_db` |
-| 🎯 **Recommendation Service** | Consume eventos Kafka → ML algorithms | `recommendation_db` |
+### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
+> **Algoritmos e Estruturas de Dados**
 
-```mermaid
-graph LR
-    A[User Actions] --> B[Engagement Service]
-    B -->|Publish Events| C[Apache Kafka]
-    C -->|Consume Events| D[Recommendation Service]
-    D -->|Personalized Content| E[User]
-```
+Repositório dedicado ao aprimoramento de lógica de programação através de soluções de problemas do LeetCode e implementações de algoritmos clássicos como ordenação, busca, árvores e grafos.
 
-</details>
-
-<details open>
-<summary><h3>📝 <a href="https://github.com/Luca5Eckert/textsense-api-java">TextSense API</a> — Análise de Texto com NLP</h3></summary>
-
-> API stateless e leve para análise de texto em tempo real, utilizando Stanford CoreNLP para processamento de linguagem natural.
-
-<table>
-  <tr>
-    <td><strong>🛠️ Stack</strong></td>
-    <td>Java 21, Spring Boot 3, Stanford CoreNLP, Maven</td>
-  </tr>
-  <tr>
-    <td><strong>🏗️ Arquitetura</strong></td>
-    <td>Stateless REST API (sem banco de dados)</td>
-  </tr>
-  <tr>
-    <td><strong>📊 Status</strong></td>
-    <td><img src="https://img.shields.io/badge/Completo-brightgreen?style=flat-square" /></td>
-  </tr>
-</table>
-
-**🔍 Funcionalidades:**
-- 📊 **Text Statistics**: Contagem de palavras, caracteres, sentenças e tempo de leitura
-- 💭 **Sentiment Analysis**: Análise de sentimento com score (0-4) e label
-
-<details>
-<summary><strong>📡 Contrato da API</strong></summary>
-
-**Endpoint:** `POST /analyze`
-
-```json
-// Request
-{
-  "text": "This new framework is absolutely brilliant!"
-}
-
-// Response
-{
-  "statistics": {
-    "characterCount": 45,
-    "wordCount": 6,
-    "sentenceCount": 1,
-    "readingTimeSeconds": 2
-  },
-  "sentiment": {
-    "score": 3,
-    "label": "POSITIVE"
-  }
-}
-```
-
-| Score | Label |
-|:-----:|-------|
-| 0 | VERY_NEGATIVE |
-| 1 | NEGATIVE |
-| 2 | NEUTRAL |
-| 3 | POSITIVE |
-| 4 | VERY_POSITIVE |
-
-</details>
-
-</details>
-
-<details>
-<summary><h3>💡 <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">AlgorithmsAndLeetCode</a> — Algoritmos e Estruturas de Dados</h3></summary>
-
-> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica de programação.
-
-<table>
-  <tr>
-    <td><strong>🛠️ Stack</strong></td>
-    <td>Java</td>
-  </tr>
-  <tr>
-    <td><strong>🎯 Foco</strong></td>
-    <td>Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, Sorting</td>
-  </tr>
-</table>
-
-</details>
+- **Stack**: Java
+- **Foco**: Estruturas de Dados · Algoritmos · Resolução de Problemas
 
 ---
 
