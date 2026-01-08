@@ -22,28 +22,45 @@
 ## 🚀 Projetos em Destaque
 
 ### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a>
-> **API REST para gestão acadêmica**  
-> Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
-> - **Stack**: Java, Spring Boot, MySQL
-> - **Status**: Em desenvolvimento ativo
+> **API REST para Gestão Acadêmica**
+
+Plataforma backend que resolve o problema da comunicação fragmentada entre coordenação e alunos. Informações cruciais como horários, avisos e controle de faltas frequentemente se perdem em grupos de WhatsApp ou e-mails não lidos. O SyncoApi cria um ponto central de informação (*Single Source of Truth*) onde todas as interações são registradas e disponibilizadas de forma organizada e confiável.
+
+- **Stack**: Java 21 · Spring Boot · Spring Security · MySQL · JWT
+- **Desafio**: Implementar autenticação segura com controle de acesso baseado em roles seguindo Clean Architecture
+- **Status**: Em desenvolvimento ativo
+
+---
 
 ### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
-> **Plataforma de recomendações orientada a eventos**  
-> Microsserviços com Kafka e Docker para ingestão, processamento e entrega de recomendações em tempo real.
-> - **Stack**: Java, Spring Boot, Kafka, Docker, PostgreSQL
-> - **Arquitetura**: Event-driven, mensageria e consumer groups
+> **Plataforma de Recomendações Event-Driven**
+
+Sistema de recomendação de mídia inspirado em plataformas como Netflix e Spotify. O projeto explora arquitetura de microsserviços com comunicação assíncrona, onde eventos de interação do usuário (visualizações, likes, ratings) são processados em tempo real para gerar recomendações personalizadas.
+
+- **Stack**: Java 21 · Spring Boot · PostgreSQL · Apache Kafka · Docker
+- **Desafio**: Orquestrar múltiplos microsserviços com mensageria Kafka e manter isolamento de dados (Database per Service)
+- **Status**: Fase de infraestrutura/MVP
+
+---
 
 ### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
-> **API de análise de texto com NLP**  
-> Serviço stateless para processamento de texto com análise de sentimentos usando Stanford CoreNLP.
-> - **Stack**: Java, Spring Boot, Stanford CoreNLP
-> - **Características**: Análise de sentimentos, extração de keywords
+> **API de Análise de Texto com NLP**
+
+Serviço stateless para processamento de linguagem natural em tempo real. A API recebe textos e retorna estatísticas detalhadas (contagem de palavras, sentenças, tempo de leitura) junto com análise de sentimentos, identificando se o conteúdo é positivo, negativo ou neutro.
+
+- **Stack**: Java 21 · Spring Boot · Stanford CoreNLP
+- **Desafio**: Integrar biblioteca de NLP (Stanford CoreNLP) mantendo a API leve e com baixa latência
+- **Status**: Completo
+
+---
 
 ### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
-> **Algoritmos e Estruturas de Dados**  
-> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
-> - **Stack**: Java
-> - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
+> **Algoritmos e Estruturas de Dados**
+
+Repositório dedicado ao aprimoramento de lógica de programação através de soluções de problemas do LeetCode e implementações de algoritmos clássicos como ordenação, busca, árvores e grafos.
+
+- **Stack**: Java
+- **Foco**: Estruturas de Dados · Algoritmos · Resolução de Problemas
 
 ---
 
@@ -94,7 +111,20 @@
 
 <div align="center">
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff)
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff" alt="GitHub Streak" />
+
+<br><br>
+
+<img src="https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&theme=default&hide_border=true&bg_color=ffffff" alt="Top Languages" height="170" />
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Luca5Eckert/Luca5Eckert/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Luca5Eckert/Luca5Eckert/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/Luca5Eckert/Luca5Eckert/output/github-snake.svg" />
+</picture>
 
 </div>
 
