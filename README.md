@@ -1,96 +1,101 @@
 <div align="center">
 
-# 👋 Olá, eu sou Lucas Eckert
+# Lucas Eckert
 
-### Desenvolvedor Backend Java | Aprendiz em análise e desenvolvimento de sistemas
+**Desenvolvedor Backend Java** | Estudante de Análise e Desenvolvimento de Sistemas
 
-<p align="center">
-  <a href="mailto:lucasismaeleckert@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://github.com/Luca5Eckert"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-
-<p>
-💻 Apaixonado por desenvolvimento backend e arquitetura de software<br>
-🎯 Focado em Java, Spring Boot e boas práticas de código<br>
-📚 Estudando princípios SOLID e Clean Architecture
-</p>
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:lucasismaeleckert@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Luca5Eckert)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399)
 
 </div>
 
 ---
 
-## 🚀 Projetos em Destaque
+## Sobre
 
-### <a href="https://github.com/Luca5Eckert/SyncoApi">📚 SyncoApi</a>
-> **API REST para gestão acadêmica**  
-> Plataforma backend focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
-> - **Stack**: Java, Spring Boot, MySQL
-> - **Status**: Em desenvolvimento ativo
+Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em arquiteturas distribuídas e orientadas a eventos. Atualmente desenvolvendo sistemas com **microserviços**, **Apache Kafka** e **Docker**.
 
-### <a href="https://github.com/Luca5Eckert/media-recommendation-system">🎬 Media Recommendation System</a>
-> **Plataforma de recomendações orientada a eventos**  
-> Microsserviços com Kafka e Docker para ingestão, processamento e entrega de recomendações em tempo real.
-> - **Stack**: Java, Spring Boot, Kafka, Docker, PostgreSQL
-> - **Arquitetura**: Event-driven, mensageria e consumer groups
-
-### <a href="https://github.com/Luca5Eckert/textsense-api-java">📝 TextSense API</a>
-> **API de análise de texto com NLP**  
-> Serviço stateless para processamento de texto com análise de sentimentos usando Stanford CoreNLP.
-> - **Stack**: Java, Spring Boot, Stanford CoreNLP
-> - **Características**: Análise de sentimentos, extração de keywords
-
-### <a href="https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions">💡 AlgorithmsAndLeetCode</a>
-> **Algoritmos e Estruturas de Dados**  
-> Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica.
-> - **Stack**: Java
-> - **Foco**: Estruturas de Dados, Algoritmos, Resolução de Problemas
+**Áreas de interesse:**
+- Arquitetura de Software (Clean Architecture, DDD)
+- Sistemas Distribuídos e Event-Driven
+- Princípios SOLID e Design Patterns
+- Estruturas de Dados e Algoritmos
 
 ---
 
-## 🛠️ Tecnologias & Ferramentas
+## Projetos em Destaque
+
+### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
+API REST para gestão acadêmica focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
+
+`Java` `Spring Boot` `MySQL` `REST API`
+
+### [Media Recommendation System](https://github.com/Luca5Eckert/media-recommendation-system)
+Plataforma de recomendações orientada a eventos com microsserviços para ingestão, processamento e entrega de recomendações em tempo real.
+
+`Java` `Spring Boot` `Apache Kafka` `Docker` `PostgreSQL` `Microservices`
+
+### [TextSense API](https://github.com/Luca5Eckert/textsense-api-java)
+Serviço stateless para processamento de texto com análise de sentimentos utilizando Stanford CoreNLP.
+
+`Java` `Spring Boot` `Stanford CoreNLP` `NLP`
+
+### [User Email Microservices](https://github.com/Luca5Eckert/user-email-microservices)
+Sistema de microsserviços para gestão de usuários e envio de emails de forma assíncrona.
+
+`Java` `Spring Boot` `Microservices`
+
+### [Algorithms & LeetCode](https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions)
+Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica de programação.
+
+`Java` `Data Structures` `Algorithms`
+
+---
+
+## Stack Técnica
 
 <div align="center">
 
-### Backend Development
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
+**Backend**
 
-### Frontend & Web
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white)
 
-### Tools & DevOps
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+**Banco de Dados**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
+**DevOps & Ferramentas**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat-square&logo=intellij-idea&logoColor=white)
+
+**Frontend** *(conhecimento complementar)*
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 
 </div>
 
 ---
 
-## 💼 Foco Atual
+## Foco Atual
 
-```yaml
-🎯 Projeto Principal: Media Recommendation System - plataforma event-driven com Kafka e Docker
-📚 Estudando: Clean Architecture, Domain-Driven Design e arquitetura orientada a eventos
-🔨 Praticando: Princípios SOLID, Design Patterns e consumo/produção de mensagens Kafka
-🌱 Aprendendo: Mensageira, Event Driven Design e fundamentos de DSA
-```
+- 🎯 **Projeto Principal:** Media Recommendation System — arquitetura event-driven com Kafka e Docker
+- 📚 **Estudando:** Clean Architecture, Domain-Driven Design (DDD) e System Design
+- 🔧 **Praticando:** Princípios SOLID, Design Patterns e programação em C
+- 💡 **Explorando:** Estruturas de Dados e Algoritmos para melhorar a resolução de problemas
 
 ---
 
-## 📈 Estatísticas GitHub
+## Estatísticas
 
 <div align="center">
 
@@ -102,18 +107,6 @@
 
 <div align="center">
 
-### 📫 Entre em Contato
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasismaeleckert@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Luca5Eckert)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399)
-
-<br>
-
-> *"Código limpo não é escrito seguindo regras. É escrito com amor."* - Robert C. Martin
-
-<br>
-
-![](https://komarev.com/ghpvc/?username=Luca5Eckert&color=blueviolet&style=flat-square)
+![Profile Views](https://komarev.com/ghpvc/?username=Luca5Eckert&color=blue&style=flat-square&label=Visualizações)
 
 </div>
