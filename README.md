@@ -18,7 +18,7 @@ Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em 
 
 **Áreas de interesse:**
 - Arquitetura de Software (Clean Architecture, DDD)
-- Sistemas Distribuídos e Event-Driven
+- Sistemas Distribuídos, Event-Driven e Design System
 - Princípios SOLID e Design Patterns
 - Estruturas de Dados e Algoritmos
 
