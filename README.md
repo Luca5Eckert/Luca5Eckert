@@ -17,8 +17,8 @@
 Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em arquiteturas distribuídas e orientadas a eventos. Atualmente desenvolvendo sistemas com **microserviços**, **Apache Kafka** e **Docker**.
 
 **Áreas de interesse:**
-- Arquitetura de Software (Clean Architecture, DDD)
 - Sistemas Distribuídos, Event-Driven e Design System
+- Arquitetura de Software (Clean Architecture, DDD)
 - Princípios SOLID e Design Patterns
 - Estruturas de Dados e Algoritmos
 
