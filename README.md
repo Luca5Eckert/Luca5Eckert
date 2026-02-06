@@ -27,14 +27,14 @@ Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em 
 ## Projetos em Destaque
 
 ### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
-API REST para gestão acadêmica focada em fortalecer a comunicação e centralizar dados em ambientes de aprendizagem.
+API REST para gestão acadêmica que centraliza a comunicação institucional e o gerenciamento de dados em ambientes educacionais. Arquitetura baseada em Clean Architecture com 152 testes e 68% de cobertura.
 
-`Java` `Spring Boot` `MySQL` `REST API`
+`Java 21` `Spring Boot` `Spring Security` `JWT` `MySQL` `Docker` `JaCoCo` `Clean Architecture`
 
-### [Media Recommendation System](https://github.com/Luca5Eckert/media-recommendation-system)
-Plataforma de recomendações orientada a eventos com microsserviços para ingestão, processamento e entrega de recomendações em tempo real.
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
+Plataforma de recomendação de livros inspirada no Letterboxd, com catálogo comunitário, sistema de avaliações, rastreamento de leitura e recomendações personalizadas via busca por similaridade vetorial com pgvector.
 
-`Java` `Spring Boot` `Apache Kafka` `Docker` `PostgreSQL` `Microservices`
+`Java 21` `Spring Boot` `Apache Kafka` `Docker` `PostgreSQL` `pgvector` `Microservices` `Event-Driven`
 
 ### [TextSense API](https://github.com/Luca5Eckert/textsense-api-java)
 Serviço stateless para processamento de texto com análise de sentimentos utilizando Stanford CoreNLP.
@@ -85,7 +85,7 @@ Soluções de problemas do LeetCode e implementações de algoritmos clássicos 
 
 ## Foco Atual
 
-- 🎯 **Projeto Principal:** Media Recommendation System — arquitetura event-driven com Kafka e Docker
+- 🎯 **Projeto Principal:** VellumHub — plataforma de recomendação de livros com arquitetura event-driven, Kafka, pgvector e Docker
 - 📚 **Estudando:** Clean Architecture, Domain-Driven Design (DDD) e System Design
 - 🔧 **Praticando:** Princípios SOLID, Design Patterns e programação em C
 - 💡 **Explorando:** Estruturas de Dados e Algoritmos para melhorar a resolução de problemas
