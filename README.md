@@ -26,35 +26,27 @@ Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em 
 
 ## Projetos em Destaque
 
-### [Vinculo](https://github.com/Luca5Eckert/vinculo)
-Plataforma de rede social baseada em grafos para visualizar e gerenciar relacionamentos pessoais e profissionais. Sistema com autenticação JWT, controle de acesso baseado em roles (RBAC) e arquitetura hexagonal. Utiliza Neo4j para modelagem nativa de relacionamentos e análise de redes sociais.
-
-`Java 21` `Spring Boot` `Neo4j` `Hexagonal Architecture` `JWT` `Spring Security` `Docker` `Graph Database`
-
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
 Plataforma de recomendação de livros inspirada no Letterboxd, com catálogo comunitário, sistema de avaliações (0-5 estrelas), rastreamento de leitura e recomendações personalizadas via busca por similaridade vetorial com pgvector. Arquitetura de microserviços com comunicação event-driven via Apache Kafka e Database per Service pattern.
 
 `Java 21` `Spring Boot` `Apache Kafka` `Docker` `PostgreSQL` `pgvector` `Microservices` `Event-Driven` `Vector Similarity`
+
+### [Vinculo](https://github.com/Luca5Eckert/vinculo)
+Plataforma de rede social baseada em grafos para visualizar e gerenciar relacionamentos pessoais e profissionais. Sistema com autenticação JWT, controle de acesso baseado em roles (RBAC) e arquitetura hexagonal. Utiliza Neo4j para modelagem nativa de relacionamentos e análise de redes sociais.
+
+`Java 21` `Spring Boot` `Neo4j` `Hexagonal Architecture` `JWT` `Spring Security` `Docker` `Graph Database`
 
 ### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
 API REST para gestão acadêmica que centraliza a comunicação institucional e o gerenciamento de dados em ambientes educacionais. Arquitetura baseada em Clean Architecture com 152 testes e 68% de cobertura.
 
 `Java 21` `Spring Boot` `Spring Security` `JWT` `MySQL` `Docker` `JaCoCo` `Clean Architecture`
 
-### [WeatherApp](https://github.com/Luca5Eckert/WeatherApp)
-Aplicação de previsão do tempo desenvolvida com Next.js e TypeScript, focada em uma interface moderna e responsiva para consulta de condições climáticas.
-
-`TypeScript` `Next.js` `React` `Tailwind CSS`
 
 ### [TextSense API](https://github.com/Luca5Eckert/textsense-api-java)
 Serviço stateless para processamento de texto com análise de sentimentos utilizando Stanford CoreNLP.
 
 `Java` `Spring Boot` `Stanford CoreNLP` `NLP`
 
-### [Algorithms & LeetCode](https://github.com/Luca5Eckert/AlgorithmsAndLeetCodeQuestions)
-Soluções de problemas do LeetCode e implementações de algoritmos clássicos para aprimoramento de lógica de programação.
-
-`Java` `Data Structures` `Algorithms`
 
 ---
 
