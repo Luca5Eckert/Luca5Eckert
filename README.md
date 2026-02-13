@@ -89,7 +89,7 @@ Serviço stateless para processamento de texto com análise de sentimentos utili
 
 ## Foco Atual
 
-- 🎯 **Projeto Principal:** Vinculo — plataforma de rede social baseada em grafos com Neo4j, arquitetura hexagonal e Spring Security
+- 🎯 **Projeto Principal:** VellumHub — plataforma de recomendação de livros com arquitetura event-driven, Kafka, pgvector e Docker
 - 📚 **Estudando:** Clean Architecture, Domain-Driven Design (DDD), System Design e Graph Databases
 - 🔧 **Praticando:** Arquiteturas event-driven com Kafka, princípios SOLID, Design Patterns e programação em C
 - 💡 **Explorando:** Estruturas de Dados, Algoritmos e busca vetorial com pgvector
