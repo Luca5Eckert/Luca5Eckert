@@ -37,10 +37,21 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](#)
 [![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](#)
 [![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](#)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](#)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](#)
 [![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)](#)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](#)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+
+**Linguagens:** Java (17/21), TypeScript, SQL, Python, C  
+**Backend:** Spring Boot, Spring WebFlux, REST APIs, SSE, Spring Security, JWT/OAuth2, JPA/Hibernate, OpenFeign  
+**Arquitetura:** Clean Architecture, Arquitetura Hexagonal, Domain-Driven Design, Microservices, Event-Driven Architecture  
+**Dados:** PostgreSQL, MySQL, Neo4j, pgvector, Apache Kafka, MQTT  
+**Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide 70-20-10, TDD, integração e E2E  
+**Infraestrutura:** Docker, Docker Compose, GitHub Actions (CI/CD), Node-RED  
+**Ferramentas:** Git, Maven, OpenAPI/Swagger, Postman  
+**Idiomas:** Português (Nativo), Inglês (Intermediário — B1/B2)
 
 ## Foco Atual
 
