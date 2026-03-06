@@ -86,9 +86,10 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 ## Foco Atual
 
+- 🚀 **Construindo:** [VellumHub](https://github.com/Luca5Eckert/VellumHub) — plataforma de recomendação de livros com 4 microsserviços, Kafka e busca vetorial com pgvector
 - 🏗️ **Arquitetura:** Sistemas orientados a eventos e como o modelo de dados influencia o design do sistema
 - 🔍 **Explorando:** Padrões de distribuição de dados e as trocas reais em sistemas distribuídos
-- 🛠️ **Praticando:** Algoritmos e estruturas de dados via LeetCode
+- 🛠️ **Praticando:** Algoritmos e estruturas de dados via LeetCode — grafos, busca binária e sliding window
 
 ---
 
