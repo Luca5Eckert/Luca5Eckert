@@ -32,7 +32,7 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 
 ---
 
-## Stack em Ícones
+## Tecnologias em Ícones
 
 **Linguagens**  
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](#)
@@ -98,7 +98,13 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 ## Foco Atual
 
 - Projeto principal: evoluindo a plataforma **VellumHub** (event-driven, Kafka, pgvector, Docker)  
-- Estudando: Clean Architecture, Domain-Driven Design, System Design, filosofia de design de software, Event-Driven Design e algoritmos  
+- Estudando:  
+  - Clean Architecture  
+  - Domain-Driven Design  
+  - System Design  
+  - Filosofia de design de software  
+  - Event-Driven Design  
+  - Algoritmos  
 - Praticando: arquitetura event-driven, princípios SOLID, Design Patterns e programação em C  
 - Explorando: estruturas de dados, algoritmos e busca vetorial com pgvector
 
