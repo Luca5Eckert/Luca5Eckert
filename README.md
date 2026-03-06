@@ -48,7 +48,7 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 **Backend:** Spring Boot, Spring WebFlux, REST APIs, SSE, Spring Security, JWT/OAuth2, JPA/Hibernate, OpenFeign  
 **Arquitetura:** Clean Architecture, Arquitetura Hexagonal, Domain-Driven Design, Microservices, Event-Driven Architecture  
 **Dados:** PostgreSQL, MySQL, Neo4j, pgvector, Apache Kafka, MQTT  
-**Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide 70-20-10, TDD, integração e E2E  
+**Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide de testes 70-20-10, TDD, testes de integração e E2E  
 **Infraestrutura:** Docker, Docker Compose, GitHub Actions (CI/CD), Node-RED  
 **Ferramentas:** Git, Maven, OpenAPI/Swagger, Postman
 
