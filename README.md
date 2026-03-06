@@ -1,8 +1,8 @@
 <div align="center">
 
-# Lucas Eckert
+# Lucas Ismael Eckert
 
-**Desenvolvedor Backend Java** | Aprendiz de Desenvolvimento de Sistemas
+**Desenvolvedor Backend Java | Spring Boot | Kafka | APIs REST | Microservices**
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:lucasismaeleckert@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Luca5Eckert)
@@ -14,100 +14,65 @@
 
 ## Sobre
 
-Desenvolvedor backend focado em **Java** e **Spring Boot**, com experiência em arquiteturas distribuídas e orientadas a eventos. Atualmente desenvolvendo sistemas com **microserviços**, **Apache Kafka** e **Docker**.
+Engenheiro backend focado em construir sistemas escaláveis, confiáveis e simples de operar. Experiência prática com microsserviços orientados a eventos, engines de recomendação e aplicações baseadas em grafos usando Java e Spring Boot. Atua em ambiente profissional pelo programa de Aprendizagem Industrial na WEG, enquanto cursa Análise e Desenvolvimento de Sistemas.
 
-**Áreas de interesse:**
-- Sistemas Distribuídos, Event-Driven e Design System
-- Arquitetura de Software (Clean Architecture, DDD)
-- Princípios SOLID e Design Patterns
-- Estruturas de Dados e Algoritmos
+---
+
+## Experiência
+
+**WEG S.A. — Desenvolvedor Backend (Programa de Aprendizagem Industrial)**  
+Ago/2024 — Jul/2026 · Jaraguá do Sul, SC  
+- Atuação como arquiteto de backend em projeto interno: definição de arquitetura REST com Spring Boot, modelagem de domínio e organização inspirada em Clean Architecture.  
+- Estabelecimento de padrões de versionamento e revisão via pull requests, aumentando consistência e rastreabilidade do código.  
+- Prática em ambiente ágil (Scrum/Kanban) com refinamentos técnicos, code reviews e CI/CD com GitHub Actions.
 
 ---
 
 ## Projetos em Destaque
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
-Plataforma de recomendação de livros inspirada no Letterboxd, com catálogo comunitário, sistema de avaliações (0-5 estrelas), rastreamento de leitura e recomendações personalizadas via busca por similaridade vetorial com pgvector. Arquitetura de microserviços com comunicação event-driven via Apache Kafka e Database per Service pattern.
+Plataforma de recomendação de livros em arquitetura de microsserviços orientada a eventos.  
+- Engine de recomendação em tempo real com **pgvector** e índice HNSW, reduzindo latência de ~300-500ms para **80-120ms**.  
+- Streaming de mensagens via **Apache Kafka** para domínios independentes (user, catalog, engagement, recommendation); fetch em lote elimina N+1 e simplifica manutenção.  
+`Java 21` `Spring Boot 3.4` `Apache Kafka` `PostgreSQL 15` `pgvector` `Docker Compose` `OpenFeign`
 
-`Java 21` `Spring Boot` `Apache Kafka` `Docker` `PostgreSQL` `pgvector` `Microservices` `Event-Driven` `Vector Similarity`
+### [Vinculo](https://github.com/Luca5Eckert/Vinculo)
+Rede social nativa em grafos com feed calculado por travessias Cypher.  
+- Modelagem de 9 tipos de conexão ponderados (amizade, mentoria, colega) em **Neo4j**, permitindo consultas em sub-milissegundos.  
+- Arquitetura Hexagonal e DDD com módulos independentes; pirâmide de testes 70-20-10 usando **Testcontainers**.  
+`Java 21` `Spring Boot 4.0` `Neo4j 5` `JWT` `Spring Security` `Docker` `Virtual Threads`
 
-### [Vinculo](https://github.com/Luca5Eckert/vinculo)
-Plataforma de rede social baseada em grafos para visualizar e gerenciar relacionamentos pessoais e profissionais. Sistema com autenticação JWT, controle de acesso baseado em roles (RBAC) e arquitetura hexagonal. Utiliza Neo4j para modelagem nativa de relacionamentos e análise de redes sociais.
-
-`Java 21` `Spring Boot` `Neo4j` `Hexagonal Architecture` `JWT` `Spring Security` `Docker` `Graph Database`
-
-### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
-API REST para gestão acadêmica que centraliza a comunicação institucional e o gerenciamento de dados em ambientes educacionais. Arquitetura baseada em Clean Architecture com 152 testes e 68% de cobertura.
-
-`Java 21` `Spring Boot` `Spring Security` `JWT` `MySQL` `Docker` `JaCoCo` `Clean Architecture`
-
-
-### [TextSense API](https://github.com/Luca5Eckert/textsense-api-java)
-Serviço stateless para processamento de texto com análise de sentimentos utilizando Stanford CoreNLP.
-
-`Java` `Spring Boot` `Stanford CoreNLP` `NLP`
-
+### [Libera.ai](https://github.com/Luca5Eckert/Libera.ai)
+Sistema IoT de controle de acesso e pagamentos para automação de cancelas.  
+- Backend **Spring WebFlux** com SSE para notificação em tempo real; integração **Mercado Pago Checkout Pro** com webhook.  
+- Clean Architecture e DDD em dois bounded contexts (access, payment); equipe de três com orquestração Node-RED e hardware ESP32 via MQTT.  
+`Java 21` `Spring Boot 3.5` `React 19` `TypeScript` `MySQL` `MQTT` `Docker`
 
 ---
 
-## Stack Técnica
+## Habilidades Técnicas
 
-<div align="center">
+- **Linguagens:** Java (17/21), TypeScript, SQL, Python, C  
+- **Backend:** Spring Boot, Spring WebFlux, REST APIs, SSE, Spring Security, JWT/OAuth2, JPA/Hibernate, OpenFeign  
+- **Arquitetura:** Clean Architecture, Hexagonal, DDD, Microservices, Event-Driven Architecture  
+- **Dados:** PostgreSQL, MySQL, Neo4j, pgvector, Apache Kafka, MQTT  
+- **Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide de testes 70-20-10, TDD  
+- **Infraestrutura & Ferramentas:** Docker, Docker Compose, GitHub Actions (CI/CD), Node-RED, Git, Maven, OpenAPI/Swagger, Postman  
+- **Frontend:** React, TypeScript, Vite, TailwindCSS  
+- **Idiomas:** Português (Nativo), Inglês (Intermediário — B1/B2)
 
-**Backend**
+---
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white)
+## Formação
 
-**Banco de Dados**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white)
-
-**DevOps & Ferramentas**
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat-square&logo=intellij-idea&logoColor=white)
-
-**Frontend** 
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-
-</div>
+- **CentroWEG / SENAI** — Desenvolvimento de Sistemas (Aprendizagem Industrial) · Ago/2024 — Jul/2026  
+- **SESI** — Ensino Médio · Concluído
 
 ---
 
 ## Foco Atual
 
-- 🎯 **Projeto Principal:** VellumHub — plataforma de recomendação de livros com arquitetura event-driven, Kafka, pgvector e Docker
-- 📚 **Estudando:** Clean Architecture, Domain-Driven Design (DDD), System Design e Graph Databases
-- 🔧 **Praticando:** Arquiteturas event-driven com Kafka, princípios SOLID, Design Patterns e programação em C
-- 💡 **Explorando:** Estruturas de Dados, Algoritmos e busca vetorial com pgvector
-
----
-
-## Estatísticas
-
-<div align="center">
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff)
-
-</div>
-
----
-
-<div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=Luca5Eckert&color=blue&style=flat-square&label=Visualizações)
-
-</div>
+- 🎯 Projeto principal: evoluindo a plataforma **VellumHub** (event-driven, Kafka, pgvector, Docker)  
+- 📚 Estudando: Clean Architecture, Domain-Driven Design, System Design e Graph Databases  
+- 🔧 Praticando: arquitetura event-driven, princípios SOLID, Design Patterns e programação em C  
+- 💡 Explorando: estruturas de dados, algoritmos e busca vetorial com pgvector
