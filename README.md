@@ -50,8 +50,7 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 **Dados:** PostgreSQL, MySQL, Neo4j, pgvector, Apache Kafka, MQTT  
 **Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide 70-20-10, TDD, integração e E2E  
 **Infraestrutura:** Docker, Docker Compose, GitHub Actions (CI/CD), Node-RED  
-**Ferramentas:** Git, Maven, OpenAPI/Swagger, Postman  
-**Idiomas:** Português (Nativo), Inglês (Intermediário — B1/B2)
+**Ferramentas:** Git, Maven, OpenAPI/Swagger, Postman
 
 ## Foco Atual
 
