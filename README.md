@@ -14,36 +14,28 @@
 
 ## Sobre
 
-Engenheiro backend focado em construir sistemas que sejam simples de operar, confiáveis em produção e fáceis de evoluir. Tenho experiência prática no desenvolvimento de APIs REST, microsserviços orientados a eventos e aplicações baseadas em grafos, com projetos que vão de plataformas de recomendação com busca vetorial a redes sociais nativas em grafos e sistemas IoT com pagamentos em tempo real.
+Desenvolvedor backend focado em Java e Spring Boot. Jovem aprendiz na **WEG S.A.** (CentroWEG/SENAI), cursando Análise e Desenvolvimento de Sistemas.
 
-Atualmente participando do Programa de Aprendizagem Industrial na **WEG S.A.**, atuando como arquiteto de backend em projeto interno do CentroWEG, enquanto curso Análise e Desenvolvimento de Sistemas.
-
-Meu interesse principal está em como sistemas são projetados para escalar e permanecer manuteníveis: arquiteturas orientadas a eventos, design orientado a dados e as trocas reais envolvidas em sistemas distribuídos.
+Interesse em sistemas distribuídos, arquiteturas orientadas a eventos e como bancos de dados influenciam o design de um sistema.
 
 ---
 
 ## Projetos em Destaque
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
-Plataforma distribuída de recomendação de livros com catálogo comunitário, rastreamento de leitura e sugestões personalizadas via busca por similaridade vetorial. Construída com 4 microsserviços independentes, cada domínio (usuário, catálogo, engajamento, recomendação) separado e escalável de forma isolada.
-
-O ponto central é a engine de recomendação em tempo real: perfis de usuário são representados como vetores e atualizados por eventos Kafka; a busca de livros similares usa pgvector com índice HNSW, reduzindo a latência de 300–500 ms para 80–120 ms em relação à abordagem anterior.
+Plataforma de recomendação de livros com 4 microsserviços independentes comunicando via Kafka. A engine de recomendação usa pgvector com índice HNSW para busca por similaridade vetorial, com perfis atualizados em tempo real por eventos.
 
 `Java 21` `Spring Boot` `Apache Kafka` `PostgreSQL` `pgvector` `OAuth2` `Docker Compose` `OpenFeign` `JUnit` `Mockito`
 
 ### [Vinculo](https://github.com/Luca5Eckert/Vinculo)
-Rede social cujo modelo de dados é um grafo — não uma adaptação de banco relacional, mas uma aplicação construída do zero onde travessia de relacionamentos é operação de primeira classe. Utiliza Neo4j com 9 tipos de conexão ponderados (amizade, mentoria, colega de trabalho) e permite queries de grafo em sub-milissegundos mesmo em escala.
-
-O feed personalizado é implementado como travessia Cypher: posts emergem com base na proximidade de conexão e na força do vínculo entre usuários, sem necessidade de serviço de recomendação separado. Arquitetura Hexagonal com 6 módulos independentes e pirâmide de testes 70-20-10 usando Testcontainers com instâncias reais do Neo4j.
+Rede social construída sobre Neo4j, onde relacionamentos são cidadãos de primeira classe. Feed personalizado implementado como travessia Cypher pela rede de conexões, sem serviço de recomendação separado. Arquitetura Hexagonal com testes usando Testcontainers.
 
 `Java 21` `Spring Boot` `Neo4j` `Spring Security` `JWT` `Docker` `JUnit 5` `Testcontainers` `Hexagonal Architecture`
 
 ### [Libera.ai](https://github.com/Luca5Eckert/Libera.ai)
-Sistema IoT completo para controle de acesso e pagamentos em estacionamentos. Sensores ESP32 detectam veículos e publicam eventos via MQTT; o backend Spring Boot processa o pagamento via Mercado Pago Checkout Pro e confirma a liberação da cancela sem intervenção humana.
+Sistema IoT para controle de acesso em estacionamentos. ESP32 detecta veículos via MQTT, pagamento via Mercado Pago Checkout Pro e confirmação em tempo real por SSE (WebFlux). Projeto em equipe — responsável pelo backend e frontend; colegas cuidaram do Node-RED e hardware.
 
-A confirmação de pagamento é feita por webhook, e o status chega ao frontend instantaneamente via Server-Sent Events (WebFlux) — sem polling. Projeto em equipe de três pessoas: fui responsável pela camada de software completa (backend + frontend React/TypeScript); colegas cuidaram da orquestração Node-RED e integração do hardware.
-
-`Java 21` `Spring Boot` `Spring WebFlux` `React 19` `TypeScript` `MySQL` `Mercado Pago SDK` `MQTT` `ESP32` `Docker`
+`Java 21` `Spring Boot` `Spring WebFlux` `React 19` `TypeScript` `MySQL` `Mercado Pago SDK` `MQTT` `Docker`
 
 ### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
 API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobertura verificada via JaCoCo.
@@ -94,9 +86,9 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 ## Foco Atual
 
-- 🏗️ **Arquitetura:** Sistemas orientados a eventos, design orientado a dados e como bancos de dados influenciam a estrutura de um sistema
-- 🔍 **Explorando:** Padrões de distribuição de dados, streaming de eventos e as trocas reais em sistemas distribuídos
-- 🛠️ **Praticando:** Testcontainers, virtual threads do Java 21 e WebFlux para I/O reativo
+- Sistemas distribuídos e arquiteturas orientadas a eventos
+- Como o modelo de dados afeta o design do sistema
+- Testcontainers, virtual threads (Java 21) e WebFlux
 
 ---
 
