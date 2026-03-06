@@ -32,7 +32,7 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 
 ---
 
-## Stacks (em ícones)
+## Stack em Ícones
 
 **Linguagens**  
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](#)
@@ -78,8 +78,8 @@ API REST acadêmica que centraliza comunicação e dados educacionais (avisos, n
 [![Testcontainers](https://img.shields.io/badge/Testcontainers-39477F?style=for-the-badge&logo=docker&logoColor=white)](#)
 [![JaCoCo](https://img.shields.io/badge/JaCoCo-FFCC00?style=for-the-badge&logo=java&logoColor=black)](#)
 [![TDD](https://img.shields.io/badge/TDD-5A0FC8?style=for-the-badge&logo=codewars&logoColor=white)](#)
-[![Test Pyramid](https://img.shields.io/badge/Pir%C3%A2mide%2070--20--10-333333?style=for-the-badge&logo=stackshare&logoColor=white)](#)
-[![Integração](https://img.shields.io/badge/Testes%20de%20Integra%C3%A7%C3%A3o-006400?style=for-the-badge&logo=google-cloud-run&logoColor=white)](#)
+[![Test Pyramid](https://img.shields.io/badge/Test%20Pyramid%2070--20--10-333333?style=for-the-badge&logo=stackshare&logoColor=white)](#)
+[![Integration Tests](https://img.shields.io/badge/Integration%20Tests-006400?style=for-the-badge&logo=google-cloud-run&logoColor=white)](#)
 [![E2E](https://img.shields.io/badge/E2E-2C3E50?style=for-the-badge&logo=playwright&logoColor=white)](#)
 
 **Infraestrutura**  
