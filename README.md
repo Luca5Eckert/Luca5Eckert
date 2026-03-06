@@ -2,7 +2,7 @@
 
 # Lucas Ismael Eckert
 
-Backend Java focado em sistemas distribuídos, microsserviços orientados a eventos e aplicações com boas práticas de arquitetura (Clean/Hexagonal, DDD). Trabalho com Spring Boot, Kafka, bancos relacionais e grafos, buscando soluções simples de operar, observáveis e fáceis de evoluir.
+Backend Java em sistemas distribuídos e microsserviços orientados a eventos, com foco em arquitetura limpa e dados (relacional e grafos). Aqui estão os projetos que mantenho e estudo.
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:lucasismaeleckert@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Luca5Eckert)
@@ -15,44 +15,32 @@ Backend Java focado em sistemas distribuídos, microsserviços orientados a even
 ## Projetos em Destaque
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
-Plataforma de recomendação de livros em microsserviços orientados a eventos.  
-- Projetei a arquitetura distribuída e o fluxo de eventos em Kafka para isolar domínios (user, catalog, engagement, recommendation).  
-- Implementei engine de recomendação em tempo real com **pgvector** (índice HNSW), reduzindo latência de ~300-500ms para **80-120ms**.  
-- Redesenhei acesso a dados para remover N+1 com busca em lote e simplificar manutenção.  
+Plataforma de recomendação de livros em microsserviços orientados a eventos, com serviços para usuários, catálogo, engajamento e recomendações vetoriais em pgvector.  
 `Java 21` `Spring Boot 3.4` `Apache Kafka` `PostgreSQL 15` `pgvector` `Docker Compose` `OpenFeign`
 
 ### [Vinculo](https://github.com/Luca5Eckert/Vinculo)
-Rede social nativa em grafos com feed calculado por travessias Cypher.  
-- Modelei 9 tipos de conexão ponderados em **Neo4j** para consultas de grafo sub-milissegundos.  
-- Estruturei com Arquitetura Hexagonal/DDD e pirâmide de testes 70-20-10 usando **Testcontainers**.  
-- Autenticação JWT stateless com RBAC e virtual threads para I/O concorrente.  
+Rede social em grafos, com feed e recomendações calculadas via travessias Cypher em Neo4j, seguindo princípios de Arquitetura Hexagonal/DDD.  
 `Java 21` `Spring Boot 4.0` `Neo4j 5` `JWT` `Spring Security` `Docker` `Virtual Threads`
 
 ### [Libera.ai](https://github.com/Luca5Eckert/Libera.ai)
-Sistema IoT de controle de acesso e pagamentos para automação de cancelas.  
-- Desenvolvi backend **Spring WebFlux** com SSE para notificação em tempo real e integração **Mercado Pago Checkout Pro** via webhook.  
-- Estruturei Clean Architecture em bounded contexts (access, payment), acoplando MQTT/ESP32 sem expor lógica de negócio.  
-- Colaborei com equipe (Node-RED + hardware) para entregar fluxo fim a fim de pagamento e liberação de cancela.  
+Sistema IoT para controle de acesso e pagamentos em cancelas, usando backend reativo, SSE para notificações e integração Mercado Pago.  
 `Java 21` `Spring Boot 3.5` `React 19` `TypeScript` `MySQL` `MQTT` `Docker`
 
 ### [SyncoApi](https://github.com/Luca5Eckert/SyncoApi)
-API REST acadêmica focada em centralizar comunicação e dados educacionais.  
-- Organizei o projeto em camadas Clean Architecture com validações e serviços coesos.  
-- Estruturei autenticação JWT, autorização por roles e testes (152 casos) com cobertura alta e pipelines de qualidade.  
+API REST acadêmica que centraliza comunicação e dados educacionais (avisos, notas, tarefas), com autenticação JWT e validações consistentes.  
 `Java 21` `Spring Boot` `Spring Security` `JWT` `MySQL` `Docker` `JaCoCo`
 
 ---
 
-## Habilidades Técnicas
+## Stack & Ferramentas
 
-- **Linguagens:** Java (17/21), TypeScript, SQL, Python, C  
-- **Backend:** Spring Boot, Spring WebFlux, REST APIs, SSE, Spring Security, JWT/OAuth2, JPA/Hibernate, OpenFeign  
-- **Arquitetura:** Clean Architecture, Hexagonal, DDD, Microservices, Event-Driven Architecture  
-- **Dados:** PostgreSQL, MySQL, Neo4j, pgvector, Apache Kafka, MQTT  
-- **Testes & Qualidade:** JUnit 5, Mockito, Testcontainers, JaCoCo, pirâmide de testes 70-20-10, TDD  
-- **Infraestrutura & Ferramentas:** Docker, Docker Compose, GitHub Actions (CI/CD), Node-RED, Git, Maven, OpenAPI/Swagger, Postman  
-- **Frontend:** React, TypeScript, Vite, TailwindCSS  
-- **Idiomas:** Português (Nativo), Inglês (Intermediário — B1/B2)
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](#)
+[![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](#)
+[![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)](#)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](#)
+[![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)](#)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](#)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
 
 ## Foco Atual
 
