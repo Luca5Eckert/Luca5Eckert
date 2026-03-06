@@ -97,11 +97,7 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&hide_border=true&count_private=true&theme=default&hide=stars)
-
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Luca5Eckert&theme=default&hide_border=true&background=ffffff)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Luca5Eckert&layout=compact&hide_border=true&theme=default&langs_count=6)
 
 </div>
 
