@@ -88,7 +88,7 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 - 🏗️ **Arquitetura:** Sistemas orientados a eventos e como o modelo de dados influencia o design do sistema
 - 🔍 **Explorando:** Padrões de distribuição de dados e as trocas reais em sistemas distribuídos
-- 🛠️ **Praticando:** Testcontainers e virtual threads do Java 21
+- 🛠️ **Praticando:** Testcontainers, virtual threads do Java 21 e algoritmos via LeetCode
 
 ---
 
