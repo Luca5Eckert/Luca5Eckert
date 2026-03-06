@@ -14,9 +14,9 @@
 
 ## Sobre
 
-Desenvolvedor backend focado em Java e Spring Boot. Jovem aprendiz na **WEG S.A.** (CentroWEG/SENAI), cursando Análise e Desenvolvimento de Sistemas.
+Desenvolvedor backend focado em Java e Spring Boot, com interesse em sistemas distribuídos e arquiteturas orientadas a eventos.
 
-Interesse em sistemas distribuídos, arquiteturas orientadas a eventos e como bancos de dados influenciam o design de um sistema.
+Jovem aprendiz no Programa de Aprendizagem Industrial da **WEG S.A.** (CentroWEG/SENAI).
 
 ---
 
@@ -86,9 +86,9 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 ## Foco Atual
 
-- Sistemas distribuídos e arquiteturas orientadas a eventos
-- Como o modelo de dados afeta o design do sistema
-- Testcontainers, virtual threads (Java 21) e WebFlux
+- 🏗️ **Arquitetura:** Sistemas orientados a eventos e como o modelo de dados influencia o design do sistema
+- 🔍 **Explorando:** Padrões de distribuição de dados e as trocas reais em sistemas distribuídos
+- 🛠️ **Praticando:** Testcontainers e virtual threads do Java 21
 
 ---
 
