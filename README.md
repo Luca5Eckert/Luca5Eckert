@@ -32,7 +32,7 @@ Rede social construída sobre Neo4j, onde relacionamentos são cidadãos de prim
 
 `Java 21` `Spring Boot` `Neo4j` `Spring Security` `JWT` `Docker` `JUnit 5` `Testcontainers` `Hexagonal Architecture`
 
-### [Libera.ai](https://github.com/Luca5Eckert/Libera.ai)
+### [OpenIt](https://github.com/Luca5Eckert/OpenIt)
 Sistema IoT para controle de acesso em estacionamentos. ESP32 detecta veículos via MQTT, pagamento via Mercado Pago Checkout Pro e confirmação em tempo real por SSE (WebFlux). Projeto em equipe — responsável pelo backend e frontend; colegas cuidaram do Node-RED e hardware.
 
 `Java 21` `Spring Boot` `Spring WebFlux` `React 19` `TypeScript` `MySQL` `Mercado Pago SDK` `MQTT` `Docker`
