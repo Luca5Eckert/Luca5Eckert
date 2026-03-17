@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td width="400">
-      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" width="400" alt="Developer workspace">
+      <img src="assets/profile-banner.svg" width="400" alt="Developer workspace">
     </td>
     <td valign="top">
       <h1>Lucas Eckert</h1>
