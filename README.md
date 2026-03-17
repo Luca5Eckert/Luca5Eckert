@@ -10,7 +10,7 @@
 
 ## Áreas de Interesse
 
-- Microsserviços e arquitetura orientada a eventos
+- Microserviços e arquitetura orientada a eventos
 - Sistemas distribuídos e comunicação assíncrona
 - Modelagem de dados para recomendação e grafos
 - Qualidade de software e testes automatizados
@@ -24,7 +24,7 @@
 
 ## Projetos Principais
 
-- [**VellumHub**](https://github.com/Luca5Eckert/VellumHub) — plataforma de recomendação de livros com 4 microsserviços, Kafka e busca vetorial com pgvector.
+- [**VellumHub**](https://github.com/Luca5Eckert/VellumHub) — plataforma de recomendação de livros com 4 microserviços, Kafka e busca vetorial com pgvector.
 - [**Vinculo**](https://github.com/Luca5Eckert/Vinculo) — rede social sobre Neo4j com feed por travessia em grafo e arquitetura hexagonal.
 
 ## Contato
