@@ -1,7 +1,7 @@
 <h1 align="center">Lucas Eckert</h1>
 
 <p align="center">
-  <img src="https://github.com/Luca5Eckert.png" alt="Foto de perfil de Lucas Eckert" width="180" />
+  <img src="https://avatars.githubusercontent.com/u/197679835?v=4" alt="Foto de perfil de Lucas Eckert" width="180" />
 </p>
 
 <p align="center">
