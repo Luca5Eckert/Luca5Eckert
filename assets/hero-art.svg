@@ -1,38 +1,38 @@
-<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Arte abstrata estilosa para cabeçalho</title>
-  <desc id="desc">Composição geométrica com gradientes escuros e acentos turquesa e violeta.</desc>
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Arte abstrata estilosa para cabeçalho</title>
+  <desc id="hero-desc">Composição geométrica com gradientes escuros e acentos turquesa e violeta.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="420" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1600" y2="420" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#090E1A"/>
       <stop offset="0.55" stop-color="#1D1A45"/>
       <stop offset="1" stop-color="#0A5E62"/>
     </linearGradient>
-    <linearGradient id="lineA" x1="120" y1="90" x2="1460" y2="350" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hero-lineA" x1="120" y1="90" x2="1460" y2="350" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#67E8F9" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#A78BFA" stop-opacity="0.38"/>
     </linearGradient>
-    <linearGradient id="lineB" x1="220" y1="360" x2="1400" y2="40" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hero-lineB" x1="220" y1="360" x2="1400" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5EEAD4" stop-opacity="0.46"/>
       <stop offset="1" stop-color="#60A5FA" stop-opacity="0.10"/>
     </linearGradient>
-    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="hero-soft" x="-10%" y="-10%" width="120%" height="120%">
       <feGaussianBlur stdDeviation="6"/>
     </filter>
   </defs>
 
-  <rect width="1600" height="420" rx="26" fill="url(#bg)"/>
+  <rect width="1600" height="420" rx="26" fill="url(#hero-bg)"/>
 
   <g opacity="0.5">
     <path d="M0 290C160 250 320 210 480 236C640 262 800 352 960 348C1120 344 1280 246 1440 214C1520 198 1568 198 1600 204V420H0V290Z" fill="#0F172A"/>
     <path d="M0 330C140 294 306 286 468 314C624 342 782 406 940 396C1102 386 1268 302 1430 282C1504 272 1560 272 1600 278V420H0V330Z" fill="#111827"/>
   </g>
 
-  <circle cx="1258" cy="84" r="92" fill="#A78BFA" fill-opacity="0.14" filter="url(#soft)"/>
-  <circle cx="1326" cy="126" r="54" fill="#5EEAD4" fill-opacity="0.22" filter="url(#soft)"/>
-  <circle cx="286" cy="112" r="66" fill="#60A5FA" fill-opacity="0.14" filter="url(#soft)"/>
+  <circle cx="1258" cy="84" r="92" fill="#A78BFA" fill-opacity="0.14" filter="url(#hero-soft)"/>
+  <circle cx="1326" cy="126" r="54" fill="#5EEAD4" fill-opacity="0.22" filter="url(#hero-soft)"/>
+  <circle cx="286" cy="112" r="66" fill="#60A5FA" fill-opacity="0.14" filter="url(#hero-soft)"/>
 
-  <path d="M90 114C384 34 742 44 1018 114C1240 170 1366 248 1508 334" stroke="url(#lineA)" stroke-width="3.2"/>
-  <path d="M140 356C386 230 682 186 948 236C1178 278 1334 344 1518 354" stroke="url(#lineB)" stroke-width="2.8"/>
+  <path d="M90 114C384 34 742 44 1018 114C1240 170 1366 248 1508 334" stroke="url(#hero-lineA)" stroke-width="3.2"/>
+  <path d="M140 356C386 230 682 186 948 236C1178 278 1334 344 1518 354" stroke="url(#hero-lineB)" stroke-width="2.8"/>
 
   <g opacity="0.68" stroke="#E2E8F0" stroke-opacity="0.22">
     <line x1="164" y1="64" x2="164" y2="350"/>

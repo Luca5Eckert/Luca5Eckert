@@ -10,7 +10,7 @@
   <a href="https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399">LinkedIn</a>
 </div>
 
-<table align="center" width="100%">
+<table align="center" width="100%" role="presentation">
   <tr>
     <td width="52%" valign="top">
       <h3>Visão Profissional</h3>
@@ -39,7 +39,7 @@
 
 <h2 align="center">Projetos Principais</h2>
 
-<table width="100%">
+<table align="center" width="100%" role="presentation">
   <tr>
     <td width="33%" valign="top">
       <h3><a href="https://github.com/Luca5Eckert/VellumHub">VellumHub</a></h3>
