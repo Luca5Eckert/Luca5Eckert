@@ -1,66 +1,40 @@
-<div align="center">
-  <img src="./assets/hero-art.svg" alt="Arte estilosa de capa" width="100%" />
-</div>
+[![Arte estilosa abstrata](./assets/hero-art.svg)](./assets/hero-art.svg)
 
-<div align="center">
-  <a href="mailto:lucasismaeleckert@gmail.com">Email</a>
-  ·
-  <a href="https://github.com/Luca5Eckert">GitHub</a>
-  ·
-  <a href="https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399">LinkedIn</a>
-</div>
+## Lucas Eckert
 
-<table align="center" width="100%" role="presentation">
-  <tr>
-    <td width="52%" valign="top">
-      <h3>Visão Profissional</h3>
-      <p>
-        Desenvolvedor backend com foco em Java, Spring Boot, Kafka e arquitetura de microserviços.
-        Atuo no desenho de sistemas distribuídos orientados a eventos, com atenção em escalabilidade,
-        consistência e qualidade de software.
-      </p>
-      <h3>Direção Técnica</h3>
-      <ul>
-        <li>Arquitetura orientada a eventos e comunicação assíncrona</li>
-        <li>Microsserviços resilientes e observáveis</li>
-        <li>Dados relacionais, grafos e busca vetorial</li>
-        <li>Testes automatizados e evolução contínua da base de código</li>
-      </ul>
-    </td>
-    <td width="48%" valign="top">
-      <h3>Stack Principal</h3>
-      <p><strong>Linguagens:</strong> Java, TypeScript, Python, C</p>
-      <p><strong>Backend:</strong> Spring Boot, Spring Security, Spring WebFlux, OpenFeign</p>
-      <p><strong>Mensageria e Dados:</strong> Apache Kafka, PostgreSQL, Neo4j, MySQL, pgvector</p>
-      <p><strong>Ferramentas:</strong> Docker, GitHub Actions, JUnit, Mockito, Testcontainers</p>
-    </td>
-  </tr>
-</table>
+Software engineer com foco em backend Java, arquitetura de microsserviços e sistemas distribuídos orientados a eventos. Minha atuação combina engenharia de software, modelagem de dados e construção de plataformas resilientes com forte base em qualidade e testes automatizados.
 
-<h2 align="center">Projetos Principais</h2>
+## Áreas de Interesse
 
-<table align="center" width="100%" role="presentation">
-  <tr>
-    <td width="33%" valign="top">
-      <h3><a href="https://github.com/Luca5Eckert/VellumHub">VellumHub</a></h3>
-      <p>
-        Plataforma de recomendação de livros com quatro microsserviços, integração por Kafka
-        e busca vetorial com pgvector para personalização em tempo real.
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h3><a href="https://github.com/Luca5Eckert/Vinculo">Vinculo</a></h3>
-      <p>
-        Rede social baseada em Neo4j com feed por travessia em grafo,
-        arquitetura hexagonal e estratégia robusta de testes automatizados.
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h3><a href="https://github.com/Luca5Eckert/OpenIt">OpenIt</a></h3>
-      <p>
-        Solução IoT para controle de acesso em estacionamentos,
-        combinando backend reativo, eventos em tempo real e integração com pagamentos.
-      </p>
-    </td>
-  </tr>
-</table>
+- Arquitetura orientada a eventos e comunicação assíncrona
+- Sistemas distribuídos e resiliência operacional
+- Modelagem de dados com SQL, grafos e vetores
+- APIs backend com foco em segurança e escalabilidade
+- Testes automatizados e evolução sustentável de código
+
+## Tecnologias
+
+- Linguagens: Java, TypeScript, Python, C
+- Backend: Spring Boot, Spring Security, Spring WebFlux, OpenFeign
+- Dados e Mensageria: PostgreSQL, MySQL, Neo4j, Apache Kafka, pgvector
+- Ferramentas: Docker, GitHub Actions, JUnit, Mockito, Testcontainers
+
+## Projetos Principais
+
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
+
+Plataforma de recomendação de livros com quatro microsserviços independentes, integração via Kafka e personalização por busca vetorial com pgvector.
+
+### [Vinculo](https://github.com/Luca5Eckert/Vinculo)
+
+Rede social baseada em Neo4j com feed por travessia em grafo, arquitetura hexagonal e estratégia robusta de testes.
+
+### [OpenIt](https://github.com/Luca5Eckert/OpenIt)
+
+Solução IoT para controle de acesso em estacionamentos com backend reativo, eventos em tempo real e integração de pagamentos.
+
+## Contato
+
+- Email: [lucasismaeleckert@gmail.com](mailto:lucasismaeleckert@gmail.com)
+- GitHub: [@Luca5Eckert](https://github.com/Luca5Eckert)
+- LinkedIn: [Lucas Ismael Eckert](https://www.linkedin.com/in/lucas-ismael-eckert-92a7bb399)
