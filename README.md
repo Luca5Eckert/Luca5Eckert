@@ -101,6 +101,10 @@ API REST para gestão acadêmica com foco em qualidade: 152 testes e 68% de cobe
 
 </div>
 
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Luca5Eckert&bg_color=ffffff&color=f48024&line=f48024&point=e9661e&area=true&area_color=f48024&hide_border=true" width="95%"/>
+</div>
+
 ---
 
 <div align="center">
