@@ -1,9 +1,3 @@
-<table>
-  <tr>
-    <td width="360">
-      <img src="SUA_IMAGEM.avif" width="360" alt="">
-    </td>
-    <td valign="top">
 
 ## Lucas Eckert
 
@@ -36,7 +30,3 @@ Interested in the decisions tutorials skip — eventual consistency, data modeli
 ---
 
 [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert-92a7bb399) · lucasismaeleckert@gmail.com
-
-  </td>
-  </tr>
-</table>
