@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td width="360">
-      <img src="SUA_IMAGEM.avif" width="360" alt="">
+      <img src="assets/melencolia-i.png" width="360" style="height:auto;" alt="Albrecht Dürer - Melencolia I">
     </td>
     <td valign="top">
 
