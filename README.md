@@ -12,8 +12,8 @@ Interested in the decisions tutorials skip — eventual consistency, data modeli
 - System design and data-intensive applications
 
 **Technologies**
-- Languages: Java, TypeScript, Python, SQL
-- Backend: Spring Boot, WebFlux, Kafka, REST, SSE
+- Languages: Java, TypeScript, C, Python, SQL
+- Backend: Spring Boot, WebFlux, Kafka
 - Data: PostgreSQL, Neo4j, pgvector, MySQL
 - Infra: Docker, GitHub Actions, MQTT
 
