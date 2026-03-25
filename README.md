@@ -13,9 +13,9 @@ Interested in the decisions tutorials skip — eventual consistency, data modeli
 
 **Technologies**
 - Languages: Java, TypeScript, C, Python, SQL
-- Backend: Spring Boot, Kafka, Webflux
+- Backend: Spring Boot, Kafka, Nodejs
 - Data: PostgreSQL, Neo4j, pgvector, MySQL
-- Infra: Docker, GitHub Actions, MQTT
+- Infra: Docker, GitHub Actions, Tomcat
 
 ---
 
