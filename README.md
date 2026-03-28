@@ -1,8 +1,8 @@
 ## Lucas Eckert
-
 Backend development. Java, distributed systems, event-driven architecture.
-
 Currently going deep on distributed systems design and neural networks fundamentals.
+
+// portfolio → [luca5eckert.github.io](https://luca5eckert.github.io)
 
 ---
 
