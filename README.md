@@ -32,15 +32,15 @@ Microservices with a reactive WebFlux gateway, Kafka ECST for event-driven state
 similarity search with LangChain4j embeddings.
 `Java 21 · Kafka · pgvector · LangChain4j · Redis`
 
+[Kairos](https://github.com/Luca5Eckert/Kairos)
+*What changes when memory has structure you didn't build?*
+Personal knowledge graph engine. Dual-pipeline ingestion with local ONNX embeddings on the JVM and LLM-based OpenIE. Multi-hop retrieval via HippoRAG 2 using pgvector and Neo4j.
+`Java 21 · Neo4j · pgvector · ONNX`
+
 [OpenIT](https://github.com/Luca5Eckert/OpenIt)
 *What does it mean to build a system from hardware to interface, from scratch?*
 IoT access control and payment system. ESP32 over MQTT, real-time updates via SSE, reactive backend.
 `Java 21 · WebFlux · MQTT · React 19`
-
-[Vinculo](https://github.com/Luca5Eckert/Vinculo)
-*What changes when you stop pretending a social graph is relational data?*
-Graph-native social network. Neo4j as the primary data model, hexagonal architecture, virtual threads.
-`Java 21 · Neo4j · Spring Boot`
 
 ---
 
@@ -48,8 +48,8 @@ Graph-native social network. Neo4j as the primary data model, hexagonal architec
 
 *Using daily —* Java 21, Spring Boot (MVC + WebFlux), Kafka, PostgreSQL, Docker, Redis, TypeScript
 
-*Exploring —* LangChain4j, pgvector, embedding pipelines, neural network fundamentals, Neo4j
+*Exploring —* LangChain4j, pgvector, embedding pipelines, neural network fundamentals, Neo4j, ONNX
 
 ---
 
-lucasismaeleckert@gmail.com · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert-92a7bb399)
+lucasismaeleckert@gmail
