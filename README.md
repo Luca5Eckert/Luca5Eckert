@@ -10,8 +10,13 @@ ML/backend intersection.
 **now**
 
 Building VellumHub — working specifically on the read model problem: how to serve recommendations
-without coupling the query path to the write path. Reading *Designing Data-Intensive Applications*
-and neural network fundamentals.
+without coupling the query path to the write path.
+
+Building Kairos — exploring structured memory and hybrid retrieval with knowledge graphs.
+
+Currently implementing native embedding generation on the JVM using ONNX (tokenization → tensors → inference → pooling).
+
+Reading *Designing Data-Intensive Applications* and neural network fundamentals.
 
 ---
 
