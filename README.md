@@ -17,7 +17,7 @@ local ONNX embeddings on the JVM (tokenization → tensors → inference → poo
 LLM-based OpenIE, and multi-hop retrieval via HippoRAG 2 with pgvector + Neo4j.
 
 Reading *Designing Data-Intensive Applications*. Studying neural network
-fundamentals — the math, not the frameworks.
+fundamentals.
 
 ---
 
