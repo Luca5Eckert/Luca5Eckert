@@ -58,6 +58,8 @@ SSE for real-time updates, reactive backend.
 
 **stack**
 
-*Daily —* Java 21, Spring Boot (MVC + WebFlux), Kafka, PostgreSQL, Docker, Redis
-*Exploring —* ONNX, Neo4j, pgvector, LangChain4j, embedding pipelines, NN fundamentals
-*Also —* TypeScript, React 19
+*Daily —* Java 21, Spring Boot (MVC + WebFlux), Kafka, PostgreSQL, Docker, Redis.
+
+*Exploring —* ONNX, Neo4j, pgvector, LangChain4j, embedding pipelines, NN fundamentals.
+
+*Also —* TypeScript, React 19.
