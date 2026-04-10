@@ -3,7 +3,7 @@
 Backend developer focused on distributed systems and the ML/backend intersection.
 Working at WEG S.A. — building things on the side that push further.
 
-// portfolio → luca5eckert.github.io · lucasismaeleckert@gmail.com
+// portfolio → [luca5eckert.github.io](https://luca5eckert.github.io)
 
 ---
 
