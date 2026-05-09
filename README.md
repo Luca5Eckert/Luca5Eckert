@@ -1,56 +1,50 @@
 # Lucas Eckert
 
-Backend Engineer focused on distributed systems, event-driven architecture, and retrieval infrastructure.
-I build production-grade backends where data flow, resilience, and system boundaries are first-class design concerns.
+Backend engineer focused on distributed systems, event-driven architecture, and retrieval infrastructure.
+I build production-grade backends with strong boundaries between write paths, read models, and serving layers.
 
 Portfolio: [lucas-eckert.vercel.app](https://lucas-eckert.vercel.app/)
 
 ---
 
-## Current focus
+## now
+
+Building **Kairos** — graph-augmented retrieval engine with durable ingestion, local ONNX embeddings on the JVM, LLM-based triple extraction via Spring AI, and multi-hop ranking with pgvector + Neo4j GDS.
+
+Building **VellumHub** — event-fed recommendation platform with reactive gateway, ECST over Kafka, semantic embeddings, cold-start profile seeding, and retry/DLT resilience.
+
+---
+
+## projects
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos)
-Graph-augmented retrieval engine that goes beyond vector similarity.
+Personal knowledge graph retrieval engine designed to go beyond pure vector similarity.
 
 - Dual ingestion flow with durable chunk persistence
-- Local ONNX embeddings on the JVM (no external embedding service)
-- Triple extraction with Spring AI + Gemini behind a clean domain port
-- Multi-hop retrieval with pgvector + Neo4j GDS (Personalized PageRank)
-- Built with hexagonal architecture and clear domain boundaries
+- Local ONNX embeddings (in-process, JVM-native)
+- Triple extraction with Spring AI + Gemini behind a domain port
+- Graph-aware retrieval using Neo4j GDS Personalized PageRank
 
 `Java 21 · Spring Boot 4 · Spring AI · PostgreSQL · pgvector · Neo4j · ONNX · Docker`
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
-Backend reference platform for event-fed recommendations at scale.
+Backend platform for recommendation serving without query-time cross-service coupling.
 
-- Reactive API Gateway (WebFlux) with JWT validation and Redis rate limiting
-- Event-Carried State Transfer over Kafka for zero query-time coupling
-- 384-dim semantic embeddings (LangChain4j) with L2 normalization
-- Cold-start recommendation strategy seeded from user preferences
-- Kafka retry topics + DLT for failure isolation and operational visibility
+- Reactive API Gateway (WebFlux) with JWT and Redis rate limiting
+- Event-Carried State Transfer over Kafka
+- 384-dim LangChain4j embeddings with L2 normalization
+- Cold-start strategy seeded from user preferences
+- Kafka retry topics and DLT for operational resilience
 
 `Java 21 · Spring Boot · WebFlux · Kafka · PostgreSQL · pgvector · Redis · Docker`
 
----
-
-## Project selection
-
 ### [OpenIT](https://github.com/Luca5Eckert/OpenIt)
-IoT access-control and payment platform integrating hardware and reactive backend systems.
+IoT access control and payment system integrating hardware events with a reactive backend.
 
 `Java 21 · WebFlux · MQTT · React`
 
 ---
 
-## What I build
-
-- Event-driven backends with strong read/write separation
-- Resilient data pipelines with explicit failure handling
-- Semantic and graph-enhanced retrieval systems
-- Services designed for clarity, testability, and evolution
-
----
-
-## Core stack
+## stack
 
 Java 21, Spring Boot, Spring WebFlux, Kafka, PostgreSQL, pgvector, Neo4j, Redis, Docker.
