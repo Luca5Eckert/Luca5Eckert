@@ -47,10 +47,10 @@ IoT access control and payment system integrating hardware events with a reactiv
 
 ## core stack
 
-- **Languages & Frameworks:** Java 21 · Spring Boot · Spring WebFlux · Spring Security
+- **Languages & Frameworks:** Java 21 · Kotlin · Python · JavaScript · Spring Boot · Spring WebFlux
+- **Security:** Spring Security · JWT
 - **AI & Retrieval:** Spring AI · LangChain4j · ONNX Runtime · Neo4j GDS
 - **Messaging & IoT:** Kafka · MQTT · Node-RED
 - **Data:** PostgreSQL · pgvector · Neo4j · Redis · MySQL
 - **Frontend:** React · TypeScript
-- **Payments:** Mercado Pago Checkout Pro
 - **Platform:** Docker · Docker Compose
