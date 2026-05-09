@@ -22,7 +22,7 @@ Personal knowledge graph retrieval engine designed to go beyond pure vector simi
 
 - Dual ingestion flow with durable chunk persistence
 - Local ONNX embeddings (in-process, JVM-native)
-- Triple extraction with Spring AI + Gemini behind a domain port
+- Triple extraction with Spring AI behind a domain port
 - Graph-aware retrieval using Neo4j GDS Personalized PageRank
 
 `Java 21 · Spring Boot 4 · Spring AI · PostgreSQL · pgvector · Neo4j · ONNX · Docker`
