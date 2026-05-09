@@ -45,6 +45,9 @@ IoT access control and payment system integrating hardware events with a reactiv
 
 ---
 
-## stack
+## core stack
 
-Java 21, Spring Boot, Spring WebFlux, Kafka, PostgreSQL, pgvector, Neo4j, Redis, Docker.
+- **Language & Frameworks:** Java 21 · Spring Boot · Spring WebFlux
+- **Messaging:** Kafka
+- **Data:** PostgreSQL · pgvector · Neo4j · Redis
+- **Platform:** Docker
