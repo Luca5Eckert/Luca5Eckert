@@ -15,6 +15,16 @@ Building **VellumHub** — event-fed recommendation platform with reactive gatew
 
 ---
 
+## interests
+
+- Distributed systems and event-driven architecture
+- Retrieval engineering (vector + graph-augmented search)
+- Recommender systems and cold-start strategies
+- Reactive APIs and resilience patterns
+- Domain-driven design and clean architecture
+
+---
+
 ## projects
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos)
