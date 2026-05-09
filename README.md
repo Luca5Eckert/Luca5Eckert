@@ -1,65 +1,56 @@
-## Lucas Eckert
+# Lucas Eckert
 
-Backend developer focused on distributed systems and the ML/backend intersection.
-Working at WEG S.A. — building things on the side that push further.
+Backend Engineer focused on distributed systems, event-driven architecture, and retrieval infrastructure.
+I build production-grade backends where data flow, resilience, and system boundaries are first-class design concerns.
 
-// portfolio → [Luca5Eckert](https://lucas-eckert.vercel.app/)
-
----
-
-**now**
-
-Building **VellumHub** — solving the read model problem: recommendation serving
-with zero coupling between the write path and the query path.
-
-Building **Kairos** — personal knowledge graph engine with dual-pipeline ingestion,
-local ONNX embeddings on the JVM (tokenization → tensors → inference → pooling),
-LLM-based OpenIE, and multi-hop retrieval via HippoRAG 2 with pgvector + Neo4j.
-
-Reading *Designing Data-Intensive Applications*. Studying neural network
-fundamentals.
+Portfolio: [lucas-eckert.vercel.app](https://lucas-eckert.vercel.app/)
 
 ---
 
-**interests**
+## Current focus
 
-Distributed systems and what breaks at scale — consistency models,
-event-driven architecture, data-intensive design.
+### [Kairos](https://github.com/Luca5Eckert/Kairos)
+Graph-augmented retrieval engine that goes beyond vector similarity.
 
-The ML/backend intersection — embeddings, retrieval, and inference
-running on the same stack as the rest of the system.
+- Dual ingestion flow with durable chunk persistence
+- Local ONNX embeddings on the JVM (no external embedding service)
+- Triple extraction with Spring AI + Gemini behind a clean domain port
+- Multi-hop retrieval with pgvector + Neo4j GDS (Personalized PageRank)
+- Built with hexagonal architecture and clear domain boundaries
 
-Neural networks from first principles. How the math becomes the architecture.
+`Java 21 · Spring Boot 4 · Spring AI · PostgreSQL · pgvector · Neo4j · ONNX · Docker`
 
----
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
+Backend reference platform for event-fed recommendations at scale.
 
-**projects**
+- Reactive API Gateway (WebFlux) with JWT validation and Redis rate limiting
+- Event-Carried State Transfer over Kafka for zero query-time coupling
+- 384-dim semantic embeddings (LangChain4j) with L2 normalization
+- Cold-start recommendation strategy seeded from user preferences
+- Kafka retry topics + DLT for failure isolation and operational visibility
 
-[**VellumHub**](https://github.com/Luca5Eckert/VellumHub)
-*How do you serve recommendations without coupling the query path to anything?*
-Reactive WebFlux gateway, event-carried state transfer over Kafka,
-pgvector similarity search with LangChain4j embeddings.
-`Java 21 · Kafka · pgvector · LangChain4j · Redis`
-
-[**Kairos**](https://github.com/Luca5Eckert/Kairos)
-*What changes when memory has structure you did not design?*
-Personal knowledge graph engine. Dual-pipeline ingestion with local ONNX embeddings
-on the JVM and LLM-based OpenIE. Multi-hop retrieval via HippoRAG 2 using
-pgvector and Neo4j.
-`Java 21 · Neo4j · pgvector · ONNX`
-
-[**OpenIT**](https://github.com/Luca5Eckert/OpenIt)
-*What does hardware-to-interface actually mean when you build it yourself?*
-IoT access control and payment system — ESP32 over MQTT,
-SSE for real-time updates, reactive backend.
-`Java 21 · WebFlux · MQTT · React 19`
+`Java 21 · Spring Boot · WebFlux · Kafka · PostgreSQL · pgvector · Redis · Docker`
 
 ---
 
-**stack**
+## Project selection
 
-*Daily —* Java 21, Spring Boot (MVC + WebFlux), Kafka, PostgreSQL, Docker, Redis.
+### [OpenIT](https://github.com/Luca5Eckert/OpenIt)
+IoT access-control and payment platform integrating hardware and reactive backend systems.
 
-*Exploring —* ONNX, Neo4j, pgvector, LangChain4j, embedding pipelines, NN fundamentals.
+`Java 21 · WebFlux · MQTT · React`
 
-*Also —* TypeScript, React 19.
+---
+
+## What I build
+
+- Event-driven backends with strong read/write separation
+- Resilient data pipelines with explicit failure handling
+- Semantic and graph-enhanced retrieval systems
+- Services designed for clarity, testability, and evolution
+
+---
+
+## Core stack
+
+Java 21, Spring Boot, Spring WebFlux, Kafka, PostgreSQL, pgvector, Neo4j, Redis, Docker.
