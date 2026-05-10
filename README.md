@@ -1,9 +1,9 @@
 # Lucas Eckert
 
-Backend engineer focused on distributed systems, event-driven architecture, and retrieval infrastructure.
+Backend developer focused on distributed systems, event-driven architecture, and retrieval infrastructure.
 I build production-grade backends with strong boundaries between write paths, read models, and serving layers.
 
-Portfolio: [lucas-eckert.vercel.app](https://lucas-eckert.vercel.app/)
+Portfolio: [luca5eckert](https://lucas-eckert.vercel.app/)
 
 ---
 
@@ -57,10 +57,9 @@ IoT access control and payment system integrating hardware events with a reactiv
 
 ## core stack
 
-- **Languages & Frameworks:** Java 21 · Kotlin · Python · JavaScript · Spring Boot · Spring WebFlux
-- **Security:** Spring Security · JWT
+- **Languages & Frameworks:** Java 21 · Spring Boot · Spring WebFlux · Spring Security · JWT · Python · JavaScript
 - **AI & Retrieval:** Spring AI · LangChain4j · ONNX Runtime · Neo4j GDS
 - **Messaging & IoT:** Kafka · MQTT · Node-RED
 - **Data:** PostgreSQL · pgvector · Neo4j · Redis · MySQL
-- **Frontend:** React · TypeScript
+- **Frontend:** React · Next.js · TypeScript
 - **Platform:** Docker · Docker Compose
