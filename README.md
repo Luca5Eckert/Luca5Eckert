@@ -1,87 +1,120 @@
 # Lucas Eckert
 
-Backend engineer focused on distributed systems, retrieval infrastructure, and event-driven architecture.
+Backend developer focused on **distributed JVM services**, **event-driven architecture**, and **retrieval/recommendation infrastructure**.
 
-I build backends that separate what happened from what is served: durable write paths, event-driven read models, and retrieval layers that follow meaning, not just word overlap.
+I build backend systems that separate what happened from what is served: durable write paths, event-built read models, vector search, graph traversal, and resilient APIs.
 
-→ [Portfólio](https://lucas-eckert.vercel.app)
-→ [LinkedIn](https://linkedin.com/in/lucas-eckert)
-
----
-
-## now
-
-Building **Kairos**: graph-augmented retrieval engine with durable ingestion, local ONNX embeddings on the JVM, LLM-based triple extraction via Spring AI, and multi-hop ranking with pgvector + Neo4j GDS.
-
-Building **VellumHub**: event-fed recommendation platform with reactive gateway, Event-Carried State Transfer over Kafka, semantic embeddings, cold-start profile seeding, and retry/DLT resilience.
-
-Reading *Designing Data-Intensive Applications* and *Neural Networks and Deep Learning* by Michael Nielsen — working through the intersection of distributed systems and ML as it applies to backend infrastructure.
+-> [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert)
 
 ---
 
-## projects
+## Current focus
 
-### [Kairos](https://github.com/Luca5Eckert/Kairos)
-
-Retrieval engine that builds a knowledge graph from source material and uses it to surface context that pure vector search misses — connecting concepts across passages even when the exact same words never appear together.
-
-**Why it matters:** most RAG pipelines stop at cosine similarity. Kairos adds graph-aware re-ranking with Personalized PageRank, allowing retrieval quality to improve as relationships between concepts accumulate.
-
-- Durable ingestion flow with persisted chunk pipeline before embedding generation
-- Local ONNX embeddings running in-process on the JVM, with no external inference service
-- Triple extraction with Spring AI isolated behind a clean domain port
-- Graph-aware retrieval using Neo4j GDS Personalized PageRank
-- Hybrid retrieval combining semantic similarity with graph traversal signals
-
-`Java 21 · Spring Boot 4 · Spring AI · PostgreSQL · pgvector · Neo4j · ONNX Runtime · Docker`
+- Building **VellumHub**, an event-driven recommendation platform using Kafka, PostgreSQL/pgvector, Redis, and Spring WebFlux.
+- Building **Kairos**, a graph-augmented retrieval engine using local JVM embeddings, pgvector, Neo4j GDS, and Spring AI.
+- Studying distributed systems and ML infrastructure through *Designing Data-Intensive Applications* and *Neural Networks and Deep Learning*.
 
 ---
+
+## Main projects
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
 
-Recommendation platform designed to serve personalized results without query-time cross-service coupling.
+Event-driven recommendation platform designed to serve personalized recommendations without query-time coupling to source-of-truth services.
 
-**Design decision:** recommendation queries read from event-built models instead of coupling to source-of-truth services at runtime. Cold-start is handled at registration, not deferred to the first recommendation request.
+The system uses Kafka events to build local read models across the book, rating, and user lifecycle. Recommendation queries are served from derived data instead of synchronously calling Catalog, Engagement, or User services at runtime.
 
-- Reactive API Gateway with WebFlux, JWT authentication, and Redis-backed rate limiting
-- Event-Carried State Transfer over Kafka, with read models built from events instead of joins
-- Semantic candidate scoring with vector embeddings and normalized similarity search
-- Cold-start strategy seeded from explicit onboarding preferences
-- Kafka retry topics and Dead Letter Topics for resilient asynchronous processing
+**Core ideas**
 
-`Java 21 · Spring Boot · WebFlux · Kafka · PostgreSQL · pgvector · Redis · Docker`
+- Event-Carried State Transfer over Kafka
+- Event-built read models for recommendation queries
+- Semantic candidate scoring with PostgreSQL/pgvector
+- Cold-start profile seeding from onboarding preferences
+- Reactive API Gateway with WebFlux, JWT validation, and Redis-backed rate limiting
+- Retry topics and Dead Letter Topics for resilient asynchronous processing
+
+**Stack**
+
+`Java 21 · Spring Boot · Spring WebFlux · Kafka · PostgreSQL · pgvector · Redis · Docker`
+
+---
+
+### [Kairos](https://github.com/Luca5Eckert/Kairos)
+
+Graph-augmented retrieval service that combines semantic search with graph traversal to retrieve context that pure vector similarity can miss.
+
+Kairos ingests source material, persists chunks, generates local JVM embeddings, extracts factual triples through an LLM adapter, and builds both vector and graph indexes. Retrieval starts from semantic anchors in pgvector and expands through Neo4j Personalized PageRank for multi-hop context ranking.
+
+**Core ideas**
+
+- Durable ingestion pipeline before embedding and graph indexing
+- Local ONNX embeddings running in-process on the JVM
+- Triple extraction isolated behind a swappable Spring AI domain port
+- Hybrid retrieval with pgvector semantic search and Neo4j graph traversal
+- Graph-aware re-ranking with Neo4j GDS Personalized PageRank
+
+**Stack**
+
+`Java 21 · Spring Boot · Spring AI · PostgreSQL · pgvector · Neo4j · ONNX Runtime · Docker`
 
 ---
 
 ### [OpenIT](https://github.com/Luca5Eckert/OpenIt)
 
-IoT access control system that bridges hardware events with a reactive backend — MQTT device communication, real-time state propagation, and integrated payment flow.
+Reactive IoT access-control system connecting hardware events, payment flow, and real-time backend state propagation.
 
-- Reactive backend with WebFlux consuming MQTT events from physical hardware
-- Real-time access state managed without polling
-- Payment integration tied to physical access grants
+OpenIT bridges MQTT events from ESP32 hardware with a Spring WebFlux backend, allowing access state to be updated in real time without polling. The system also integrates payment flow with physical access grants.
 
-`Java 21 · Spring WebFlux · MQTT · React`
+**Core ideas**
+
+- MQTT hardware event handling
+- Reactive backend with Spring WebFlux
+- Real-time access-state propagation with Server-Sent Events
+- Payment integration tied to access control
+- Frontend interface built with React and TypeScript
+
+**Stack**
+
+`Java 21 · Spring WebFlux · MySQL · MQTT · ESP32 · Node-RED · React · TypeScript`
 
 ---
 
-## interests
+## Technical interests
 
 - Distributed systems and event-driven architecture
+- Event-built read models and eventual consistency
+- Recommendation systems and cold-start strategies
 - Retrieval engineering: vector search, graph-augmented search, and re-ranking
-- Recommender systems and cold-start strategies
 - Reactive APIs and resilience patterns
-- Domain-driven design and clean architecture
+- Domain-driven design, hexagonal architecture, and clean service boundaries
 - ML-informed backend infrastructure
 
 ---
 
-## stack
+## Stack
 
-- **Languages:** Java · Python · TypeScript · JavaScript
-- **Backend:** Spring Boot · Spring WebFlux · Spring Security
-- **AI & Retrieval:** Spring AI · LangChain4j · ONNX Runtime · Neo4j GDS
-- **Messaging:** Kafka · MQTT
-- **Data:** PostgreSQL · pgvector · Neo4j · Redis · MySQL
-- **Frontend:** React · Next.js
-- **Platform:** Docker · AWS · Linux
+**Languages**  
+Java · TypeScript · JavaScript · Python · SQL
+
+**Backend**  
+Spring Boot · Spring WebFlux · Spring Security · REST APIs · JWT · SSE
+
+**Messaging and event-driven systems**  
+Kafka · MQTT · Event-Carried State Transfer · Retry Topics · Dead Letter Topics
+
+**AI, retrieval, and recommendation systems**  
+Spring AI · LangChain4j · ONNX Runtime · Neo4j GDS · Vector Search · RAG
+
+**Data stores**  
+PostgreSQL · pgvector · Neo4j · Redis · MySQL
+
+**Platform and tooling**  
+Docker · Docker Compose · GitHub Actions · Linux
+
+---
+
+## Contact
+
+- Portfolio: [lucas-eckert.vercel.app](https://lucas-eckert.vercel.app)
+- LinkedIn: [linkedin.com/in/lucas-ismael-eckert](https://linkedin.com/in/lucas-ismael-eckert)
+- Email: lucasismaeleckert@gmail.com
