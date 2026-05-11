@@ -4,8 +4,8 @@ Backend engineer focused on distributed systems, retrieval infrastructure, and e
 
 I build backends that separate what happened from what is served: durable write paths, event-driven read models, and retrieval layers that follow meaning, not just word overlap.
 
-→ https://lucas-eckert.vercel.app  
-→ https://linkedin.com/in/lucas-eckert
+→ [Portfólio](https://lucas-eckert.vercel.app)
+→ [LinkedIn](https://linkedin.com/in/lucas-eckert)
 
 ---
 
