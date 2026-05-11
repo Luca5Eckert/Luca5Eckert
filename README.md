@@ -70,9 +70,9 @@ IoT access control system that bridges hardware events with a reactive backend �
 
 ## stack
 
-- **Languages & Frameworks:** Java 21 · Spring Boot · Spring WebFlux · Spring Security · Python · JavaScript
+- **Languages & Frameworks:** Java 21 · Spring Boot · Spring WebFlux · Spring Security · Python · JavaScript · TypeScript
 - **AI & Retrieval:** Spring AI · LangChain4j · ONNX Runtime · Neo4j GDS
 - **Messaging & IoT:** Kafka · MQTT
 - **Data:** PostgreSQL · pgvector · Neo4j · Redis · MySQL
-- **Frontend:** React · Next.js · TypeScript
-- **Platform:** Docker · Docker Compose
+- **Frontend:** React · Next.js 
+- **Platform:** Docker · AWS · Linux
