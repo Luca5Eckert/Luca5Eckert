@@ -8,7 +8,7 @@ I build backend systems that separate what happened from what is served: durable
 
 ---
 
-## Current focus
+## current focus
 
 - Building **VellumHub**, an event-driven recommendation platform using Kafka, PostgreSQL/pgvector, Redis, and Spring WebFlux.
 - Building **Kairos**, a graph-augmented retrieval engine using local JVM embeddings, pgvector, Neo4j GDS, and Spring AI.
@@ -16,7 +16,7 @@ I build backend systems that separate what happened from what is served: durable
 
 ---
 
-## Main projects
+## projects
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
 
@@ -79,7 +79,7 @@ OpenIT bridges MQTT events from ESP32 hardware with a Spring WebFlux backend, al
 
 ---
 
-## Technical interests
+## interests
 
 - Distributed systems and event-driven architecture
 - Event-built read models and eventual consistency
@@ -91,7 +91,7 @@ OpenIT bridges MQTT events from ESP32 hardware with a Spring WebFlux backend, al
 
 ---
 
-## Stack
+## stack
 
 **Languages**  
 Java · TypeScript · JavaScript · Python · SQL
@@ -113,7 +113,7 @@ Docker · Docker Compose · GitHub Actions · Linux
 
 ---
 
-## Contact
+## contact
 
 - Portfolio: [lucas-eckert.vercel.app](https://lucas-eckert.vercel.app)
 - LinkedIn: [linkedin.com/in/lucas-ismael-eckert](https://linkedin.com/in/lucas-ismael-eckert)
