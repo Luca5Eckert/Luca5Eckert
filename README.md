@@ -10,6 +10,7 @@ I build backend systems around explicit state flow: durable write paths, event-b
 
 ## currently
 
+- Acting as backend and architecture lead on the **CentroWEG final project**, designing the Hub Core, service boundaries, authentication/authorization model, and OpenAPI contracts for modular project integration.
 - Building **VellumHub**, an event-driven recommendation platform with Kafka, PostgreSQL/pgvector, Redis, and Spring WebFlux.
 - Building **Kairos**, a graph-augmented retrieval engine with local JVM embeddings, pgvector, Neo4j GDS, and Spring AI.
 - Studying distributed systems, recommendation infrastructure, and ML fundamentals through *Designing Data-Intensive Applications* and *Neural Networks and Deep Learning*.
