@@ -12,8 +12,8 @@ My main focus is backend engineering: service boundaries, APIs, messaging, persi
 
 - Backend developer in WEG/CentroWEG-SENAI’s 3,200h Industrial Apprenticeship Program.
 - Leading backend architecture for **Portal Conecta**, a class-wide final project currently in early development, focused on service boundaries, Hub Core design, OpenAPI contracts, RabbitMQ-based messaging, and synchronous/asynchronous communication between modules.
-- Building **VellumHub**, an event-driven recommendation platform with Kafka, PostgreSQL/pgvector, Redis, LangChain4j, and Spring WebFlux.
-- Building **Kairos**, an operational JVM-native graph-augmented retrieval engine with local ONNX embeddings, PostgreSQL/pgvector, Neo4j GDS, Spring AI, and Gemini.
+- Evolving **VellumHub v3 → v4**, a mature event-driven recommendation platform with Kafka, PostgreSQL/pgvector, Redis, LangChain4j, and Spring WebFlux. The next iteration focuses on distributed-systems production concerns such as observability, idempotent consumers, transactional outbox, Flyway migrations, ops/security hardening, and Testcontainers-based integration tests.
+- Refining **Kairos v1**, an operational JVM-native graph-augmented retrieval engine with PostgreSQL/pgvector, Neo4j GDS, ONNX Runtime, Spring AI, and Gemini. Current work focuses on HippoRAG 2.0-style retrieval improvements, including passage-aware weighted PageRank, triple recall, recognition-memory filtering, failed-chunk reprocessing, and retrieval trace persistence.
 - Studying distributed systems, derived data, backend architecture, recommendation systems, and retrieval infrastructure.
 
 ---
@@ -31,9 +31,9 @@ My main focus is backend engineering: service boundaries, APIs, messaging, persi
 
 ## selected systems
 
-### [VellumHub](https://github.com/Luca5Eckert/VellumHub) · active
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub) · mature v3
 
-Event-driven recommendation platform designed to serve personalized recommendations without query-time coupling to source-of-truth services.
+Event-driven recommendation platform currently at v3, evolving toward v4 with a focus on observability, idempotent consumers, transactional outbox, schema migrations, operational security, and integration testing for distributed flows.
 
 VellumHub uses Kafka events to build local read models across catalog, engagement, user, and recommendation boundaries. Recommendation queries are served from derived state instead of synchronously calling upstream services at runtime.
 
@@ -45,7 +45,7 @@ VellumHub uses Kafka events to build local read models across catalog, engagemen
 - Cold-start profile seeding from onboarding preferences
 - Reactive API Gateway with Spring WebFlux, JWT validation, and Redis-backed rate limiting
 - Retry topics and Dead Letter Topics for resilient asynchronous processing
-- Backend architecture around derived data instead of synchronous service chaining
+- Architecture evolution from external ML calls to JVM-native vector search and resilient event-driven state
 
 **Stack**
 
@@ -53,13 +53,13 @@ VellumHub uses Kafka events to build local read models across catalog, engagemen
 
 ---
 
-### [Kairos](https://github.com/Luca5Eckert/Kairos) · operational
+### [Kairos](https://github.com/Luca5Eckert/Kairos) · operational v1
 
 JVM-native graph-augmented retrieval engine that turns documents into a semantic memory graph.
 
 Kairos combines durable PostgreSQL storage, pgvector semantic anchors, local ONNX embeddings, Spring AI/Gemini triple extraction, and Neo4j GDS Personalized PageRank to retrieve context connected by meaning and relationships — not only vector similarity.
 
-The project is not a chatbot wrapper or a basic vector search demo. It is a backend retrieval engine that persists source material, chunks it durably, enriches it with embeddings and factual triples, projects knowledge into a graph, and retrieves context through both semantic search and graph expansion.
+The v1 pipeline is operational: source ingestion, durable chunking, local embeddings, triple extraction, pgvector semantic search, Neo4j graph construction, graph expansion, and PostgreSQL rehydration are already implemented. Current work focuses on HippoRAG 2.0-style retrieval improvements, including passage-aware weighted PageRank, triple recall, recognition-memory filtering, failed-chunk reprocessing, and retrieval trace persistence.
 
 **What it proves**
 
@@ -110,6 +110,7 @@ OpenIT bridges MQTT events from ESP32 hardware with a Spring WebFlux backend, al
 - PostgreSQL, Redis, Neo4j, and pgvector-backed systems
 - Recommendation systems and cold-start strategies
 - Graph-augmented retrieval and semantic memory systems
+- Observability, idempotency, outbox, migrations, and integration testing for distributed flows
 - Reactive APIs with Spring WebFlux
 - API gateways, rate limiting, retries, and Dead Letter Topics
 - Domain-driven design and hexagonal architecture
