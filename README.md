@@ -1,8 +1,8 @@
 # Lucas Eckert
 
-I like building backend systems where state has a clear path — from write models, through events and storage, to reliable application behavior.
+Backend Developer focused on Java/Spring, event-driven systems, and data-intensive backend infrastructure for recommendation and retrieval systems.
 
-**Junior Backend Developer** focused on Java/Spring, event-driven systems, distributed JVM services, and backend infrastructure for recommendations and retrieval.
+I build backend systems where state has an explicit lifecycle — from write models and domain events to local read models, storage, and reliable application behavior.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [GitHub](https://github.com/Luca5Eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -10,13 +10,13 @@ I like building backend systems where state has a clear path — from write mode
 
 ## Currently
 
-Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** (3,200h) in Systems Development, with a path toward internal IT roles at WEG after completion.
+Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Systems Development.
 
-- Leading backend architecture for **Portal Conecta**, a class-wide final project in early development — focused on Hub Core design, service boundaries, OpenAPI contracts, RabbitMQ-based messaging, and synchronous/asynchronous module integration.
-- Evolving **VellumHub v3 → v4**: adding observability, idempotent consumers, transactional outbox, Flyway migrations, ops/security hardening, and Testcontainers-based distributed-flow tests.
-- Refining **Kairos v1**: rebuilding retrieval toward HippoRAG 2.0 — passage-aware weighted PageRank, recognition memory filtering, triple recall, and retrieval trace persistence.
+- Leading backend architecture for **Portal Conecta**, focused on service boundaries, OpenAPI contracts, RabbitMQ messaging, and synchronous/asynchronous module integration.
+- Evolving **VellumHub v4** with idempotent consumers, transactional outbox, Flyway migrations, observability, correlation IDs, and Testcontainers-based distributed-flow tests.
+- Refining **Kairos v1** toward HippoRAG 2.0-style retrieval: passage-aware weighted PageRank, recognition memory filtering, triple recall, and retrieval trace persistence.
 - Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
-
+  
 ---
 
 ## Selected Systems
