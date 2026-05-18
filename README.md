@@ -14,7 +14,7 @@ Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** (3,200h
 
 - Leading backend architecture for **Portal Conecta**, a class-wide final project in early development — focused on Hub Core design, service boundaries, OpenAPI contracts, RabbitMQ-based messaging, and synchronous/asynchronous module integration.
 - Evolving **VellumHub v3 → v4**: adding observability, idempotent consumers, transactional outbox, Flyway migrations, ops/security hardening, and Testcontainers-based distributed-flow tests.
-- Refining **Kairos v1**: improving retrieval with HippoRAG 2.0-style passage-aware weighted PageRank, triple recall, recognition-memory filtering, failed-chunk reprocessing, and retrieval trace persistence.
+- Refining **Kairos v1**: rebuilding retrieval toward HippoRAG 2.0 — passage-aware weighted PageRank, recognition memory filtering, triple recall, and retrieval trace persistence.
 - Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
 
 ---
@@ -25,17 +25,19 @@ Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** (3,200h
 
 Event-driven recommendation platform designed to serve personalized recommendations without query-time coupling to source-of-truth services.
 
-The architecture centers on a WebFlux API Gateway, separate User/Catalog/Engagement/Recommendation services with service-owned PostgreSQL databases, Kafka-fed local read models, and a pgvector-enabled recommendation database. Recommendations are served from derived state — no synchronous upstream calls at query time.
+Five microservices — gateway, user, catalog, engagement, recommendation — each owning its domain and its database. The central architectural decision is that recommendation-service never calls catalog-service at query time. Instead, it maintains local read models fed by Kafka events: book embeddings, user profile vectors, and pre-joined metadata for low-latency responses.
 
-v3 replaced earlier external ML-service coupling with JVM-native vector search and Kafka-fed read models. v4 focuses on production-grade distributed-systems concerns.
+Recommendations are served from a CTE query over pgvector: ANN search via HNSW over 384-dimensional L2-normalized embeddings generates 200 candidates, reranked with a 70/30 blend of vector distance and popularity score. User profiles are updated incrementally on rating events — each rating is classified as DETRACTOR, NEUTRAL, or PROMOTER (weights −5, +1, +5), and the book embedding is added to the user vector with the corresponding scale, then renormalized. Cold-start is handled by collecting genre preferences at registration, publishing a `create_user_preference` event, and seeding the profile vector before the first recommendation query.
+
+v4 focuses on production-grade distributed-systems concerns: idempotent consumers, transactional outbox, Flyway migrations, correlation ID propagation, and Testcontainers-based integration tests for full distributed flows.
 
 **Demonstrates**
-- Event-Carried State Transfer over Kafka for local recommendation read models
-- JVM-native semantic retrieval with LangChain4j 384-dimensional embeddings and HNSW indexing
-- L2-normalized user and book vectors for calibrated cosine similarity
-- Cold-start profile seeding from onboarding preferences
-- Reactive API Gateway with Spring WebFlux, JWT validation, and Redis-backed rate limiting
-- Kafka retry topics and Dead Letter Topics for resilient asynchronous processing
+- Event-Carried State Transfer over Kafka — five services, each owning its read models
+- Deliberate ownership boundaries: catalog-service as canonical writer of book-progress; engagement-service replicates history via events, never overrides operational state
+- JVM-native semantic retrieval — LangChain4j all-MiniLM-L6-v2, 384-dim L2-normalized vectors, HNSW indexing
+- Incremental user profile learning from rating signals, with cold-start fallback to popularity ranking
+- Kafka retry topics and Dead Letter Topics — 3 attempts, fixed 3s backoff, DLT as operational signal
+- Reactive API Gateway with Spring WebFlux, JWT validation, and Redis-backed per-route rate limiting
 
 `Java 21 · Spring Boot · Spring WebFlux · Kafka · PostgreSQL · pgvector · Redis · LangChain4j · Docker`
 
@@ -43,25 +45,28 @@ v3 replaced earlier external ML-service coupling with JVM-native vector search a
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos) · operational v1
 
-JVM-native graph-augmented retrieval engine that turns documents into a semantic memory graph.
+JVM-native graph-augmented retrieval engine that turns documents into a semantic memory graph. The idea: *Obsidian where the graph builds itself* — the user feeds the system; Kairos extracts concepts, relations, and semantic structure automatically.
 
-Kairos persists source documents and chunks in PostgreSQL, generates local embeddings with ONNX Runtime, extracts factual subject-predicate-object triples through Spring AI/Gemini, stores semantic vectors in pgvector, and projects concepts, passages, and relationships into Neo4j. At query time, pgvector retrieves semantic anchors, Neo4j GDS Personalized PageRank expands through related concepts, and PostgreSQL rehydrates the final ranked chunks.
+The architecture is a dual store. PostgreSQL/pgvector holds chunk embeddings and concept embeddings for dense retrieval. Neo4j holds the knowledge graph: PhraseNodes, PassageNodes, TRIPLE edges (subject–predicate–object), SYNONYMY edges between semantically equivalent phrases, and CONTEXT edges linking passages to the concepts they contain. At ingestion, each chunk is embedded locally via ONNX Runtime (all-MiniLM-L6-v2, 384 dimensions, no Python sidecar), Gemini Flash extracts factual triples through an OpenIE port, and SYNONYMY edges are created by comparing new phrase embeddings against existing ones — anything above 0.8 cosine similarity gets linked, connecting variants like "backprop" and "backpropagation" automatically.
 
-The goal is retrieval based on relationships between ideas, not only vector proximity.
+At query time, pgvector retrieves semantic anchors in both phrase and passage space, those anchors seed a Neo4j GDS Personalized PageRank run that expands through related concepts and passages, dense retrieval runs in parallel, and results are fused by RRF. Node specificity — modeled as `1 / log(1 + document_frequency)` — prevents generic concepts from dominating propagation.
+
+Current v1 work closes the gap to HippoRAG 2.0: passage-aware weighted PPR, triple recall with recognition memory filtering, per-user graph isolation via OAuth2, and retrieval trace persistence as the foundation for future learning-to-rank.
 
 **Demonstrates**
 - Backend-first retrieval infrastructure — not notebook-based ML experimentation
-- JVM-native embedding pipeline with ONNX Runtime
-- Dual-store architecture with PostgreSQL/pgvector and Neo4j
-- Graph-aware retrieval with Neo4j GDS Personalized PageRank
-- LLM usage isolated to factual triple extraction behind a swappable domain port
-- Hexagonal architecture separating domain, application, infrastructure, and presentation layers
+- JVM-native embedding pipeline with ONNX Runtime — no Python sidecar
+- Dual-store architecture: pgvector for dense retrieval, Neo4j for graph traversal and PPR
+- HippoRAG 2.0-style retrieval: semantic anchors → Personalized PageRank → dense fallback → RRF fusion
+- SYNONYMY edges computed from embedding similarity — lexical variation handled structurally
+- LLM (Gemini Flash) isolated to triple extraction behind a swappable domain port
+- Hexagonal architecture: domain has no framework dependencies; infrastructure implements domain-defined ports
 
 `Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j · Neo4j GDS · Gemini · Docker`
 
 ---
 
-### [OpenIT](https://github.com/Luca5Eckert/OpenIt) · delivered CentroWEG project
+### [OpenIT](https://github.com/Luca5Eckert/OpenIt) · delivered
 
 Reactive IoT parking access-control system where backend-confirmed payment state controls physical access.
 
@@ -80,9 +85,7 @@ OpenIT coordinates ESP32 sensor events, MQTT communication, Node-RED orchestrati
 
 ### [Vinculo](https://github.com/Luca5Eckert/vinculo)
 
-Graph-based social network backend built around Neo4j relationships and modular backend architecture.
-
-Models people, connection requests, accepted bidirectional relationships, posts, and network visualization endpoints. Uses Spring Boot, Neo4j, Spring Security, JWT, Docker, and a DDD/hexagonal module structure.
+Graph-based social network backend built around Neo4j relationships and modular backend architecture. Models people, connection requests, accepted bidirectional relationships, posts, and network visualization endpoints.
 
 **Demonstrates**
 - Neo4j-backed relationship modeling for social graph data
