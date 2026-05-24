@@ -125,6 +125,8 @@ Graph-based social network backend built around Neo4j relationships and modular 
 
 ## Certifications & Coursework
 
+* **Confluent Certified Data Streaming Engineer — Foundations** — data streaming fundamentals, Kafka ecosystem, stream processing, schema management, and event-driven data flow.
+* **Confluent Apache Kafka Fundamentals Accreditation** — Kafka core concepts, producers, consumers, topics, partitions, scalability, availability, and resilient event streaming.
 * **Neo4j Graph Data Science Certification** — graph algorithms, graph projections, and graph-based data analysis.
 * **Neo4j & Generative AI Certification** — knowledge graphs, retrieval workflows, and GenAI integration with graph data.
 * **Neo4j Fundamentals** — graph data modeling, Cypher, and Neo4j core concepts.
