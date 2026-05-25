@@ -1,8 +1,10 @@
 # Lucas Eckert
 
-Backend developer focused on data-intensive backend systems: graph-augmented retrieval engines, event-driven recommendation pipelines, and distributed infrastructure designed around explicit state, derived data, and safe failure handling.
+Backend developer focused on data-intensive backend systems, event-driven architecture, and retrieval infrastructure.
 
-My work sits at the intersection of **backend engineering**, **data modeling**, and **applied ML/AI**. I am interested in how retrieval, embeddings, and knowledge graphs become production backend infrastructure — systems with explicit write models, domain events, local read models, storage boundaries, and observable behavior.
+I build backend systems around explicit state, durable data ownership, asynchronous integration, and observable behavior — from recommendation pipelines and graph-augmented retrieval engines to IoT/payment systems where backend state controls real-world access.
+
+My work sits at the intersection of **backend engineering**, **data modeling**, and **applied ML/AI**. I am especially interested in systems where correctness under partial failure, derived data, retrieval quality, and long-term evolvability matter.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [GitHub](https://github.com/Luca5Eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -12,10 +14,22 @@ My work sits at the intersection of **backend engineering**, **data modeling**, 
 
 Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Systems Development, with current backend work centered on service-oriented architecture, distributed-system reliability, and graph-augmented retrieval.
 
-* Leading backend architecture for **Portal Conecta**, focused on service boundaries, OpenAPI contracts, RabbitMQ messaging, and explicit synchronous/asynchronous integration.
-* Evolving **VellumHub v4** with idempotent consumers, transactional outbox, Flyway migrations, correlation ID propagation, observability, and Testcontainers-based distributed-flow tests.
-* Refining **Kairos v1** toward HippoRAG 2.0-style retrieval: passage-aware weighted PageRank, recognition memory filtering, triple recall, per-user graph isolation, and retrieval trace persistence.
-* Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
+- Leading backend architecture for **Portal Conecta**, focused on service boundaries, OpenAPI contracts, RabbitMQ messaging, and explicit synchronous/asynchronous integration.
+- Evolving **VellumHub v4** with transactional outbox, idempotent consumers, Flyway migrations, correlation ID propagation, observability, and Testcontainers-based distributed-flow tests.
+- Refining **Kairos v1** toward HippoRAG-style retrieval: passage-aware graph propagation, triple recall, recognition filtering, per-user graph isolation, and retrieval trace persistence.
+- Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
+
+---
+
+## Focus Areas
+
+- Distributed backend systems
+- Event-driven architecture
+- Data modeling and derived read models
+- Graph-augmented retrieval
+- Vector search and recommendation systems
+- Reliability under partial failure
+- Backend quality: tests, boundaries, migrations, observability, and failure-safe flows
 
 ---
 
@@ -23,24 +37,23 @@ Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Syst
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub) · mature v3 · v4 in progress
 
-Event-driven recommendation platform designed to serve personalized recommendations without query-time coupling to source-of-truth services.
+*Recommendations without synchronous coupling.*
 
-Five microservices — gateway, user, catalog, engagement, and recommendation — each own their domain and database. The central architectural decision is that recommendation-service never calls catalog-service at query time. Instead, it maintains local read models fed by Kafka events: book embeddings, user profile vectors, and pre-joined metadata. Every recommendation response is served from local state, removing synchronous cross-service coupling from the hot path.
+Event-driven book recommendation platform implemented as five JVM services: gateway, user, catalog, engagement, and recommendation.
 
-Recommendations are served through a CTE query over pgvector. ANN search via HNSW over 384-dimensional L2-normalized embeddings generates candidate books, then results are reranked with a weighted blend of vector similarity and popularity score. User profiles are updated incrementally from rating events: each rating is classified as `DETRACTOR`, `NEUTRAL`, or `PROMOTER`, the book embedding is scaled accordingly, added to the user vector, and renormalized.
+The core architectural decision is that `recommendation-service` does not call source-of-truth services during the recommendation hot path. Instead, catalog, user, and engagement changes are propagated through Kafka and materialized into recommendation-owned read models: book embeddings, user profile vectors, and pre-joined metadata.
 
-Cold-start is handled at registration. Genre preferences are collected, a `create_user_preference` event is published, and the profile vector is seeded before the first recommendation query.
+This keeps personalized recommendation serving local, fast, and resilient under partial failure.
 
-v4 focuses on production-grade distributed-systems concerns: transactional outbox to prevent database/Kafka dual-write failure, idempotent consumers to make retries and reprocessing safe, Flyway migrations for schema evolution, correlation ID propagation across services, observability, and Testcontainers-based integration tests for full distributed flows, including failure and retry paths.
+**Key engineering decisions**
 
-**Key decisions**
-
-* Read model isolation via Event-Carried State Transfer: recommendation-service owns derived copies of the data it needs to serve recommendations locally.
-* Transactional outbox prevents phantom events and dual-write inconsistencies between the database and Kafka.
-* Idempotent consumers with deduplication keys make Kafka retries, broker restarts, and consumer restarts safe at the application boundary.
-* Incremental user profile learning updates recommendation state from rating signals without relying on batch recomputation.
-* Cold-start is handled at write time through preference seeding, reducing the need for degraded query-time fallback behavior.
-* Service ownership boundaries are explicit: source-of-truth services own writes; downstream services consume events to build derived read models.
+- Read model isolation through Event-Carried State Transfer.
+- Recommendation-owned derived state instead of query-time service coupling.
+- pgvector similarity search over 384-dimensional embeddings.
+- Incremental user-profile learning from rating events classified as `DETRACTOR`, `NEUTRAL`, or `PROMOTER`.
+- Cold-start profile seeding from onboarding genre preferences.
+- Retry-safe asynchronous processing with idempotent consumers, retry topics, and dead-letter topics.
+- v4 work around transactional outbox, schema migrations, correlation IDs, observability, and distributed-flow testing.
 
 `Java 21 · Spring Boot · Spring WebFlux · Kafka · PostgreSQL · pgvector · Redis · LangChain4j · Flyway · Docker · Testcontainers`
 
@@ -48,24 +61,22 @@ v4 focuses on production-grade distributed-systems concerns: transactional outbo
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos) · operational v1
 
-JVM-native graph-augmented retrieval engine that turns documents into a semantic memory graph. The idea: *Obsidian where the graph builds itself* — the user feeds the system; Kairos extracts concepts, relations, and semantic structure automatically.
+*Documents as a self-building semantic memory graph.*
 
-The architecture is a dual store. PostgreSQL/pgvector holds chunk and concept embeddings for dense retrieval. Neo4j holds the knowledge graph: `PhraseNode`s, `PassageNode`s, `TRIPLE` edges (subject–predicate–object), `SYNONYMY` edges between semantically equivalent phrases, and `CONTEXT` edges linking passages to the concepts they contain.
+JVM-native graph-augmented retrieval backend that turns documents into a semantic memory graph.
 
-At ingestion, each chunk is embedded locally via ONNX Runtime using all-MiniLM-L6-v2 384-dimensional embeddings, with no Python sidecar. Gemini Flash extracts factual triples through an OpenIE-style domain port, and `SYNONYMY` edges are created by comparing new phrase embeddings against existing ones, linking lexical variants structurally instead of resolving them through query-time fuzzy matching.
+Kairos combines dense vector search with graph traversal. PostgreSQL/pgvector stores embeddings for dense recall; Neo4j stores passages, concepts, triples, synonymy relations, and semantic graph structure. The system is designed as retrieval infrastructure, not as a chatbot wrapper.
 
-At query time, pgvector retrieves semantic anchors in both phrase and passage space. Those anchors seed a Neo4j GDS Personalized PageRank run that expands through related concepts and passages; dense retrieval runs in parallel; results are fused with Reciprocal Rank Fusion. Node specificity, modeled as `1 / log(1 + document_frequency)`, prevents generic concepts from dominating propagation.
+**Key engineering decisions**
 
-Current v1 work closes the gap to HippoRAG 2.0-style retrieval: passage-aware weighted PPR, triple recall with recognition memory filtering, per-user graph isolation via OAuth2, and retrieval trace persistence as the foundation for future learning-to-rank.
-
-**Key decisions**
-
-* Dual-store architecture separates retrieval concerns: pgvector handles dense vector search; Neo4j handles structural reasoning, concept propagation, and graph traversal.
-* JVM-native embedding pipeline keeps retrieval infrastructure inside the backend runtime instead of depending on a Python sidecar.
-* `SYNONYMY` edges are computed at ingestion time, so lexical variation is represented structurally in the graph.
-* The LLM is isolated behind a swappable domain port for triple extraction, keeping provider-specific integration outside the domain model.
-* Hexagonal architecture keeps the domain layer free of framework dependencies; infrastructure adapters implement domain-defined ports.
-* Per-user graph isolation is treated as a first-class data modeling concern, not an authorization afterthought.
+- Dual-store retrieval architecture: pgvector for dense search, Neo4j for structural reasoning and graph propagation.
+- Local embedding generation with ONNX Runtime using `all-MiniLM-L6-v2` 384-dimensional embeddings.
+- Gemini/Spring AI integration for structured subject-predicate-object triple extraction.
+- Personalized PageRank over graph anchors for concept propagation.
+- Dense passage recall, triple recall, recognition filtering, and Reciprocal Rank Fusion.
+- Ingestion-time synonymy edges, so lexical variation becomes graph structure instead of query-time fuzzy matching.
+- Per-user graph isolation treated as a first-class data-modeling concern.
+- Retrieval trace persistence for observability and future ranking improvements.
 
 `Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j · Neo4j GDS · Gemini · Docker`
 
@@ -73,16 +84,20 @@ Current v1 work closes the gap to HippoRAG 2.0-style retrieval: passage-aware we
 
 ### [OpenIT](https://github.com/Luca5Eckert/OpenIt) · delivered
 
+*Physical access controlled by durable backend state.*
+
 Reactive IoT parking access-control system where backend-confirmed payment state controls physical access.
 
-OpenIT coordinates ESP32 sensor events, MQTT communication, Node-RED orchestration, a Spring WebFlux backend, Mercado Pago Checkout Pro, MySQL persistence, and a React/TypeScript payment terminal. Delivered as a CentroWEG formative project, it covers full end-to-end backend ownership over hardware events, payment state, persistence, real-time updates, and access-control rules.
+OpenIT integrates ESP32 sensors, MQTT, Node-RED orchestration, a Spring WebFlux backend, Mercado Pago Checkout Pro, MySQL persistence, and a React/TypeScript payment terminal. The project covers the full flow from physical sensor events to payment confirmation and gate release.
 
-**Key decisions**
+**Key engineering decisions**
 
-* Gate release is tied to persisted payment confirmation, not optimistic UI state, so physical access is driven by durable backend state.
-* Server-Sent Events propagate payment status without frontend polling and without WebSocket overhead.
-* Node-RED acts as an orchestration layer between IoT events and backend actions, keeping the Spring service free of hardware-specific flow logic.
-* Access and payment concerns are separated through Clean Architecture / DDD-style boundaries.
+- Gate release is tied to persisted backend payment confirmation, not optimistic UI state.
+- ESP32 sensor events are propagated through MQTT and Node-RED.
+- Webhook-based payment confirmation is persisted in MySQL.
+- Server-Sent Events update the frontend payment status without polling.
+- Hardware orchestration is separated from backend business rules.
+- Payment, access control, persistence, and real-time update concerns are isolated.
 
 `Java 21 · Spring Boot · Spring WebFlux · MySQL · MQTT · ESP32 · Node-RED · Mercado Pago · React · TypeScript · Docker`
 
@@ -90,14 +105,18 @@ OpenIT coordinates ESP32 sensor events, MQTT communication, Node-RED orchestrati
 
 ### [Vinculo](https://github.com/Luca5Eckert/vinculo)
 
-Graph-based social network backend built around Neo4j relationships and modular backend architecture. It models people, connection requests, accepted bidirectional relationships, posts, and network visualization endpoints.
+*Social relationships modeled as a graph.*
 
-**Key decisions**
+Graph-based social network backend built around Neo4j relationships and modular backend architecture.
 
-* Neo4j is used deliberately for relationship-first social graph modeling instead of forcing traversal-heavy behavior through relational joins.
-* Connection requests have an explicit lifecycle with accepted/rejected state transitions.
-* Authentication and authorization are handled through JWT and role-based access control.
-* Backend modules are separated across auth, person, connection, request, post, and graph concerns.
+It models people, connection requests, accepted bidirectional relationships, posts, and network visualization endpoints.
+
+**Key engineering decisions**
+
+- Neo4j is used for relationship-first social graph modeling.
+- Connection requests have an explicit lifecycle with accepted/rejected transitions.
+- Authentication and authorization are handled through JWT and role-based access control.
+- Backend modules are separated across auth, person, connection, request, post, and graph concerns.
 
 `Java 21 · Spring Boot · Neo4j · Spring Security · JWT · Docker · Testcontainers`
 
@@ -105,34 +124,43 @@ Graph-based social network backend built around Neo4j relationships and modular 
 
 ## Stack
 
-**Languages** — Java (primary) · SQL · TypeScript · Python · JavaScript · C
+**Languages**  
+Java · SQL · TypeScript · Python · JavaScript · C
 
-**Backend** — Spring Boot · Spring WebFlux · Spring Security · Spring AI · REST APIs · JWT · SSE · JPA/Hibernate · JDBC · OpenAPI/Swagger
+**Backend**  
+Spring Boot · Spring WebFlux · Spring Security · Spring AI · REST APIs · JWT · SSE · JPA/Hibernate · JDBC · OpenAPI/Swagger
 
-**Distributed Systems & Messaging** — Kafka · RabbitMQ · MQTT · Event-Carried State Transfer · Transactional Outbox Pattern · Idempotent Consumers · Retry Topics · Dead Letter Topics · Correlation ID Propagation
+**Distributed Systems & Messaging**  
+Kafka · RabbitMQ · MQTT · Event-Carried State Transfer · Transactional Outbox Pattern · Idempotent Consumers · Retry Topics · Dead Letter Topics · Correlation ID Propagation
 
-**Data & Storage** — PostgreSQL · pgvector · Neo4j · Neo4j GDS · Redis · MySQL · write/read model separation · derived data · schema evolution
+**Data & Storage**  
+PostgreSQL · pgvector · Neo4j · Neo4j GDS · Redis · MySQL · write/read model separation · derived data · schema evolution
 
-**AI & Retrieval** — LangChain4j · ONNX Runtime · Gemini · RAG · Graph-Augmented Retrieval · Vector Search · Personalized PageRank · Reciprocal Rank Fusion · Embeddings
+**AI & Retrieval**  
+LangChain4j · ONNX Runtime · Gemini · RAG · Graph-Augmented Retrieval · Vector Search · Personalized PageRank · Reciprocal Rank Fusion · Embeddings
 
-**Architecture** — Hexagonal Architecture · DDD · Bounded Contexts · Clean Architecture · Eventual Consistency · CQRS
+**Architecture**  
+Hexagonal Architecture · DDD · Bounded Contexts · Clean Architecture · Eventual Consistency · CQRS
 
-**Infrastructure & Tooling** — Docker · Flyway · GitHub Actions · Maven · Git · Linux · Testcontainers
+**Infrastructure & Tooling**  
+Docker · Flyway · GitHub Actions · Maven · Git · Linux · Testcontainers
 
-**Testing** — JUnit 5 · Mockito · Testcontainers · JaCoCo
+**Testing**  
+JUnit 5 · Mockito · Testcontainers · JaCoCo
 
 ---
 
 ## Certifications & Coursework
 
-* **Confluent Certified Data Streaming Engineer — Foundations** — data streaming fundamentals, Kafka ecosystem, stream processing, schema management, and event-driven data flow.
-* **Confluent Apache Kafka Fundamentals Accreditation** — Kafka core concepts, producers, consumers, topics, partitions, scalability, availability, and resilient event streaming.
-* **Neo4j Graph Data Science Certification** — graph algorithms, graph projections, and graph-based data analysis.
-* **Neo4j & Generative AI Certification** — knowledge graphs, retrieval workflows, and GenAI integration with graph data.
-* **Neo4j Fundamentals** — graph data modeling, Cypher, and Neo4j core concepts.
-* **AWS Academy Graduate — Cloud Foundations** — cloud computing fundamentals, AWS core services, security, architecture, pricing, and support.
-* **AWS Academy Graduate — Generative AI Foundations** — foundational GenAI concepts and AWS-oriented AI workflows.
-* **Relevant coursework at WEG CentroWEG / SENAI** — API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
+- **Confluent Certified Data Streaming Engineer — Foundations**
+- **Confluent Apache Kafka Fundamentals Accreditation**
+- **Neo4j Graph Data Science Certification**
+- **Neo4j & Generative AI Certification**
+- **Neo4j Fundamentals**
+- **AWS Academy Graduate — Cloud Foundations**
+- **AWS Academy Graduate — Generative AI Foundations**
+
+Relevant coursework at **WEG CentroWEG / SENAI**: API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
 
 ---
 
