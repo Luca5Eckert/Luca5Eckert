@@ -117,7 +117,7 @@ Graph-based social network backend built around Neo4j relationships and modular 
 
 **Architecture** — Hexagonal Architecture · DDD · Bounded Contexts · Clean Architecture · Eventual Consistency · CQRS
 
-**Infrastructure & Tooling** — Docker · Docker Compose · Flyway · GitHub Actions · Maven · Git · Linux · Testcontainers
+**Infrastructure & Tooling** — Docker · Flyway · GitHub Actions · Maven · Git · Linux · Testcontainers
 
 **Testing** — JUnit 5 · Mockito · Testcontainers · JaCoCo
 
