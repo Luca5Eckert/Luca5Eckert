@@ -130,6 +130,7 @@ Graph-based social network backend built around Neo4j relationships and modular 
 * **Neo4j Graph Data Science Certification** — graph algorithms, graph projections, and graph-based data analysis.
 * **Neo4j & Generative AI Certification** — knowledge graphs, retrieval workflows, and GenAI integration with graph data.
 * **Neo4j Fundamentals** — graph data modeling, Cypher, and Neo4j core concepts.
+* **AWS Academy Graduate — Cloud Foundations** — cloud computing fundamentals, AWS core services, security, architecture, pricing, and support.
 * **AWS Academy Graduate — Generative AI Foundations** — foundational GenAI concepts and AWS-oriented AI workflows.
 * **Relevant coursework at WEG CentroWEG / SENAI** — API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
 
