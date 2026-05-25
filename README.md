@@ -6,7 +6,7 @@ I build backend systems around explicit state, durable data ownership, asynchron
 
 My work sits at the intersection of **backend engineering**, **data modeling**, and **applied ML/AI**. I am especially interested in systems where correctness under partial failure, derived data, retrieval quality, and long-term evolvability matter.
 
-[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [GitHub](https://github.com/Luca5Eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
+[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
 ---
 
@@ -172,4 +172,4 @@ I am interested in environments where correctness under partial failure is taken
 
 Open to junior positions and internships where I can contribute to production backend code from day one.
 
-[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [GitHub](https://github.com/Luca5Eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
+[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
