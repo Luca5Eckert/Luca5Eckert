@@ -2,9 +2,7 @@
 
 Backend developer focused on data-intensive backend systems, event-driven architecture, and retrieval infrastructure.
 
-I build backend systems around explicit state, durable data ownership, asynchronous integration, and observable behavior — from recommendation pipelines and graph-augmented retrieval engines to IoT/payment systems where backend state controls real-world access.
-
-My work sits at the intersection of **backend engineering**, **data modeling**, and **applied ML/AI**. I am especially interested in systems where correctness under partial failure, derived data, retrieval quality, and long-term evolvability matter.
+I build backend systems where correctness under partial failure, derived data, retrieval quality, and long-term evolvability are first-class concerns. My work spans recommendation pipelines, graph-augmented retrieval engines, and IoT/payment systems — tied together by explicit state, durable data ownership, and observable behavior.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -12,24 +10,28 @@ My work sits at the intersection of **backend engineering**, **data modeling**, 
 
 ## Currently
 
-Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Systems Development, with current backend work centered on service-oriented architecture, distributed-system reliability, and graph-augmented retrieval.
+Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Systems Development.
 
-- Leading backend architecture for **Portal Conecta**, focused on service boundaries, OpenAPI contracts, RabbitMQ messaging, and explicit synchronous/asynchronous integration.
+**At WEG:**
+
+- Acting as **Tech Lead Backend** for **Portal Conecta**, focused on service boundaries, OpenAPI contracts, RabbitMQ messaging, and explicit synchronous/asynchronous integration.
+
+**Personal projects:**
+
 - Evolving **VellumHub v4** with transactional outbox, idempotent consumers, Flyway migrations, correlation ID propagation, observability, and Testcontainers-based distributed-flow tests.
-- Refining **Kairos v1** toward HippoRAG-style retrieval: passage-aware graph propagation, triple recall, recognition filtering, per-user graph isolation, and retrieval trace persistence.
-- Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
+- Maintaining **Kairos v1** as a functional graph-augmented retrieval engine, with passage-aware graph propagation, triple recall, recognition filtering, per-user graph isolation, and retrieval trace persistence.
+
+Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
 
 ---
 
-## Focus Areas
+## Technical Focus
 
-- Distributed backend systems
-- Event-driven architecture
-- Data modeling and derived read models
-- Graph-augmented retrieval
-- Vector search and recommendation systems
-- Reliability under partial failure
-- Backend quality: tests, boundaries, migrations, observability, and failure-safe flows
+- Java/Spring backend systems
+- Event-driven and data-intensive applications
+- Retrieval and recommendation infrastructure
+- Explicit data ownership, derived state, and local read models
+- Backend reliability, testing, and maintainability
 
 ---
 
@@ -37,7 +39,7 @@ Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Syst
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub) · mature v3 · v4 in progress
 
-*Recommendations without synchronous coupling.*
+**Recommendations without synchronous coupling.**
 
 Event-driven book recommendation platform implemented as five JVM services: gateway, user, catalog, engagement, and recommendation.
 
@@ -59,9 +61,9 @@ This keeps personalized recommendation serving local, fast, and resilient under 
 
 ---
 
-### [Kairos](https://github.com/Luca5Eckert/Kairos) · operational v1
+### [Kairos](https://github.com/Luca5Eckert/Kairos) · functional v1
 
-*Documents as a self-building semantic memory graph.*
+**Documents as a self-building semantic memory graph.**
 
 JVM-native graph-augmented retrieval backend that turns documents into a semantic memory graph.
 
@@ -78,13 +80,13 @@ Kairos combines dense vector search with graph traversal. PostgreSQL/pgvector st
 - Per-user graph isolation treated as a first-class data-modeling concern.
 - Retrieval trace persistence for observability and future ranking improvements.
 
-`Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j · Neo4j GDS · Gemini · Docker`
+`Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j · Neo4j GDS · Gemini · Flyway · Docker`
 
 ---
 
 ### [OpenIT](https://github.com/Luca5Eckert/OpenIt) · delivered
 
-*Physical access controlled by durable backend state.*
+**Physical access controlled by durable backend state.**
 
 Reactive IoT parking access-control system where backend-confirmed payment state controls physical access.
 
@@ -105,7 +107,7 @@ OpenIT integrates ESP32 sensors, MQTT, Node-RED orchestration, a Spring WebFlux 
 
 ### [Vinculo](https://github.com/Luca5Eckert/vinculo)
 
-*Social relationships modeled as a graph.*
+**Social relationships modeled as a graph.**
 
 Graph-based social network backend built around Neo4j relationships and modular backend architecture.
 
@@ -122,7 +124,7 @@ It models people, connection requests, accepted bidirectional relationships, pos
 
 ---
 
-## Stack
+## Technologies
 
 **Languages**  
 Java · SQL · TypeScript · Python · JavaScript · C
@@ -130,37 +132,52 @@ Java · SQL · TypeScript · Python · JavaScript · C
 **Backend**  
 Spring Boot · Spring WebFlux · Spring Security · Spring AI · REST APIs · JWT · SSE · JPA/Hibernate · JDBC · OpenAPI/Swagger
 
-**Distributed Systems & Messaging**  
-Kafka · RabbitMQ · MQTT · Event-Carried State Transfer · Transactional Outbox Pattern · Idempotent Consumers · Retry Topics · Dead Letter Topics · Correlation ID Propagation
-
 **Data & Storage**  
-PostgreSQL · pgvector · Neo4j · Neo4j GDS · Redis · MySQL · write/read model separation · derived data · schema evolution
+PostgreSQL · pgvector · Neo4j · Neo4j GDS · Redis · MySQL
 
-**AI & Retrieval**  
-LangChain4j · ONNX Runtime · Gemini · RAG · Graph-Augmented Retrieval · Vector Search · Personalized PageRank · Reciprocal Rank Fusion · Embeddings
+**Messaging & Integration**  
+Kafka · RabbitMQ · MQTT · Node-RED · Mercado Pago Checkout Pro
+
+**AI & Retrieval Tooling**  
+LangChain4j · ONNX Runtime · Gemini
+
+**Infrastructure & Quality**  
+Docker · Flyway · GitHub Actions · Maven · Git · Linux · JUnit 5 · Mockito · Testcontainers · JaCoCo
+
+---
+
+## Engineering Concepts
+
+**Event-Driven Systems**  
+Event-Carried State Transfer · Transactional Outbox · Idempotent Consumers · Retry Topics · Dead Letter Topics · Correlation ID Propagation · Eventual Consistency · Partial Failure Handling
+
+**Data Modeling & State Ownership**  
+Service-Owned Persistence · Write/Read Model Separation · Derived Data · Local Read Models · Schema Evolution · Data Ownership Boundaries
 
 **Architecture**  
-Hexagonal Architecture · DDD · Bounded Contexts · Clean Architecture · Eventual Consistency · CQRS
+Hexagonal Architecture · Clean Architecture · Domain-Driven Design · Bounded Contexts · CQRS · Service Boundaries · Ports and Adapters
 
-**Infrastructure & Tooling**  
-Docker · Flyway · GitHub Actions · Maven · Git · Linux · Testcontainers
+**Retrieval & Recommendation**  
+RAG · Graph-Augmented Retrieval · Semantic Search · Dense Passage Recall · Triple Recall · Personalized PageRank · Reciprocal Rank Fusion · Recommendation Reranking
 
-**Testing**  
-JUnit 5 · Mockito · Testcontainers · JaCoCo
+**Backend Quality**  
+Automated Testing · Integration Testing · Migration Safety · Observability · Rate Limiting · Failure-Safe Flows
 
 ---
 
 ## Certifications & Coursework
 
-- **Confluent Certified Data Streaming Engineer — Foundations**
-- **Confluent Apache Kafka Fundamentals Accreditation**
-- **Neo4j Graph Data Science Certification**
-- **Neo4j & Generative AI Certification**
-- **Neo4j Fundamentals**
-- **AWS Academy Graduate — Cloud Foundations**
-- **AWS Academy Graduate — Generative AI Foundations**
+Certifications, accreditations, and training badges:
 
-Relevant coursework at **WEG CentroWEG / SENAI**: API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
+- Confluent Certified Data Streaming Engineer — Foundations
+- Confluent Apache Kafka Fundamentals Accreditation
+- Neo4j Graph Data Science Certification
+- Neo4j & Generative AI Certification
+- Neo4j Fundamentals
+- AWS Academy Graduate — Cloud Foundations
+- AWS Academy Graduate — Generative AI Foundations
+
+Relevant coursework at WEG CentroWEG / SENAI: API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
 
 ---
 
@@ -170,6 +187,6 @@ Backend or data-intensive systems engineering roles — ideally in teams working
 
 I am interested in environments where correctness under partial failure is taken seriously, data modeling is a first-class concern, and backend systems are designed to evolve over time.
 
-Open to junior positions and internships where I can contribute to production backend code from day one.
+Open to junior positions and internships where I can contribute to backend codebases and grow through production-oriented engineering work.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
