@@ -2,7 +2,7 @@
 
 Backend developer focused on data-intensive backend systems, event-driven architecture, and retrieval infrastructure.
 
-I build backend systems where correctness under partial failure, derived data, retrieval quality, and long-term evolvability are first-class concerns. My work spans recommendation pipelines, graph-augmented retrieval engines, and IoT/payment systems — tied together by explicit state, durable data ownership, and observable behavior.
+I build backend systems where correctness under partial failure, derived data, retrieval quality, operational visibility, and long-term evolvability are first-class concerns. My work spans recommendation pipelines, graph-augmented retrieval engines, and IoT/payment systems — tied together by explicit state, durable data ownership, and observable behavior.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -18,7 +18,7 @@ Completing WEG's **CentroWEG / SENAI Industrial Apprenticeship Program** in Syst
 
 **Personal projects:**
 
-- Evolving **VellumHub v4** with transactional outbox, idempotent consumers, Flyway migrations, correlation ID propagation, observability, and Testcontainers-based distributed-flow tests.
+- Evolving **VellumHub v4** with transactional outbox, idempotent consumers, Flyway migrations, correlation ID propagation, Micrometer/Prometheus metrics, Grafana dashboards, Loki logs, Tempo traces, alert rules, runbooks, and Testcontainers-based distributed-flow tests.
 - Maintaining **Kairos v1** as a functional graph-augmented retrieval engine, with passage-aware graph propagation, triple recall, recognition filtering, per-user graph isolation, and retrieval trace persistence.
 
 Studying distributed systems and derived data through *Designing Data-Intensive Applications* and applied Java/Spring work.
@@ -31,7 +31,7 @@ Studying distributed systems and derived data through *Designing Data-Intensive 
 - Event-driven and data-intensive applications
 - Retrieval and recommendation infrastructure
 - Explicit data ownership, derived state, and local read models
-- Backend reliability, testing, and maintainability
+- Backend reliability, observability, testing, and maintainability
 
 ---
 
@@ -55,9 +55,11 @@ This keeps personalized recommendation serving local, fast, and resilient under 
 - Incremental user-profile learning from rating events classified as `DETRACTOR`, `NEUTRAL`, or `PROMOTER`.
 - Cold-start profile seeding from onboarding genre preferences.
 - Retry-safe asynchronous processing with idempotent consumers, retry topics, and dead-letter topics.
-- v4 work around transactional outbox, schema migrations, correlation IDs, observability, and distributed-flow testing.
+- Local observability stack with Spring Boot Actuator, Micrometer, Prometheus, Grafana, Loki, Tempo, Grafana Alloy, and OpenTelemetry Java Agent.
+- Custom Kafka, DLT, and business metrics with low-cardinality labels, provisioned dashboards, Prometheus alert rules, and operational runbooks.
+- v4 work around transactional outbox, schema migrations, correlation IDs, observability hardening, and distributed-flow testing.
 
-`Java 21 · Spring Boot · Spring WebFlux · Kafka · PostgreSQL · pgvector · Redis · LangChain4j · Flyway · Docker · Testcontainers`
+`Java 21 · Spring Boot · Spring WebFlux · Kafka · PostgreSQL · pgvector · Redis · LangChain4j · Micrometer · Prometheus · Grafana · Loki · Tempo · OpenTelemetry · Docker · Testcontainers`
 
 ---
 
@@ -138,6 +140,9 @@ PostgreSQL · pgvector · Neo4j · Neo4j GDS · Redis · MySQL
 **Messaging & Integration**  
 Kafka · RabbitMQ · MQTT · Node-RED · Mercado Pago Checkout Pro
 
+**Observability**  
+Spring Boot Actuator · Micrometer · Prometheus · Grafana · Loki · Tempo · Grafana Alloy · OpenTelemetry Java Agent · structured JSON logs · alert rules · runbooks
+
 **AI & Retrieval Tooling**  
 LangChain4j · ONNX Runtime · Gemini
 
@@ -161,7 +166,7 @@ Hexagonal Architecture · Clean Architecture · Domain-Driven Design · Bounded 
 RAG · Graph-Augmented Retrieval · Semantic Search · Dense Passage Recall · Triple Recall · Personalized PageRank · Reciprocal Rank Fusion · Recommendation Reranking
 
 **Backend Quality**  
-Automated Testing · Integration Testing · Migration Safety · Observability · Rate Limiting · Failure-Safe Flows
+Automated Testing · Integration Testing · Migration Safety · Observability · Metrics · Distributed Tracing · Structured Logging · Rate Limiting · Failure-Safe Flows
 
 ---
 
