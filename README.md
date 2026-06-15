@@ -6,8 +6,6 @@ I build backend systems where things still work correctly when parts of the infr
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Luca5Eckert&show_icons=true&theme=default&hide_border=true)
-
 ---
 
 ## Currently
