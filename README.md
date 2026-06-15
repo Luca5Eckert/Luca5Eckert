@@ -44,15 +44,22 @@ Maintaining Kairos as a functional graph-augmented retrieval engine with passage
 
 **Problem:** RAG systems that rely only on dense vector search lose structural relationships between concepts. A passage about "machine learning" and one about "gradient descent" are close in embedding space — but the *relationship* between them carries information that flat retrieval discards.
 
-**Decision:** dual-store architecture — PostgreSQL/pgvector for dense recall, Neo4j for structural reasoning. At ingestion, documents are split into passages, embedded locally via ONNX Runtime (`all-MiniLM-L6-v2`, 384-dim), and processed by Gemini/Spring AI to extract subject-predicate-object triples. Triples become graph edges. Synonymy edges are built at ingestion — lexical variation becomes graph structure rather than a query-time problem.
+**Decision:** dual-store architecture, with each store doing what it's actually good at.
+
+- **PostgreSQL + pgvector** is the source of truth for durable text and semantic similarity. Passage embeddings and triple embeddings live here; dense recall runs against HNSW indexes.
+- **Neo4j + Graph Data Science** stores the structural projection — `Passage` nodes, `PhraseNode` concepts, `CONTAINS` and `TRIPLE` edges. Graph propagation runs here via Personalized PageRank.
+
+Neither store substitutes for the other. Postgres answers "what is semantically close to this query?" Neo4j answers "what else does the graph connect to these anchors?" The retrieval path merges both signals.
+
+At ingestion, documents are split into passages, embedded locally via ONNX Runtime (`all-MiniLM-L6-v2`, 384-dim), and processed by Gemini/Spring AI to extract subject-predicate-object triples. Triples become graph edges persisted in both stores. The embedding model runs fully in-process on the JVM — no Python sidecar.
 
 **Notable decisions:**
-- Personalized PageRank propagates over graph anchors to surface conceptually related passages that dense search would miss
-- Dense recall, triple recall, and recognition filtering merged with Reciprocal Rank Fusion
+- Personalized PageRank propagates over graph anchors to surface conceptually related passages that dense search alone would miss
+- Dense recall, triple recall, and recognition-memory filtering merged with Reciprocal Rank Fusion
 - Per-user graph isolation as a first-class data-modeling decision — not a `WHERE` clause bolted on afterward
 - Retrieval trace persistence for observability and future ranking improvements
 
-**Result:** a retrieval engine that reasons over document structure, not just surface similarity.
+**Result:** a retrieval engine that reasons over document structure, not just surface similarity. 183 tests passing, 69% line coverage.
 
 `Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j · Neo4j GDS · Gemini · Flyway · Docker`
 
@@ -64,17 +71,7 @@ Maintaining Kairos as a functional graph-augmented retrieval engine with passage
 
 **Decision:** gate release is gated on persisted backend payment confirmation. The full flow (ESP32 → MQTT → Node-RED → Spring WebFlux → Mercado Pago webhook → MySQL) must complete and persist before access is granted. Server-Sent Events push payment status to the React/TypeScript terminal without polling.
 
-**Result:** physical access controlled by durable backend state. Payment, access control, persistence, and real-time update concerns isolated into separate layers.
-
 `Java 21 · Spring Boot · Spring WebFlux · MySQL · MQTT · ESP32 · Node-RED · Mercado Pago · React · TypeScript · Docker`
-
----
-
-### [Vinculo](https://github.com/Luca5Eckert/vinculo) — social graph backend
-
-Graph-based social network where relationships are first-class Neo4j edges, not relational join tables. Connection requests have an explicit accepted/rejected lifecycle. Backend modules separated across auth, person, connection, request, post, and graph concerns — JWT auth and role-based access control.
-
-`Java 21 · Spring Boot · Neo4j · Spring Security · JWT · Testcontainers · Docker`
 
 ---
 
