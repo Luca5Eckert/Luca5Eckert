@@ -73,7 +73,7 @@ A personal knowledge backend that retrieves connected ideas, not just text chunk
 
 ---
 
-### [Portal Conecta](https://github.com/Portal-Conecta) - CentroWEG final project
+### Portal Conecta - CentroWEG final project *(private, team project)*
 
 A modular academic platform where the central backend owns identity, academic structure, permissions, integration contracts, and observability.
 
@@ -124,7 +124,7 @@ An IoT parking flow where a physical gate opens only after the backend has confi
 Java - SQL - TypeScript - JavaScript - Python
 
 **Backend & APIs**  
-Spring Boot - Spring WebFlux - Spring Security - Spring Cloud Gateway - JPA/Hibernate
+Spring Boot - Spring MVC - Spring WebFlux - Spring Security - Spring Cloud Gateway - JPA/Hibernate - OpenAPI
 
 **Frontend**  
 React - Next.js - TypeScript
@@ -136,13 +136,16 @@ PostgreSQL - pgvector - Neo4j - Neo4j GDS - Redis - MySQL
 Kafka - RabbitMQ - MQTT
 
 **Observability**  
-Micrometer - Prometheus - Grafana - Loki - Tempo - OpenTelemetry
+Micrometer - Prometheus - Grafana - Loki - Tempo - Alloy - OpenTelemetry
 
 **AI & retrieval**  
 Spring AI - LangChain4j - ONNX Runtime - Gemini
 
 **Quality, delivery & runtime**  
-JUnit 5 - Mockito - Testcontainers - JaCoCo - Flyway - Docker - GitHub Actions
+JUnit 5 - Mockito - Testcontainers - JaCoCo - Maven - Flyway - Docker/Compose - GitHub Actions - Linux
+
+**Cloud**  
+AWS
 
 ---
 
