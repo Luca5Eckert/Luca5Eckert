@@ -11,7 +11,7 @@ Brazil - BRT / UTC-03
 
 ## Proof points
 
-- **Kairos:** latest recorded local run: 183 tests, 69.41% line coverage, 65.97% branch coverage.
+- **Kairos:** latest recorded local run: 204 tests, 84,26% line coverage, 67.97% branch coverage.
 - **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks.
 - **Portal Conecta backend core:** release validation recorded 682 tests, 0 failures, 0 errors; the central backend work also includes API Gateway routing/security, reusable logging, and a Grafana/Loki/Prometheus/Tempo/Alloy observability stack.
 
