@@ -11,7 +11,7 @@ Brazil - BRT / UTC-03
 
 ## Proof points
 
-- **Kairos:** latest recorded local run: 204 tests, 84,26% line coverage, 67.97% branch coverage.
+- **Kairos:** latest recorded local run: 244 tests, 0 failures, 0 errors, 7 Docker/Testcontainers-dependent tests skipped; 86.77% line coverage and 74.54% branch coverage.
 - **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks.
 - **Portal Conecta backend core:** release validation recorded 682 tests, 0 failures, 0 errors; the central backend work also includes API Gateway routing/security, reusable logging, and a Grafana/Loki/Prometheus/Tempo/Alloy observability stack.
 
@@ -67,7 +67,7 @@ A personal knowledge backend that retrieves connected ideas, not just text chunk
 - Authenticated source ingestion resolves ownership from request context, not client-submitted IDs.
 - Graph retrieval returns activated triples as evidence beside ranked chunks.
 
-**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query across semantic candidates and graph-expanded context. The backend has 183 Maven tests passing, 0 failures, 1 skipped, 69.41% line coverage, and 65.97% branch coverage.
+**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query across semantic candidates and graph-expanded context. The backend has 244 Maven tests, 0 failures, 0 errors, and 7 Docker/Testcontainers-dependent tests skipped; JaCoCo reports 86.77% line coverage and 74.54% branch coverage.
 
 `Java 21 - Spring Boot - Spring AI - ONNX Runtime - PostgreSQL - pgvector - Neo4j - Neo4j GDS - Gemini - Flyway - Docker`
 
