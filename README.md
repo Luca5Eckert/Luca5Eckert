@@ -11,8 +11,8 @@ Brazil - BRT / UTC-03
 
 ## Proof points
 
-- **Kairos:** latest recorded local run: 251 tests; 86.77% line coverage and 74.54% branch coverage.
-- **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks.
+- **Kairos:** latest recorded local run: 244 tests executed, 0 failures, 0 errors; 86.77% line coverage and 74.54% branch coverage.
+- **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks; latest consolidated validation: 478 Maven tests passing.
 - **Portal Conecta backend core:** release validation recorded 682 tests, 0 failures, 0 errors; the central backend work also includes API Gateway routing/security, reusable logging, and a Grafana/Loki/Prometheus/Tempo/Alloy observability stack.
 
 ---
@@ -46,7 +46,7 @@ A book recommendation backend that serves personalized results from local, event
 - Gateway-enforced JWT validation, Redis-backed rate limits, and downstream JWT validation.
 - Local observability with Micrometer, Prometheus, Grafana, Loki, Tempo, Alloy, OpenTelemetry, dashboards, alerts, and runbooks.
 
-**Result:** recommendation requests are served from the recommendation database alone, with catalog/user/engagement changes already folded into local projections. The pgvector path measures ~80-120 ms in-JVM versus ~300-500 ms with the previous Python sidecar.
+**Result:** recommendation requests are served from the recommendation database alone, with catalog/user/engagement changes already folded into local projections. The pgvector path measures ~80-120 ms in-JVM versus ~300-500 ms with the previous Python sidecar. Latest consolidated validation: 478 Maven tests passing.
 
 `Java 21 - Spring Boot - Spring WebFlux - Spring Cloud Gateway - Kafka - PostgreSQL - pgvector - Redis - LangChain4j - Micrometer - Prometheus - Grafana - Loki - Tempo - OpenTelemetry - Docker`
 
@@ -67,7 +67,7 @@ A personal knowledge backend that retrieves connected ideas, not just text chunk
 - Authenticated source ingestion resolves ownership from request context, not client-submitted IDs.
 - Graph retrieval returns activated triples as evidence beside ranked chunks.
 
-**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query across semantic candidates and graph-expanded context. The backend has 251 tests; JaCoCo reports 86.77% line coverage and 74.54% branch coverage.
+**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query across semantic candidates and graph-expanded context. The latest local verification executed 244 tests with 0 failures and 0 errors; JaCoCo reports 86.77% line coverage and 74.54% branch coverage.
 
 `Java 21 - Spring Boot - Spring AI - ONNX Runtime - PostgreSQL - pgvector - Neo4j - Neo4j GDS - Gemini - Flyway - Docker`
 
@@ -91,6 +91,8 @@ A modular academic platform where the central backend owns identity, academic st
 - Frontend work was secondary but real: contributed to integration points in the Next.js frontend when backend contracts needed to be reflected in the UI.
 
 **Result:** feature teams could integrate through one central identity/academic-data backend, one gateway boundary, one shared logging package, and one observability stack instead of rebuilding those concerns per module. Hub Core release validation covered 682 tests, 0 failures, 0 errors, and 20 Docker/Testcontainers-dependent tests skipped; API Gateway has 21 source-level test scenarios across routing, security, rate limiting, and trace propagation; `portal-logging` has 50 source-level test scenarios across servlet/reactive access logs, correlation IDs, auto-configuration, and user ID resolution; observability includes 5 telemetry components and 2 provisioned Grafana dashboards.
+
+Individual implementation evidence: [CSV/XLSX user import PR #293](https://github.com/Portal-Conecta/core-backend/pull/293) and [CSV/XLSX class import PR #296](https://github.com/Portal-Conecta/core-backend/pull/296).
 
 `Java 21 - Spring Boot - Spring Security - Spring Cloud Gateway - PostgreSQL - RabbitMQ - OpenAPI - Docker - Grafana - Prometheus - Loki - Tempo - Alloy - OpenTelemetry`
 
