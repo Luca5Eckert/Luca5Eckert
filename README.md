@@ -142,7 +142,7 @@ Micrometer - Prometheus - Grafana - Loki - Tempo - Alloy - OpenTelemetry
 Spring AI - LangChain4j - ONNX Runtime - Gemini
 
 **Quality, delivery & runtime**  
-JUnit 5 - Mockito - Testcontainers - JaCoCo - Maven - Flyway - Docker/Compose - GitHub Actions - Linux
+JUnit 5 - Mockito - Testcontainers - JaCoCo - Maven - GitHub Actions - Qodana - CodeQL - Dependency Review - CycloneDX SBOM - Trivy - Dependabot - Flyway - Docker/Compose - Linux
 
 **Cloud**  
 AWS
