@@ -11,7 +11,7 @@ Brazil - BRT / UTC-03
 
 ## Proof points
 
-- **Kairos:** latest recorded local run: 251 tests; 86.77% line coverage and 74.54% branch coverage.
+- **Kairos:** local verification on 2026-07-29 recorded 262 tests, 0 failures, 0 errors, 9 skipped; 87.15% line and 73.00% branch coverage.
 - **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks.
 - **Portal Conecta backend core:** release validation recorded 682 tests, 0 failures, 0 errors; the central backend work also includes API Gateway routing/security, reusable logging, and a Grafana/Loki/Prometheus/Tempo/Alloy observability stack.
 
@@ -23,7 +23,7 @@ Brazil - BRT / UTC-03
 Acting as backend technical lead on **Portal Conecta**, focused on the central backend: Hub Core, API Gateway, shared logging, observability, service contracts, authentication/authorization, RabbitMQ messaging, and synchronous/asynchronous integration boundaries.
 
 **Personal**  
-Hardening **VellumHub v4** around Kafka contracts, idempotent consumers, transactional outbox, Flyway migrations, tracing, and distributed-flow tests. Maintaining **Kairos** as a graph-augmented retrieval backend with local JVM embeddings, pgvector, Neo4j GDS, triple recall, and user-scoped graph propagation.
+Hardening **VellumHub v4** around Kafka contracts, idempotent consumers, transactional outbox, Flyway migrations, tracing, and distributed-flow tests. Maintaining **Kairos** as an experimental graph-augmented retrieval backend with local JVM embeddings, pgvector, Neo4j GDS, triple recall, user-scoped graph propagation, and automated quality gates.
 
 ---
 
@@ -54,7 +54,7 @@ A book recommendation backend that serves personalized results from local, event
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos) - graph-augmented retrieval engine
 
-A personal knowledge backend that retrieves connected ideas, not just text chunks that look similar in embedding space.
+An experimental personal-knowledge backend designed to retrieve evidence connected through semantic and graph relationships, not only embedding similarity.
 
 **Problem:** standard vector RAG is good at semantic similarity, but weak when the useful context depends on relationships between passages, concepts, and extracted facts.
 
@@ -62,12 +62,12 @@ A personal knowledge backend that retrieves connected ideas, not just text chunk
 
 **Notable decisions:**
 - Passage recall, triple recall, recognition-memory filtering, and Personalized PageRank.
-- Reciprocal Rank Fusion over semantic and graph signals.
+- GitHub Actions quality gates for Maven verification, JaCoCo, Testcontainers, container health checks, SBOM/Trivy, Qodana, CodeQL, and dependency review.
 - User-scoped graph modeling as a first-class constraint, not a late `WHERE` clause.
 - Authenticated source ingestion resolves ownership from request context, not client-submitted IDs.
 - Graph retrieval returns activated triples as evidence beside ranked chunks.
 
-**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query across semantic candidates and graph-expanded context. The backend has 251 tests; JaCoCo reports 86.77% line coverage and 74.54% branch coverage.
+**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query semantic candidates and graph-expanded context. Local verification on 2026-07-29 recorded 262 tests, 0 failures, 0 errors, and 9 skipped; JaCoCo reported 87.15% line and 73.00% branch coverage. The project remains experimental: public failed-chunk recovery, graph rebuild, and formal retrieval evaluation are not implemented.
 
 `Java 21 - Spring Boot - Spring AI - ONNX Runtime - PostgreSQL - pgvector - Neo4j - Neo4j GDS - Gemini - Flyway - Docker`
 
