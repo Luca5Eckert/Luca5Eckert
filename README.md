@@ -161,7 +161,7 @@ Service-owned persistence - write/read model separation - derived data - local r
 Hexagonal Architecture - Clean Architecture - Domain-Driven Design - bounded contexts - CQRS - ports and adapters
 
 **Retrieval & recommendation**  
-RAG - graph-augmented retrieval - dense passage recall - triple recall - recognition memory - Personalized PageRank - Reciprocal Rank Fusion
+RAG - graph-augmented retrieval - dense passage recall - triple recall - recognition memory - Personalized PageRank - retrieval evidence
 
 **Backend quality**  
 Integration testing - migration safety - observability - distributed tracing - structured logging - failure-safe flows
