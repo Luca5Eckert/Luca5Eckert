@@ -1,189 +1,118 @@
 # Lucas Eckert
 
-I build backend systems where state stays correct even when infrastructure is slow, unavailable, or eventually consistent.
+**Backend Developer | Java/Spring | Event-driven and data-intensive systems**
 
-My work is centered on explicit ownership of data, durable write paths, derived read models, observable services, and APIs with clear operational boundaries.
+I build backend systems where state remains correct under partial failure, asynchronous processing, and eventually consistent infrastructure.
 
-[Portfolio](https://lucas-eckert.vercel.app) - [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) - [Email](mailto:lucasismaeleckert@gmail.com)  
-Brazil - BRT / UTC-03
+My work focuses on explicit data ownership, durable write paths, derived read models, observable services, and APIs with clear operational boundaries.
 
----
-
-## Proof points
-
-- **Kairos:** local verification on 2026-07-29 recorded 262 tests, 0 failures, 0 errors, 9 skipped; 87.15% line and 73.00% branch coverage.
-- **VellumHub:** recommendation serving moved from a Python sidecar to in-JVM pgvector, from ~300-500 ms to ~80-120 ms in local benchmarks.
-- **Portal Conecta backend core:** release validation recorded 682 tests, 0 failures, 0 errors; the central backend work also includes API Gateway routing/security, reusable logging, and a Grafana/Loki/Prometheus/Tempo/Alloy observability stack.
+[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)  
+Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 
 ---
 
-## Currently
+## Current role
 
-**At WEG** - CentroWEG / SENAI Industrial Apprenticeship Program, a Brazilian industry-linked technical apprenticeship program connected to WEG and SENAI training.  
-Acting as backend technical lead on **Portal Conecta**, focused on the central backend: Hub Core, API Gateway, shared logging, observability, service contracts, authentication/authorization, RabbitMQ messaging, and synchronous/asynchronous integration boundaries.
+I work at **WEG** as a **Process Technician in Software Development**, within the Integrated Manufacturing Systems area.
 
-**Personal**  
-Hardening **VellumHub v4** around Kafka contracts, idempotent consumers, transactional outbox, Flyway migrations, tracing, and distributed-flow tests. Maintaining **Kairos** as an experimental graph-augmented retrieval backend with local JVM embeddings, pgvector, Neo4j GDS, triple recall, user-scoped graph propagation, and automated quality gates.
+My current work involves developing and integrating internal applications for manufacturing workflow digitalization, with emphasis on backend services, system integration, and maintainable operational boundaries.
 
----
-
-## Projects
-
-### [VellumHub](https://github.com/Luca5Eckert/VellumHub) - event-driven book recommendation
-
-A book recommendation backend that serves personalized results from local, event-fed state instead of calling every source service during the request.
-
-**Problem:** recommendation systems that query catalog, user, and engagement services at serving time create synchronous coupling. One slow source service can degrade the whole recommendation path.
-
-**Decision:** `recommendation-service` does not call upstream services during the hot path. Catalog, user, and engagement changes propagate through Kafka and materialize into recommendation-owned tables: book embeddings, user profile vectors, interacted books, and pre-joined metadata.
-
-**Notable decisions:**
-- Event-Carried State Transfer for local read models.
-- PostgreSQL + pgvector with 384-dimensional embeddings and HNSW cosine search.
-- Incremental user-profile updates from rating events classified as `DETRACTOR`, `NEUTRAL`, or `PROMOTER`.
-- Cold-start profile seeding from onboarding genre preferences.
-- Retry topics and Dead Letter Topics for inspectable async failures.
-- Gateway-enforced JWT validation, Redis-backed rate limits, and downstream JWT validation.
-- Local observability with Micrometer, Prometheus, Grafana, Loki, Tempo, Alloy, OpenTelemetry, dashboards, alerts, and runbooks.
-
-**Result:** recommendation requests are served from the recommendation database alone, with catalog/user/engagement changes already folded into local projections. The pgvector path measures ~80-120 ms in-JVM versus ~300-500 ms with the previous Python sidecar.
-
-`Java 21 - Spring Boot - Spring WebFlux - Spring Cloud Gateway - Kafka - PostgreSQL - pgvector - Redis - LangChain4j - Micrometer - Prometheus - Grafana - Loki - Tempo - OpenTelemetry - Docker`
+Previously, during the CentroWEG/SENAI Industrial Apprenticeship Program, I served as backend technical lead for Portal Conecta, a multi-service platform developed by more than 20 contributors.
 
 ---
 
-### [Kairos](https://github.com/Luca5Eckert/Kairos) - graph-augmented retrieval engine
+## Selected evidence
 
-An experimental personal-knowledge backend designed to retrieve evidence connected through semantic and graph relationships, not only embedding similarity.
-
-**Problem:** standard vector RAG is good at semantic similarity, but weak when the useful context depends on relationships between passages, concepts, and extracted facts.
-
-**Decision:** split retrieval across the stores that match the job. PostgreSQL + pgvector answers "what is semantically close to this query?" over durable text, passage embeddings, triple embeddings, and dense recall. Neo4j + Graph Data Science answers "what else does the graph connect to these anchors?" through `Passage` nodes, `PhraseNode` concepts, `CONTAINS` links, and `TRIPLE` relationships. Gemini is isolated behind Spring AI ports for triple extraction and recognition-memory seed selection; embeddings run locally through ONNX Runtime with `all-MiniLM-L6-v2`.
-
-**Notable decisions:**
-- Passage recall, triple recall, recognition-memory filtering, and Personalized PageRank.
-- GitHub Actions quality gates for Maven verification, JaCoCo, Testcontainers, container health checks, SBOM/Trivy, Qodana, CodeQL, and dependency review.
-- User-scoped graph modeling as a first-class constraint, not a late `WHERE` clause.
-- Authenticated source ingestion resolves ownership from request context, not client-submitted IDs.
-- Graph retrieval returns activated triples as evidence beside ranked chunks.
-
-**Result:** a user can ingest a source, let the system extract triples and build graph structure asynchronously, then query semantic candidates and graph-expanded context. Local verification on 2026-07-29 recorded 262 tests, 0 failures, 0 errors, and 9 skipped; JaCoCo reported 87.15% line and 73.00% branch coverage. The project remains experimental: public failed-chunk recovery, graph rebuild, and formal retrieval evaluation are not implemented.
-
-`Java 21 - Spring Boot - Spring AI - ONNX Runtime - PostgreSQL - pgvector - Neo4j - Neo4j GDS - Gemini - Flyway - Docker`
+- **Portal Conecta:** backend technical leadership across a platform with more than 20 contributors, eight repositories, and five services; the Hub Core recorded **779 passing tests**.
+- **VellumHub:** moved recommendation serving from a Python sidecar to JVM-native embeddings and pgvector, reducing local benchmark latency from approximately **300–500 ms to 80–120 ms**, with **478 Maven tests**.
+- **Kairos:** built a graph-augmented retrieval backend validated by **262 tests**, with **87.15% line coverage** and **73.00% branch coverage**.
 
 ---
 
-### [Portal Conecta](https://github.com/Portal-Conecta) - CentroWEG final project (team project)
+## Selected work
 
-A modular academic platform where the central backend owns identity, academic structure, permissions, integration contracts, and observability.
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub) — Event-Driven Recommendation Platform
 
-**Problem:** if every module keeps its own version of users, courses, classes, rooms, and permissions, the platform drifts into duplicated rules and inconsistent authorization.
+A distributed recommendation backend that serves personalized results entirely from recommendation-owned state instead of querying catalog, user, and engagement services during each request.
 
-**Decision:** build a central **Hub Core** as the official source of truth for shared academic data and authorization rules. Feature services such as Checklist, Seat Map, and Announcements stay outside that core boundary and integrate through explicit HTTP contracts, RabbitMQ events, and the API Gateway.
+- **Architecture:** designed service-owned databases and Kafka-fed read models using Event-Carried State Transfer. Catalog, user, rating, progress, and reaction events are materialized into local recommendation projections.
+- **Serving path:** recommendations use locally stored book embeddings, user-profile vectors, interaction history, and pre-joined metadata, avoiding synchronous fan-out in the request path.
+- **Reliability:** implemented transactional outbox flows, idempotent consumers, retry and dead-letter handling, Flyway migrations, correlation propagation, distributed tracing, and Testcontainers-based validation.
+- **Evidence:** replaced an external Python embedding service with in-JVM embeddings and pgvector HNSW search, reducing local benchmark latency from approximately **300–500 ms to 80–120 ms**. Consolidated validation covers **478 Maven tests**.
 
-**Notable decisions:**
-- Backend team scope centered on Hub Core, API Gateway, `portal-logging`, and observability rather than feature modules owned by other teams.
-- Hub Core is the source of truth for authentication, users, profiles, courses, classes, memberships, rooms, notifications, and contextual authorization.
-- OpenAPI contracts and RabbitMQ event flows make integrations explicit instead of coupling services through shared assumptions.
-- API Gateway centralizes external routing, rate-limit policy, security, error shaping, correlation ID handling, and W3C trace propagation.
-- `portal-logging` extracts servlet/reactive access logging, correlation IDs, user ID resolution, and health/metrics log suppression into a reusable package for services.
-- Observability stack provisions Grafana, Loki, Prometheus, Tempo, and Alloy, with dashboards for Hub Core and JVM/Prometheus runtime metrics.
-- Frontend work was secondary but real: contributed to integration points in the Next.js frontend when backend contracts needed to be reflected in the UI.
-
-**Result:** feature teams could integrate through one central identity/academic-data backend, one gateway boundary, one shared logging package, and one observability stack instead of rebuilding those concerns per module. Hub Core release validation covered 682 tests, 0 failures, 0 errors, and 20 Docker/Testcontainers-dependent tests skipped; API Gateway has 21 source-level test scenarios across routing, security, rate limiting, and trace propagation; `portal-logging` has 50 source-level test scenarios across servlet/reactive access logs, correlation IDs, auto-configuration, and user ID resolution; observability includes 5 telemetry components and 2 provisioned Grafana dashboards.
-
-`Java 21 - Spring Boot - Spring Security - Spring Cloud Gateway - PostgreSQL - RabbitMQ - OpenAPI - Docker - Grafana - Prometheus - Loki - Tempo - Alloy - OpenTelemetry`
+`Java 21 · Spring Boot · Kafka · PostgreSQL · pgvector · Redis · Flyway · OpenTelemetry · Testcontainers · Docker`
 
 ---
 
-### [OpenIT](https://github.com/Luca5Eckert/OpenIt) - IoT access control
+### [Kairos](https://github.com/Luca5Eckert/Kairos) — Graph-Augmented Retrieval Engine
 
-An IoT parking flow where a physical gate opens only after the backend has confirmed and persisted payment state.
+A personal-knowledge backend that combines semantic retrieval with graph-based context expansion to retrieve evidence connected through passages, concepts, and extracted relationships.
 
-**Problem:** IoT payment flows that release a gate based on optimistic UI state create a state gap between what the user sees and what the backend has durably recorded.
+- **Data ownership:** PostgreSQL and pgvector store durable sources, chunks, embeddings, triples, processing state, and retrieval history as the source of truth. Neo4j operates as a derived graph projection.
+- **Retrieval:** combines dense passage recall, triple recall, graph-seed selection, weighted Personalized PageRank, and ranking fusion to support multi-hop context discovery.
+- **AI pipeline:** runs `all-MiniLM-L6-v2` embeddings locally on the JVM through ONNX Runtime and DJL. Gemini is integrated through Spring AI for structured triple extraction and constrained graph-seed selection.
+- **Reliability:** persists ingestion state before asynchronous enrichment, tracks explicit per-chunk progress, and retries failed work idempotently without discarding completed processing.
+- **Evidence:** validated by **262 tests**, Testcontainers, **87.15% line coverage**, **73.00% branch coverage**, container smoke testing, CodeQL, Trivy, SBOM generation, and Terraform-modeled AWS infrastructure.
 
-**Decision:** access release is gated on persisted backend payment confirmation. The flow connects ESP32 sensors, MQTT, Node-RED, Spring WebFlux, Mercado Pago, MySQL, and a React/TypeScript terminal. Server-Sent Events push payment status to the frontend without client polling.
-
-**Notable decisions:**
-- MQTT events from ESP32 devices for vehicle detection.
-- Node-RED as the IoT orchestration bridge.
-- Spring backend as the authority for payment and access state.
-- Mercado Pago integration behind a payment provider port.
-- SSE for unidirectional real-time payment updates.
-- Clean Architecture and bounded backend modules for access and payment.
-
-**Result:** entry is recorded, payment is created, Mercado Pago confirmation updates backend state, and the exit command is sent to Node-RED/MQTT only after confirmed payment.
-
-`Java 21 - Spring Boot - Spring WebFlux - MySQL - MQTT - ESP32 - Node-RED - Mercado Pago - React - TypeScript - Docker`
+`Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j GDS · Gemini · Testcontainers · Terraform`
 
 ---
 
-## Stack
+### [Portal Conecta](https://github.com/Portal-Conecta) — Multi-Service Academic Platform
 
-**Languages**  
-Java - SQL - TypeScript - JavaScript - Python
+A team platform in which a central backend owns identity, academic structure, permissions, integration contracts, and shared operational infrastructure.
 
-**Backend & APIs**  
-Spring Boot - Spring MVC - Spring WebFlux - Spring Security - Spring Cloud Gateway - JPA/Hibernate - OpenAPI
+I served as backend technical lead during the CentroWEG/SENAI final project, developed by more than 20 contributors across eight repositories and five services.
 
-**Frontend**  
-React - Next.js - TypeScript
+- **Service boundaries:** defined the Hub Core as the source of truth for authentication, users, courses, classes, academic memberships, rooms, notifications, and contextual authorization.
+- **Core capabilities:** implemented administrative CSV/XLSX imports for users and classes, including `dryRun`, `REJECT/SKIP` policies, duplicate handling, permission preservation, and reuse of existing domain use cases.
+- **Integration:** established explicit OpenAPI contracts and RabbitMQ event flows between the Hub Core and feature services such as Checklist, Seat Map, and Announcements.
+- **Platform foundation:** owned the WebFlux API Gateway and shared operational infrastructure, including JWT validation, Redis-backed rate limiting, correlation IDs, W3C trace propagation, reusable MVC/WebFlux logging, and observability with Prometheus, Grafana, Loki, Tempo, and Alloy.
+- **Evidence:** the Hub Core recorded **779 passing tests** in a verified Maven execution.
 
-**Data & storage**  
-PostgreSQL - pgvector - Neo4j - Neo4j GDS - Redis - MySQL
+`Java 21 · Spring Boot · Spring Security · Spring Cloud Gateway · PostgreSQL · Redis · RabbitMQ · OpenAPI · OpenTelemetry · Grafana · Loki · Tempo`
 
-**Messaging & integration**  
-Kafka - RabbitMQ - MQTT
+---
+
+## Engineering focus
+
+**Backend and APIs**  
+Java 21 · Spring Boot · Spring MVC · Spring WebFlux · Spring Security · REST · JWT · OpenAPI · Maven
+
+**Data and messaging**  
+PostgreSQL · pgvector · Neo4j GDS · Redis · MySQL · Kafka · RabbitMQ · Flyway
+
+**Distributed systems**  
+Explicit data ownership · Event-Carried State Transfer · derived read models · transactional outbox · idempotent consumers · eventual consistency · retry and dead-letter handling · partial-failure recovery
+
+**Quality and delivery**  
+JUnit 5 · Mockito · Testcontainers · JaCoCo · GitHub Actions · Docker Compose · CodeQL · Trivy · CycloneDX/SBOM
 
 **Observability**  
-Micrometer - Prometheus - Grafana - Loki - Tempo - Alloy - OpenTelemetry
+OpenTelemetry · Micrometer · Prometheus · Grafana · Loki · Tempo · Alloy · structured logging · distributed tracing
 
-**AI & retrieval**  
-Spring AI - LangChain4j - ONNX Runtime - Gemini
+**AI and retrieval**  
+ONNX Runtime · Spring AI · LangChain4j · Gemini · embeddings · vector search · graph-augmented retrieval · Personalized PageRank
 
-**Quality, delivery & runtime**  
-JUnit 5 - Mockito - Testcontainers - JaCoCo - Maven - GitHub Actions - Qodana - CodeQL - Dependency Review - CycloneDX SBOM - Trivy - Dependabot - Flyway - Docker/Compose - Linux
-
-**Cloud**  
-AWS
-
----
-
-## Engineering concepts
-
-**Event-driven systems**  
-Event-Carried State Transfer - transactional outbox - idempotent consumers - retry topics - dead letter topics - correlation ID propagation - eventual consistency - partial failure handling
-
-**Data modeling & ownership**  
-Service-owned persistence - write/read model separation - derived data - local read models - schema evolution - source-of-truth boundaries
-
-**Architecture**  
-Hexagonal Architecture - Clean Architecture - Domain-Driven Design - bounded contexts - CQRS - ports and adapters
-
-**Retrieval & recommendation**  
-RAG - graph-augmented retrieval - dense passage recall - triple recall - recognition memory - Personalized PageRank - retrieval evidence
-
-**Backend quality**  
-Integration testing - migration safety - observability - distributed tracing - structured logging - failure-safe flows
+**Cloud and infrastructure**  
+AWS · Terraform · EC2 · EBS · ECR · VPC · IAM · S3 · SSM
 
 ---
 
 ## Certifications
 
-- Confluent Certified Data Streaming Engineer - Foundations
-- Confluent Apache Kafka Fundamentals Accreditation
-- Neo4j Graph Data Science Certification
-- Neo4j & Generative AI Certification
+- Confluent Data Streaming Engineer — Foundations
+- Apache Kafka Fundamentals Accreditation
+- Neo4j Graph Data Science
+- Neo4j and Generative AI
 - Neo4j Fundamentals
-- AWS Academy - Cloud Foundations
-- AWS Academy - Generative AI Foundations
-
-Coursework through CentroWEG / SENAI: API Programming, Database Implementation, System Architecture, Cloud Computing, and Information Security.
+- AWS Academy Cloud Foundations
+- AWS Academy Generative AI Foundations
 
 ---
 
-## What I'm looking for
+## Professional focus
 
-Backend and data-intensive systems roles where ownership and operational visibility matter: distributed systems, event-driven platforms, retrieval infrastructure, recommendation systems, data pipelines, and applied AI backends.
+I am focused on backend and data-intensive systems where correctness, explicit ownership, asynchronous integration, recoverability, and operational visibility matter.
 
-I am early-career by title, but I am looking for junior roles or internships where I can keep owning backend boundaries, making tradeoffs explicit, and turning complex domain rules into maintainable services.
+My main areas of interest are distributed platforms, event-driven architectures, recommendation systems, retrieval infrastructure, data pipelines, and applied AI backends.
