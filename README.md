@@ -13,7 +13,7 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 
 ## Current role
 
-I work at **WEG** as a **Process Technician in Software Development**, within the Integrated Manufacturing Systems area.
+I work at **WEG** as a **Software Developer**, within the Integrated Manufacturing Systems area.
 
 My current work involves developing and integrating internal applications for manufacturing workflow digitalization, with emphasis on backend services, system integration, and maintainable operational boundaries.
 
