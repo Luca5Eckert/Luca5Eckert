@@ -21,7 +21,7 @@ Recent work includes:
 
 - implementing cross-service functionality spanning frontend, backend, and Excel import/export while preserving compatibility with historical data and existing responses;
 - improving rendering behavior for large forms and refining user-facing workflows without breaking existing system contracts;
-- reviewing changes and deploying application updates through CI/CD to a corporate **Kubernetes QAS environment**;
+- reviewing changes and deploying application updates through CI/CD to a corporate **Kubernetes environment**;
 - creating a geolocation service for position history and last-known-location queries and evaluating IoT telemetry integration constraints for TCP-based trackers;
 - participating in product discovery and backlog refinement for internal quality and audit workflows.
 
@@ -31,7 +31,7 @@ Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I 
 
 ## Selected evidence
 
-- **WEG — Integrated Manufacturing Systems:** hands-on delivery across internal applications, code review, CI/CD, and Kubernetes-based QAS deployment, with work spanning application integration, performance, data compatibility, and manufacturing-domain workflows.
+- **WEG — Integrated Manufacturing Systems:** hands-on delivery across internal applications, code review, CI/CD, and Kubernetes-based deployment, with work spanning application integration, performance, data compatibility, and manufacturing-domain workflows.
 - **Portal Conecta:** backend technical leadership across a platform with more than 20 contributors, eight repositories, and five services; the Hub Core recorded **779 passing tests**.
 - **VellumHub:** moved recommendation serving from a Python sidecar to JVM-native embeddings and pgvector, reducing local benchmark latency from approximately **300–500 ms to 80–120 ms**, with **478 Maven tests**; infrastructure includes Kubernetes, Kustomize, and Argo CD GitOps definitions.
 - **Kairos:** built a graph-augmented retrieval backend validated by **262 tests**, with **87.15% line coverage** and **73.00% branch coverage**, plus Terraform-modeled AWS infrastructure.
