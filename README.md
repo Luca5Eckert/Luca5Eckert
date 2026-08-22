@@ -13,17 +13,20 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 
 ## Current role
 
-I work at **WEG** as a **Software Developer** in the **Integrated Manufacturing Systems** area.
+I work at **WEG** as a **Software Developer** in **Industrial Software Engineering / Integrated Manufacturing Systems**, building and integrating software that supports manufacturing processes.
 
-My current work involves developing and integrating internal applications used in manufacturing workflows, contributing across backend services, frontend integration, data flows, code review, CI/CD, and application delivery to corporate environments.
+My work currently spans backend development, system integration, data flows, frontend integration, code review, testing, and application delivery to corporate Kubernetes environments.
 
 Recent work includes:
 
-- implementing cross-service functionality spanning frontend, backend, and Excel import/export while preserving compatibility with historical data and existing responses;
-- improving rendering behavior for large forms and refining user-facing workflows without breaking existing system contracts;
-- reviewing changes and deploying application updates through CI/CD to a corporate **Kubernetes environment**;
-- creating a geolocation service for position history and last-known-location queries and evaluating IoT telemetry integration constraints for TCP-based trackers;
-- participating in product discovery and backlog refinement for internal quality and audit workflows.
+- **Designed and developed a Java/Spring Boot geolocation service from the ground up**, separating location responsibilities between manufacturing systems. The service exposes REST APIs for position history and last-known-location queries and supports authenticated WebSocket ingestion for tracker telemetry, backed by PostgreSQL, Flyway, JUnit, and Testcontainers.
+- **Optimized large checklist workflows containing around 300 questions**, restructuring item-level state updates and rendering behavior to reduce interaction time from approximately **1.5 s to 45 ms**.
+- Delivered cross-service features across an internal checklist platform built with **React/TypeScript, NestJS/PostgreSQL, and FastAPI/Python**, keeping contracts, database migrations, historical data, and Excel import/export behavior compatible across services.
+- Implemented a **location answer type** supporting GPS capture, interactive map selection, manual coordinates, and local offline persistence, later integrating internal manufacturing locations with an OpenStreetMap fallback.
+- Extended the checklist platform with additional domain-specific question types and reusable entity/user selection flows while preserving behavior across the editor, responder, stored answers, and Excel workflows.
+- Perform code review and application delivery through **CI/CD and Kubernetes**, including deploying the Excel service to production and Checklist features to QAS.
+
+The work sits inside an industrial software engineering team that creates software around manufacturing operations and integrates applications with data originating from manufacturing systems and MES-related flows.
 
 Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I served as backend technical lead for Portal Conecta, a multi-service platform developed by more than 20 contributors.
 
@@ -31,7 +34,7 @@ Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I 
 
 ## Selected evidence
 
-- **WEG — Integrated Manufacturing Systems:** hands-on delivery across internal applications, code review, CI/CD, and Kubernetes-based deployment, with work spanning application integration, performance, data compatibility, and manufacturing-domain workflows.
+- **WEG — Industrial Software Engineering:** designed a Java/Spring Boot geolocation service with REST and authenticated WebSocket ingestion; delivered cross-service functionality across React, NestJS, PostgreSQL, and FastAPI; optimized ~300-question checklist interactions from approximately **1.5 s to 45 ms**; and delivered applications through CI/CD to Kubernetes-based QAS and production environments.
 - **Portal Conecta:** backend technical leadership across a platform with more than 20 contributors, eight repositories, and five services; the Hub Core recorded **779 passing tests**.
 - **VellumHub:** moved recommendation serving from a Python sidecar to JVM-native embeddings and pgvector, reducing local benchmark latency from approximately **300–500 ms to 80–120 ms**, with **478 Maven tests**; infrastructure includes Kubernetes, Kustomize, and Argo CD GitOps definitions.
 - **Kairos:** built a graph-augmented retrieval backend validated by **262 tests**, with **87.15% line coverage** and **73.00% branch coverage**, plus Terraform-modeled AWS infrastructure.
@@ -88,7 +91,7 @@ I served as backend technical lead during the CentroWEG/SENAI final project, dev
 ## Engineering focus
 
 **Backend and APIs**  
-Java 21 · Spring Boot · Spring MVC · Spring WebFlux · Spring Security · REST · JWT · OpenAPI · Maven
+Java 21 · Spring Boot · Spring MVC · Spring WebFlux · Spring Security · NestJS · FastAPI · REST · JWT · OpenAPI · Maven
 
 **Data and messaging**  
 PostgreSQL · pgvector · Neo4j GDS · Redis · MySQL · Kafka · RabbitMQ · Flyway
