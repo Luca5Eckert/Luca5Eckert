@@ -17,12 +17,10 @@ I work at **WEG** as a **Software Developer** in **Industrial Software Engineeri
 
 I participate in product discovery with analysts, then define and implement the technical solution across the services involved. Recent work includes:
 
-- **Reduced an internal organizational lookup flow from 988 ms to 215 ms (-78%)** by removing sequential/N+1-style relationship loading, consolidating database access, and pushing filtering to the database over a directory with approximately **63,000 users, 6,000 sections, and 1,320 departments**. With a warm endpoint cache, recurring responses reach about **30 ms (-97% vs. baseline)**. The change was exercised locally and in Kubernetes-based QAS/production environments and validated against **281 automated tests**.
+- **Reduced an internal organizational lookup flow from 988 ms to 215 ms (-78%)** by removing sequential/N+1-style relationship loading, consolidating database access, and pushing filtering to the database. With a warm endpoint cache, recurring responses reach about **30 ms (-97% vs. baseline)**.
 - **Designed and developed a Java/Spring Boot geolocation service from the ground up** for vehicle/driver tracking workflows. It exposes REST APIs for position history and last-known-location queries and authenticated WebSocket ingestion for tracker telemetry, backed by PostgreSQL, Flyway, JUnit, and Testcontainers.
-- Delivered new checklist capabilities end to end across **React/TypeScript, NestJS/PostgreSQL, and FastAPI/Python**, including location and organizational-structure response types, persistence contracts, validation, PDF output, and Excel import/export compatibility. Real audit flows can contain around **300 questions**.
-- Work through the application delivery cycle in **Kubernetes** and am currently building the Checklist automated testing / **CI/CD pipeline**; I have also deployed the Excel-processing service to production.
-
-The geolocation service is the integration boundary I own. Mobile position publishing from Nexus is being implemented by another system/team, while the authenticated WebSocket path for JMAK-style tracker messages is implemented on the service side and awaits validation with the physical tracker.
+- Delivered new checklist capabilities end to end across **React/TypeScript, NestJS/PostgreSQL, and FastAPI/Python**, including location and organizational-structure response types, persistence contracts, validation, PDF output, and Excel import/export compatibility.
+- Work through the application delivery cycle in **Kubernetes** and am currently building the Checklist automated testing / **CI/CD pipeline**.
 
 Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I served as backend technical lead for Portal Conecta, a multi-service platform developed by more than 20 contributors.
 
