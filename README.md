@@ -4,7 +4,7 @@
 
 Backend developer focused on Java/Spring Boot, performance, and data-intensive systems, with TypeScript/NestJS as a secondary backend stack.
 
-I work in Industrial Software Engineering at WEG, building services and integrations where data modeling, reliability, system integration, and performance matter. Outside work, I build event-driven recommendation infrastructure and graph-augmented retrieval systems.
+I work in Industrial Software Engineering at WEG, building services and integrations where data modeling, reliability, system integration, and performance matter. Outside work, I build event-driven recommendation infrastructure and graph-augmented retrieval systems with reproducible evaluation.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)  
 Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
@@ -14,10 +14,10 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 ## Selected evidence
 
 - **WEG — backend performance:** reduced an organizational lookup from **988 ms to 215 ms (-78%)** by removing sequential/N+1-style relationship loading and pushing hierarchical filtering into PostgreSQL. Four core lookup endpoints went from **2 database queries to 1** across about **63K users**; recurring warm-cache responses reached about **30 ms**.
+- **Kairos — retrieval quality:** improved multi-hop **nDCG@10 from 0.65 to 0.96 (+47.6%)** over vector-only retrieval in a controlled **60-query offline evaluation** using production ONNX embeddings, PostgreSQL/pgvector, and Neo4j GDS Personalized PageRank. Recall@10 was already **1.00 in both modes**, so the result is a ranking-quality gain rather than a recall claim.
+- **VellumHub — recommendation serving:** replaced an external Python recommendation path with JVM-native ranking and pgvector HNSW, reducing a **local benchmark** from approximately **300–500 ms to 80–120 ms**.
 - **WEG — geolocation:** designed and implemented a **Java/Spring Boot** service for driver and vehicle tracking with REST APIs for position history/latest location, authenticated WebSocket telemetry ingestion, PostgreSQL, Flyway, and Testcontainers-backed integration testing.
 - **WEG — engineering productivity:** standardized a three-service local environment with Docker Compose, reducing setup/startup from **5.5 to 2.26 minutes (-59%)**, and introduced automated test gates before build/deployment.
-- **VellumHub:** replaced an external Python recommendation path with JVM-native ranking and pgvector HNSW, reducing a **local benchmark** from approximately **300–500 ms to 80–120 ms**.
-- **Kairos:** combines pgvector dense recall with Neo4j GDS Personalized PageRank and JVM-local ONNX embeddings to retrieve context through both semantic similarity and graph relationships.
 
 ---
 
@@ -55,10 +55,12 @@ A five-service backend shaped around service-owned persistence and Kafka-fed loc
 
 A JVM-native retrieval backend that combines semantic search with graph propagation to recover evidence connected through passages, concepts, and extracted relationships.
 
-- **Data ownership:** PostgreSQL/pgvector keep durable sources, chunks, embeddings, triples, processing state, and retrieval history; Neo4j is a derived graph projection.
-- **Retrieval:** HNSW-backed passage/triple recall feeds graph seeds and weighted Personalized PageRank before ranked passages are hydrated from PostgreSQL.
+- **Measured retrieval quality:** multi-hop nDCG@10 improved from **0.65 to 0.96 (+47.6%)** over vector-only search in a controlled 60-query evaluation; overall nDCG@10 improved from about **0.82 to 0.98 (+18.8%)**.
+- **Evaluation boundary:** production ONNX embeddings, real PostgreSQL/pgvector retrieval, and real Neo4j GDS/PPR; live Gemini recognition is intentionally excluded from the deterministic retrieval-core benchmark.
+- **Continuous evaluation:** a Docker-backed **12-query regression gate runs in CI**, while the full 60-query quality/latency benchmark runs separately on demand and on schedule.
+- **Trade-off:** graph-augmented p95 measured about **418 ms** versus **19 ms** for vector-only retrieval, with Neo4j GDS/PPR at about **401 ms p95**, making graph propagation the next optimization target.
+- **Data ownership:** PostgreSQL/pgvector keep durable sources, chunks, embeddings, triples, processing state, and retrieval history; Neo4j is a rebuildable derived graph projection.
 - **Local inference:** `all-MiniLM-L6-v2` embeddings run inside the JVM through ONNX Runtime, avoiding an external embedding service.
-- **Recovery:** per-chunk processing state makes asynchronous enrichment resumable without discarding already completed work.
 
 `Java 21 · Spring Boot · Spring AI · ONNX Runtime · PostgreSQL · pgvector · Neo4j GDS · Gemini · Testcontainers · Terraform · AWS`
 
