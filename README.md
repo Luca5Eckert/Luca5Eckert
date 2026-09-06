@@ -15,7 +15,7 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 
 - **WEG — backend performance:** reduced an organizational lookup from **988 ms to 215 ms (-78%)** by removing sequential/N+1-style relationship loading and pushing hierarchical filtering into PostgreSQL. Four core lookup endpoints went from **2 database queries to 1** across about **63K users**; recurring warm-cache responses reached about **30 ms**.
 - **Kairos — retrieval quality:** improved multi-hop **nDCG@10 from 0.65 to 0.96 (+47.6%)** over vector-only retrieval in a controlled **60-query offline evaluation** using production ONNX embeddings, PostgreSQL/pgvector, and Neo4j GDS Personalized PageRank. Recall@10 was already **1.00 in both modes**, so the result is a ranking-quality gain rather than a recall claim.
-- **VellumHub — recommendation serving:** replaced an external Python recommendation path with JVM-native ranking and pgvector HNSW, reducing a **local benchmark** from approximately **300–500 ms to 80–120 ms**.
+- **VellumHub — recommendation quality:** built a reproducible model-backed offline benchmark using the production MiniLM embedding path, pgvector, and **120 books / 24 profiles**. The current 70/30 semantic+popularity ranker reached **nDCG@10 0.599 vs 0.066** for popularity-only, while semantic-only reached **1.000**, exposing popularity weighting as the next tuning target rather than hiding the regression.
 - **WEG — geolocation:** designed and implemented a **Java/Spring Boot** service for driver and vehicle tracking with REST APIs for position history/latest location, authenticated WebSocket telemetry ingestion, PostgreSQL, Flyway, and Testcontainers-backed integration testing.
 - **WEG — engineering productivity:** standardized a three-service local environment with Docker Compose, reducing setup/startup from **5.5 to 2.26 minutes (-59%)**, and introduced automated test gates before build/deployment.
 
@@ -45,7 +45,9 @@ A five-service backend shaped around service-owned persistence and Kafka-fed loc
 
 - **Implemented:** service-owned databases, Kafka projections, pgvector/HNSW recommendation serving, gateway JWT enforcement, Redis-backed rate limiting, shared Kafka contracts, Flyway validation, retry/DLT infrastructure, and Kubernetes/Kustomize/Argo CD delivery definitions.
 - **Performance:** moving recommendation retrieval from an external Python path to JVM-native ranking reduced a local benchmark from approximately **300–500 ms to 80–120 ms**.
-- **Current hardening:** transactional outbox, stronger consumer idempotency, production-security tightening, and distributed failure-path validation.
+- **Evaluation:** a reproducible offline harness runs the real `AllMiniLmL6V2EmbeddingModel` path, pgvector/Flyway/Testcontainers, and canonical ranking SQL across **120 books / 24 profiles**. The current 70/30 ranker measured **nDCG@10 0.599 vs 0.066** for popularity-only; semantic-only measured **1.000**, identifying the popularity term as a ranking-quality tuning target.
+- **Evaluation boundary:** these are deterministic synthetic-text offline results, not an online A/B test or production SLA. The reference run records dataset seed/version, model/provider, commit SHA, ranking configuration, raw per-user results, and aggregate Precision/Recall/nDCG/MRR@10.
+- **Current hardening:** transactional outbox, stronger consumer idempotency, production-security tightening, and broader distributed failure-path validation.
 
 `Java 21 · Spring Boot · Kafka · PostgreSQL · pgvector · Redis · Flyway · OpenTelemetry · Testcontainers · Docker · Kubernetes · Kustomize · Argo CD`
 
