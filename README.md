@@ -14,7 +14,7 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 ## Currently focused on
 
 - **WEG — Move / tracking:** validating the JMAK tracker integration in a controlled PoC and tightening the protocol/integration boundary before broader operational use.
-- **WEG — Checklist / platform integration:** hardening the HelpChain alert flow after its integration into `dev`, while current platform work starts WEG Domain foundations for organizational structure, unified login, and centralized access control.
+- **WEG — WEG Domain:** starting the shared organizational-structure, unified-login, and centralized-access foundations intended to become a common platform boundary for internal applications.
 - **VellumHub — delivery guarantees:** moving from measured eventual consistency to stronger Kafka guarantees with idempotent consumers, transactional outbox, safe DLT replay, and a reusable distributed-test harness once a second real context justifies the abstraction.
 - **Kairos — graceful degradation and recovery:** adding dense fallback for Neo4j/GDS outages, rebuild/reconciliation from PostgreSQL, and durable automatic retries for failed chunks.
 
@@ -27,7 +27,7 @@ I work at **WEG** as a **Software Developer** in **Industrial Software Engineeri
 Selected work includes:
 
 - **Backend performance:** organizational lookups suffered from sequential/N+1-style relationship loading, so I moved hierarchical filtering into PostgreSQL and consolidated four core paths from **2 database queries to 1**; response time fell from **988 ms to 215 ms (-78%)** across a base of about **63K users**, with recurring warm-cache responses around **30 ms**.
-- **Geolocation:** mobile and tracker position flows needed one backend boundary, so I designed a **Java/Spring Boot** service with REST history/latest-position APIs, authenticated WebSocket telemetry, PostgreSQL, and Flyway; the service now exposes **2 ingestion paths** behind one boundary, with Testcontainers exercising **3 critical boundaries** end to end: persistence, authentication, and tracker-message processing.
+- **Geolocation:** tracker traffic had to survive the corporate WebSocket path without splitting authentication, persistence, and position APIs across separate services, so I built a **Java/Spring Boot** boundary with REST history/latest-position APIs, authenticated WebSocket ingestion, PostgreSQL, and Flyway; after Kong/APIHub idle timeouts exposed connection fragility, I added periodic pings and validated **7 automated test areas**, keeping the tracker connection active through the idle-timeout path.
 - **Checklist:** new audit inputs had to behave consistently across editing, answering, persistence, PDF, and Excel, so I implemented Location and Organizational Structure across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**; targeted render/state changes also reduced interaction time on large forms from about **1.5 s to 45 ms**.
 - **Engineering productivity:** three services had divergent local setup and validation paths, so I standardized them with Docker Compose and mandatory Jest/Vitest/Pytest gates before build/deployment; environment startup/setup fell from **5.5 to 2.26 minutes (-59%)**.
 
