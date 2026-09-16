@@ -28,7 +28,7 @@ Selected work includes:
 
 - **Backend services & performance:** built a Java/Spring Boot geolocation service with REST/WebSocket integration and optimized organizational lookups from **988 ms to 215 ms (-78%)** across a base of about **63K users**, with recurring warm-cache responses around **30 ms**.
 - **Domain & platform evolution:** contribute to shared organizational-domain and service evolution by mapping legacy behavior, modeling boundaries and migration constraints, introducing schema versioning with Flyway, and preserving compatibility across existing consumers.
-- **Cross-service delivery:** delivered Checklist capabilities across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**, including offline, PDF and Excel flows; targeted state/render changes reduced interaction time on large forms from about **1.5 s to 45 ms**.
+- **Cross-service delivery:** delivered Checklist capabilities across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**, including location, organizational-structure, PDF, and Excel flows; targeted state/render changes reduced interaction time on large forms from about **1.5 s to 45 ms**.
 
 Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I served as backend technical lead for **Portal Conecta**, a multi-service platform developed by more than 20 contributors across eight repositories and five services.
 
@@ -75,14 +75,17 @@ Backend technical leadership on an applied platform developed by **20+ contribut
 **Languages**  
 Java · TypeScript · Python
 
-**Frameworks**  
-Spring Boot · Spring WebFlux · Spring Security · Spring Data JPA · NestJS
+**Backend & web**  
+Spring Boot · Spring WebFlux · Spring Security · Spring Data JPA · NestJS · FastAPI · React
 
-**Storage**  
-PostgreSQL · Redis · Neo4j · pgvector
+**Data & storage**  
+PostgreSQL · MinIO · Dremio · Redis · Neo4j · pgvector
 
-**Messaging**  
-Apache Kafka · RabbitMQ
+**Data orchestration & schema**  
+Apache Airflow · Flyway
+
+**Messaging & integration**  
+Apache Kafka · RabbitMQ · WebSocket
 
 **Infrastructure**  
 Docker · Kubernetes · AWS · Terraform · Kustomize · Argo CD
