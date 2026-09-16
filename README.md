@@ -2,9 +2,9 @@
 
 **Software Developer @ WEG · Java · Spring Boot · Kafka · PostgreSQL**
 
-Backend developer focused on performance, distributed systems, and data-intensive backend engineering.
+Backend developer focused on performance, systems integration, distributed systems, and data-intensive backend engineering.
 
-I work in Industrial Software Engineering at WEG, building services and integrations where data modeling, reliability, system boundaries, and measurable performance matter. Outside work, I build event-driven recommendation infrastructure and graph-augmented retrieval systems with reproducible evaluation.
+I work in Industrial Software Engineering at WEG, evolving services and shared domain boundaries where legacy compatibility, data modeling, reliability, system integration, and measurable performance matter. My work spans discovery and legacy analysis through technical design, implementation, validation, and application delivery. Outside work, I build event-driven recommendation infrastructure and graph-augmented retrieval systems with reproducible evaluation.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)  
 Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
@@ -13,8 +13,8 @@ Jaraguá do Sul, Brazil · BRT / UTC-03 · English B2
 
 ## Currently focused on
 
-- **WEG — Move / tracking:** validating the JMAK tracker integration in a controlled PoC and tightening the protocol/integration boundary before broader operational use.
-- **WEG — WEG Domain:** starting the shared organizational-structure, unified-login, and centralized-access foundations intended to become a common platform boundary for internal applications.
+- **WEG — shared organizational domain:** consolidating behavior and requirements from existing systems, modeling people, organizational structure and access boundaries, and decomposing adoption into cohesive delivery slices instead of a big-bang migration.
+- **WEG — shared service evolution:** designing the next version of an internal file-storage service around legacy compatibility, explicit application/token ownership, storage efficiency, cleaner API boundaries, and controlled migration of existing data.
 - **VellumHub — delivery guarantees:** moving from measured eventual consistency to stronger Kafka guarantees with idempotent consumers, transactional outbox, safe DLT replay, and a reusable distributed-test harness once a second real context justifies the abstraction.
 - **Kairos — graceful degradation and recovery:** adding dense fallback for Neo4j/GDS outages, rebuild/reconciliation from PostgreSQL, and durable automatic retries for failed chunks.
 
@@ -27,9 +27,10 @@ I work at **WEG** as a **Software Developer** in **Industrial Software Engineeri
 Selected work includes:
 
 - **Backend performance:** organizational lookups suffered from sequential/N+1-style relationship loading, so I moved hierarchical filtering into PostgreSQL and consolidated four core paths from **2 database queries to 1**; response time fell from **988 ms to 215 ms (-78%)** across a base of about **63K users**, with recurring warm-cache responses around **30 ms**.
-- **Geolocation:** tracker traffic had to survive the corporate WebSocket path without splitting authentication, persistence, and position APIs across separate services, so I built a **Java/Spring Boot** boundary with REST history/latest-position APIs, authenticated WebSocket ingestion, PostgreSQL, and Flyway; after Kong/APIHub idle timeouts exposed connection fragility, I added periodic pings and validated **7 automated test areas**, keeping the tracker connection active through the idle-timeout path.
+- **Geolocation:** tracker traffic had to survive the corporate WebSocket path without splitting authentication, persistence, and position APIs across separate services, so I built a **Java/Spring Boot** boundary with REST history/latest-position APIs, authenticated WebSocket ingestion, PostgreSQL, Flyway, and automated integration coverage.
+- **Domain and platform evolution:** I help evolve a shared organizational-data boundary by mapping legacy hierarchy, people, application and permission behavior, turning conflicts into explicit requirements, and splitting adoption into incremental functional modules rather than treating the rewrite as one large service migration.
+- **Production service evolution:** I have introduced schema migration control with **Flyway**, evolved notification-preference flows across backend and frontend, improved browser-push lifecycle behavior, and shipped small production changes while preserving existing contracts and consumers.
 - **Checklist:** new audit inputs had to behave consistently across editing, answering, persistence, PDF, and Excel, so I implemented Location and Organizational Structure across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**; targeted render/state changes also reduced interaction time on large forms from about **1.5 s to 45 ms**.
-- **Engineering productivity:** three services had divergent local setup and validation paths, so I standardized them with Docker Compose and mandatory Jest/Vitest/Pytest gates before build/deployment; environment startup/setup fell from **5.5 to 2.26 minutes (-59%)**.
 
 Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I served as backend technical lead for **Portal Conecta**, a multi-service platform developed by more than 20 contributors across eight repositories and five services.
 
