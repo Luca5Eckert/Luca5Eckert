@@ -26,11 +26,9 @@ I work at **WEG** as a **Software Developer** in **Industrial Software Engineeri
 
 Selected work includes:
 
-- **Backend performance:** organizational lookups suffered from sequential/N+1-style relationship loading, so I moved hierarchical filtering into PostgreSQL and consolidated four core paths from **2 database queries to 1**; response time fell from **988 ms to 215 ms (-78%)** across a base of about **63K users**, with recurring warm-cache responses around **30 ms**.
-- **Geolocation:** tracker traffic had to survive the corporate WebSocket path without splitting authentication, persistence, and position APIs across separate services, so I built a **Java/Spring Boot** boundary with REST history/latest-position APIs, authenticated WebSocket ingestion, PostgreSQL, Flyway, and automated integration coverage.
-- **Domain and platform evolution:** I help evolve a shared organizational-data boundary by mapping legacy hierarchy, people, application and permission behavior, turning conflicts into explicit requirements, and splitting adoption into incremental functional modules rather than treating the rewrite as one large service migration.
-- **Production service evolution:** I have introduced schema migration control with **Flyway**, evolved notification-preference flows across backend and frontend, improved browser-push lifecycle behavior, and shipped small production changes while preserving existing contracts and consumers.
-- **Checklist:** new audit inputs had to behave consistently across editing, answering, persistence, PDF, and Excel, so I implemented Location and Organizational Structure across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**; targeted render/state changes also reduced interaction time on large forms from about **1.5 s to 45 ms**.
+- **Backend services & performance:** built a Java/Spring Boot geolocation service with REST/WebSocket integration and optimized organizational lookups from **988 ms to 215 ms (-78%)** across a base of about **63K users**, with recurring warm-cache responses around **30 ms**.
+- **Domain & platform evolution:** contribute to shared organizational-domain and service evolution by mapping legacy behavior, modeling boundaries and migration constraints, introducing schema versioning with Flyway, and preserving compatibility across existing consumers.
+- **Cross-service delivery:** delivered Checklist capabilities across **NestJS/PostgreSQL, React/TypeScript, and FastAPI/Python**, including offline, PDF and Excel flows; targeted state/render changes reduced interaction time on large forms from about **1.5 s to 45 ms**.
 
 Previously, during the **CentroWEG/SENAI Industrial Apprenticeship Program**, I served as backend technical lead for **Portal Conecta**, a multi-service platform developed by more than 20 contributors across eight repositories and five services.
 
