@@ -1,8 +1,8 @@
 # Lucas Eckert
 
-**Software Developer @ WEG · Java / Spring Boot · PostgreSQL · Distributed Systems**
+**Backend Software Developer @ WEG · Java / Spring Boot · Distributed Systems · PostgreSQL · Kafka**
 
-I build backend systems where data access, state flow, integration boundaries, and measurable behavior matter. At WEG, I work on industrial software across performance, systems integration, legacy analysis, and domain evolution. Outside work, I use personal projects to go deeper into event-driven and data-intensive systems.
+I build backend systems where data ownership, state transitions, integration boundaries, and measurable behavior matter. At WEG, I increasingly take problems from legacy discovery and domain modeling through implementation and validation, working across performance, data contracts, integrations, authorization, and migration constraints. Outside work, I use VellumHub and Kairos to go deeper into event-driven consistency, distributed failure modes, and data-intensive retrieval.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -12,7 +12,7 @@ I build backend systems where data access, state flow, integration boundaries, a
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub) — Event-Driven Recommendation Platform
 
-A five-service Java/Spring backend that keeps recommendation serving local through Kafka-fed PostgreSQL/pgvector projections instead of request-time fan-out.
+A five-service Java/Spring backend that keeps recommendation serving local through Kafka-fed PostgreSQL/pgvector projections instead of request-time fan-out, with transition-aware events, retry/DLT handling, pessimistic concurrency control, and distributed validation.
 
 - Repeated reference runs stayed below **0.8 s p95** from interaction to visible ranking, with **260/260 interactions reflected**.
 - After convergence, authenticated recommendation reads measured **16–20 ms p95**, and **60/60** succeeded with User, Catalog, and Engagement intentionally unavailable.
