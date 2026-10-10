@@ -1,8 +1,8 @@
 # Lucas Eckert
 
-**Backend Software Developer @ WEG · Java / Spring Boot · Distributed Systems · PostgreSQL · Kafka**
+**Backend Software Developer · Java / Spring Boot · Distributed & Data-Intensive Systems**
 
-I work across the full lifecycle of backend systems: understanding requirements, choosing architecture, implementing changes, and evaluating results. At WEG, I take practical product and development responsibilities for shared Java/Spring capabilities involving identity, organizational access, integration, data consistency and delivery. Independently, VellumHub and Kairos are substantial engineering systems where I design, implement and benchmark event-driven consistency and graph/vector retrieval trade-offs.
+I design and evolve Java/Spring backend systems with a focus on distributed and data-intensive applications. My engineering work centers on API and service boundaries, domain/data modeling, event-driven integration, consistency and reliability. I evaluate architectural choices through explicit trade-offs, tests and measurable results.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -29,6 +29,10 @@ A JVM-native retrieval engine that keeps relational authority in PostgreSQL/pgve
 **Stack:** Java 21 · Spring Boot · ONNX Runtime · PostgreSQL · pgvector · Neo4j GDS · Personalized PageRank · Testcontainers
 
 ---
+
+## Professional engineering
+
+At **WEG**, I work as a **Software Developer** on shared backend capabilities for industrial applications. My responsibilities span product discovery and technical decisions as well as Java/Spring implementation: organizational identity, scoped authorization, data synchronization, concurrent state and release verification. This is professional delivery evidence, not the definition of my entire technical focus. See the [professional engineering cases](https://lucas-eckert.vercel.app/#professional-work).
 
 ## Current interests
 
