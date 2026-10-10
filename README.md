@@ -2,7 +2,7 @@
 
 **Backend Software Developer @ WEG · Java / Spring Boot · Distributed Systems · PostgreSQL · Kafka**
 
-I build backend systems where data ownership, state transitions, integration boundaries, and measurable behavior matter. At WEG, I increasingly take problems from legacy discovery and domain modeling through implementation and validation, working across performance, data contracts, integrations, authorization, and migration constraints. Outside work, I use VellumHub and Kairos to go deeper into event-driven consistency, distributed failure modes, and data-intensive retrieval.
+I build backend systems where data ownership, state transitions, integration boundaries, and measurable behavior matter. At WEG, I work across concurrency, performance, data synchronization, authentication, and production delivery. Outside work, VellumHub and Kairos are architecture laboratories: I document alternatives, accept/reject explicit consistency and reliability costs, and benchmark whether distributed state or graph retrieval complexity actually pays for itself.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -12,7 +12,7 @@ I build backend systems where data ownership, state transitions, integration bou
 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub) — Event-Driven Recommendation Platform
 
-A five-service Java/Spring backend that keeps recommendation serving local through Kafka-fed PostgreSQL/pgvector projections instead of request-time fan-out, with transition-aware events, retry/DLT handling, pessimistic concurrency control, and distributed validation.
+A five-service Java/Spring backend where domains deploy and scale independently, collaborate through Kafka facts, and materialize state where it is consumed. Recommendation accepts bounded eventual consistency for autonomous reads, while current reading progress stays canonical in Catalog to preserve read-your-write.
 
 - Repeated reference runs stayed below **0.8 s p95** from interaction to visible ranking, with **260/260 interactions reflected**.
 - After convergence, authenticated recommendation reads measured **16–20 ms p95**, and **60/60** succeeded with User, Catalog, and Engagement intentionally unavailable.
@@ -21,7 +21,7 @@ A five-service Java/Spring backend that keeps recommendation serving local throu
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos) — Graph-Augmented Retrieval Engine
 
-A JVM-native retrieval engine that keeps PostgreSQL/pgvector as durable state and uses a rebuildable Neo4j GDS projection for graph propagation.
+A JVM-native retrieval engine that keeps relational authority in PostgreSQL/pgvector and uses Neo4j GDS as a derived graph projection. Local ONNX embeddings, external relational interpretation, recoverable chunk processing, and immutable answer snapshots make the boundaries explicit.
 
 - In a controlled **60-query offline evaluation**, graph augmentation improved multi-hop **nDCG@10 from 0.65 to 0.96 (+47.6%)** over vector-only retrieval.
 - The quality gain has an explicit cost: **418 ms graph p95 vs. 19 ms vector-only**, with a Docker-backed **12-query regression gate** protecting ranking quality in CI.
