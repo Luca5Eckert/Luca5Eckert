@@ -2,7 +2,7 @@
 
 **Backend Software Developer @ WEG · Java / Spring Boot · Distributed Systems · PostgreSQL · Kafka**
 
-I build backend systems where data ownership, state transitions, integration boundaries, and measurable behavior matter. At WEG, I work across concurrency, performance, data synchronization, authentication, and production delivery. Outside work, VellumHub and Kairos are architecture laboratories: I document alternatives, accept/reject explicit consistency and reliability costs, and benchmark whether distributed state or graph retrieval complexity actually pays for itself.
+I work across the full lifecycle of backend systems: understanding requirements, choosing architecture, implementing changes, and evaluating results. At WEG, I take practical product and development responsibilities for shared Java/Spring capabilities involving identity, organizational access, integration, data consistency and delivery. Independently, VellumHub and Kairos are substantial engineering systems where I design, implement and benchmark event-driven consistency and graph/vector retrieval trade-offs.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
