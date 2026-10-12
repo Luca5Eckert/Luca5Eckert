@@ -61,7 +61,7 @@ Kairos is an **experimental retrieval backend**, not a production-ready or indep
 
 ## Additional engineering work
 
-- **[Portal Conecta — Hub Core](https://github.com/Portal-Conecta/core-backend):** Backend technical leadership in a collaborative academic platform. Worked on shared identity and authorization, OpenAPI contracts, service integration, and a WebFlux gateway. This was a **team project** completed during my industrial apprenticeship.
+- **[Portal Conecta](https://github.com/Portal-Conecta/core-backend) — Gateway & Observability:** Backend technical leadership in a collaborative platform developed during my industrial apprenticeship. I built much of the [observability stack](https://github.com/Portal-Conecta/observability) (OpenTelemetry tracing, Grafana, Prometheus, Loki, Tempo, Alloy and cross-service dashboards), developed the [Spring Cloud Gateway/WebFlux edge](https://github.com/Portal-Conecta/api-gateway) (JWT, Redis rate limiting, routing and trace propagation), and implemented shared [MVC/WebFlux structured logging](https://github.com/Portal-Conecta/portal-logging). I also contributed to the [Hub Core](https://github.com/Portal-Conecta/core-backend). This work was collaborative; the observability environment was implemented and documented locally, not verified as production monitoring.
 - **[Trama](https://github.com/Luca5Eckert/trama):** A Go/PostgreSQL modular monolith shaped around the actual production workflow of a small atelier. Models color batches and ordered size runs explicitly, with transactional writes and architectural boundary tests.
 
 ## Technical focus
