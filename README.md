@@ -1,31 +1,34 @@
 # Lucas Eckert
 
-**Backend Software Developer · Java / Spring Boot · Distributed & Data-Intensive Systems**
+**Backend Software Developer · Java / Spring Boot · Software Engineering & Distributed Systems**
 
-I build and evolve backend systems with a focus on how data, state, and responsibilities cross service and persistence boundaries. My work covers APIs, domain modeling, event-driven integration, concurrency, and reliability.
+I design and build backend systems, from understanding the problem and existing constraints to architecture, implementation, integration, and delivery. My main stack is Java/Spring and PostgreSQL; distributed systems, data-intensive applications, and event-driven integration are areas of deeper work.
 
-I start with the problem and its constraints, choose explicit ownership and consistency rules, and validate the result through tests, measurements, and documented trade-offs. Complexity should solve a real problem—not become the goal.
+I aim for engineering proportional to the problem: sometimes a modular monolith is the right choice, sometimes independent services are. I document why, test the boundaries, and measure results rather than using architectural complexity as a credential.
 
 [Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
 ---
 
-## Engineering approach
+## How I approach engineering
 
-- **Boundaries before frameworks.** Decide which domain owns a fact, where it can change, and what other components actually need to know.
-- **Correctness beyond the happy path.** Account for concurrent writes, stale state, partial failures, compatibility, and recovery.
-- **Evidence over adjectives.** Compare alternatives with reproducible tests and benchmarks, report what improved, and name the cost.
+- **Understand before building.** Investigate consumer needs, existing contracts, sources of data, and the reasons behind current behavior.
+- **Choose the right boundaries.** Define domain ownership and favor simpler architecture until independent scaling, deployment, or failure isolation justifies complexity.
+- **Deliver and verify.** Implement, integrate, test, and document changes; distinguish a working component, a deployed application, and actual adoption.
 
 ## Professional engineering
 
-At **WEG**, I work as a **Software Developer** on shared Java/Spring backend capabilities used by industrial applications. My work spans requirements discovery, domain and API design, organizational access rules, authentication, data synchronization, testing, and delivery.
+At **WEG**, I am a **Software Developer** in industrial software engineering. I take end-to-end technical responsibility for evolving a shared Java/Spring domain backend for applications in my section, from consumer discovery and architectural decisions through implementation, data synchronization, testing, and releases. I also contribute improvements to existing production systems developed by other teams.
 
-Two examples of the engineering work:
+The shared backend is being developed as a common reference for identity, organization, and access. I chose a **modular monolith with PostgreSQL** for closely related domains rather than distributing them prematurely. I implemented asymmetric **RS256/JWKS** identity verification for consumers, and designed an evolving authorization model where **feature availability in an organization is separate from user access granted through groups**. Feature-level grants and ecosystem-wide migration are not presented as complete.
 
-- Protected writes across **seven mutable entities** with HTTP conditional requests (ETag/If-Match) and coordinated application/database revisions.
-- Reduced organizational-tree response time from approximately **630 ms to 60–70 ms** in a documented measurement by pushing visibility filters into data access and constructing the response directly.
+Other representative outcomes:
 
-I also work on reconciling batch-imported data with application writes and evolving shared contracts without assuming every consumer can migrate at once. These are professional contributions within a team; the benchmark is not a production latency guarantee.
+- Improved a legacy organizational query from **988 ms to 215 ms (~78%)** in a documented comparison by eliminating sequential reads and filtering in the database.
+- Reduced a critical interaction in a large audit form from approximately **1.5 s to 45 ms** through frontend state/rendering changes.
+- Protected shared writes with conditional requests and PostgreSQL-aligned revisions, and established application release checks on the existing corporate deployment platform.
+
+Those results refer to their specific measured scenarios, not system-wide production SLAs. My earlier geolocation contribution was an initial prototype, not ownership of the current deployed service.
 
 [Professional engineering cases](https://lucas-eckert.vercel.app/#professional-work)
 
