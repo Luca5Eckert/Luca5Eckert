@@ -14,7 +14,15 @@ I favor decisions that can be explained and tested: a modular monolith when simp
 - **Define boundaries:** separate ownership of mutable state from derived projections, and design API/event contracts deliberately.
 - **Verify claims:** use tests, controlled benchmarks, and failure scenarios; distinguish merged code from operational validation.
 
-My professional experience is in backend software development. Internal systems, designs, operational measurements, and employer-specific case studies are intentionally not published in this profile.
+## Professional engineering
+
+As a Software Developer, I work across requirements, architecture, Java/Spring Boot implementation, automated testing, integration, and delivery. I use PostgreSQL and a modular approach to domain boundaries; selected work includes optimistic concurrency (ETag/If-Match, JPA revisions), JWT RS256/JWKS, Airflow/Dremio synchronization, and CI/CD with Docker/Kubernetes.
+
+Two independently measured improvements on existing applications:
+- **988 → 215 ms (~78%)** for a database-query path after query and filtering optimization.
+- **1.5 s → 45 ms (~97%)** for a critical interaction in a large audit workflow, involving React, NestJS, and FastAPI.
+
+These are scoped measurements rather than system-wide performance claims. Employer-owned project names, proprietary topology, confidential configuration and internal identifiers are not disclosed.
 
 ## Open engineering projects
 
