@@ -16,6 +16,9 @@ I favor decisions that can be explained and tested: a modular monolith when simp
 
 ## Professional engineering
 
+Built and operate an observability platform with OpenTelemetry, a decoupled Collector, Loki/Tempo/Prometheus and MinIO, with a Go BFF connecting telemetry APIs to a unified investigation console. Support and evolve industrial applications, diagnosing operational incidents, implementing customer requirements and coordinating expansion to other units. CI/CD verifies behavior and architecture through integration tests, ArchUnit fitness functions and coverage gates.
+
+
 As a Software Developer, I work across requirements, architecture, Java/Spring Boot implementation, automated testing, integration, and delivery. I use PostgreSQL and a modular approach to domain boundaries; selected work includes contextual resource/action authorization with JWT RS256/JWKS and OAuth 2.0 Token Exchange patterns (backend implemented and tested; broader consumer integration pending), optimistic concurrency (ETag/If-Match, JPA/PostgreSQL revisions), Airflow/Dremio synchronization, and CI/CD with Docker/Kubernetes. One verified pipeline dropped from 4m09s to 3m05s (-25.7%) while retaining test and coverage gates.
 
 Three scoped measurements on professional engineering paths:
@@ -35,7 +38,9 @@ These are scoped measurements rather than system-wide performance claims. Employ
 
 **Evidence:** In controlled distributed runs, interaction-to-ranking freshness was **553–751 ms p95**, converged reads **15.98–19.86 ms p95**, and **60/60** reads completed with three upstream services unavailable. All **260/260** expected ranking signals were observed in the reference tests.
 
-**Reliability:** Selected Catalog/Engagement Transactional Outbox streams merged in [#295](https://github.com/Luca5Eckert/VellumHub/pull/295), [#296](https://github.com/Luca5Eckert/VellumHub/pull/296) and [#297](https://github.com/Luca5Eckert/VellumHub/pull/297). [#299](https://github.com/Luca5Eckert/VellumHub/pull/299) then merged transactional consumer idempotency for canonical Book, Reading Progress, Rating and Reaction streams using durable event identities and revision checkpoints. Physical Kafka delivery remains at-least-once; merge does not establish coordinated production cutover, safe DLT replay or universal exactly-once semantics.
+**Security and architecture:** Implemented an OAuth2/OIDC Authorization Server with Authorization Code + PKCE, RS256/JWKS token validation and architecture fitness functions in CI/CD for service boundaries, event contracts and recommendation read autonomy.
+
+**Reliability:** Selected Catalog/Engagement Transactional Outbox streams merged in [#295](https://github.com/Luca5Eckert/VellumHub/pull/295), [#296](https://github.com/Luca5Eckert/VellumHub/pull/296) and [#297](https://github.com/Luca5Eckert/VellumHub/pull/297). [#299](https://github.com/Luca5Eckert/VellumHub/pull/299) then merged transactional consumer idempotency for canonical Book, Reading Progress, Rating and Reaction streams using durable event identities and revision checkpoints. Durable quarantine and ordered consumer recovery are implemented in [#301](https://github.com/Luca5Eckert/VellumHub/pull/301). Physical Kafka delivery remains at-least-once; merge does not establish coordinated production cutover, universal exactly-once semantics.
 
 **Stack:** Java 21 · Spring Boot · Kafka · PostgreSQL/pgvector · Redis · Testcontainers
 
