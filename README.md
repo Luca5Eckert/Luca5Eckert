@@ -1,10 +1,10 @@
 # Lucas Eckert
 
-**Backend Software Developer · Java / Spring Boot · Distributed Systems · Observability**
+**Backend Software Developer · Java / Spring Boot · Distributed & Data-Intensive Systems**
 
-I design backend systems that can be **understood, verified, operated, and changed**. My core is Java/Spring and PostgreSQL; I work with distributed systems, messaging, data-intensive applications, and observability to make correctness and operational behavior visible.
+I build and evolve backend services from problem discovery through design, implementation, testing, and delivery. Java/Spring and PostgreSQL are my core tools; distributed systems, event-driven integration, and data-intensive applications are where I develop deeper expertise.
 
-Influenced by *Designing Data-Intensive Applications* and *A Philosophy of Software Design*, I try to reduce cognitive load, change amplification, and hidden coupling. Short feedback loops connect architecture decisions to tests, reproducible experiments, and telemetry; complexity is a cost to manage, not evidence of sophistication.
+Influenced by *Designing Data-Intensive Applications* and *A Philosophy of Software Design*, I favor clear ownership, manageable complexity, small verification cycles, and evidence-based trade-offs. Tests establish expected behavior; observability helps understand what happens when systems actually run.
 
 [Portfolio & technical writing](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
@@ -17,17 +17,11 @@ Influenced by *Designing Data-Intensive Applications* and *A Philosophy of Softw
 
 ## Professional engineering
 
-In professional industrial software engineering, I contribute to a cross-application observability platform using **OpenTelemetry/Collector, structured logs, Grafana, Loki, Tempo, Prometheus, MinIO, and a Go BFF** for correlated investigation. I support multiple applications and use service/JVM resource signals, errors, and traces to troubleshoot incidents, spot emerging memory pressure, and inform targeted optimizations or cache evaluation. I do not attribute a percentage reduction in detection time or memory use without a measured baseline. CI/CD also checks integration behavior and architectural boundaries with automated tests and fitness functions.
+As a Software Developer in industrial software engineering, I work across requirements, domain modeling, Java/Spring backend implementation, integration, automated tests, delivery, and support. My contributions include shared backend capabilities, PostgreSQL optimization, contextual authorization, optimistic concurrency across APIs and batch processing, and CI/CD verification.
 
+I also work with OpenTelemetry, structured logs, Grafana, Prometheus, Loki and Tempo to investigate behavior across applications, relate incidents to system resources, and support performance and reliability decisions. Observability is one part of the engineering work, not my entire role.
 
-As a Software Developer, I work across requirements, architecture, Java/Spring Boot implementation, automated testing, integration, and delivery. I use PostgreSQL and a modular approach to domain boundaries; selected work includes contextual resource/action authorization with JWT RS256/JWKS and OAuth 2.0 Token Exchange patterns (backend implemented and tested; broader consumer integration pending), optimistic concurrency (ETag/If-Match, JPA/PostgreSQL revisions), Airflow/Dremio synchronization, and CI/CD with Docker/Kubernetes. One verified pipeline dropped from 4m09s to 3m05s (-25.7%) while retaining test and coverage gates.
-
-Three scoped measurements on professional engineering paths:
-- **630 → 60–70 ms (~89–90%)** for a hierarchical query path after reducing repeated data loads.
-- **988 → 215 ms (~78%)** for a separate database-query path after query and filtering optimization.
-- **1.5 s → 45 ms (~97%)** for a critical interaction in a large audit workflow, involving React, NestJS, and FastAPI.
-
-These are scoped measurements rather than system-wide performance claims. Employer-owned project names, proprietary topology, confidential configuration and internal identifiers are not disclosed.
+**Selected measured results:** a hierarchical query path improved from **630 to 60–70 ms**, a separate PostgreSQL lookup from **988 to 215 ms**, and a critical interaction in a large audit flow from **1.5 s to 45 ms**. These figures refer to their respective measured scenarios, not system-wide SLAs. I do not disclose employer-owned product names or proprietary details.
 
 ## Open engineering projects
 
@@ -39,9 +33,9 @@ These are scoped measurements rather than system-wide performance claims. Employ
 
 **Evidence:** In controlled distributed runs, interaction-to-ranking freshness was **553–751 ms p95**, converged reads **15.98–19.86 ms p95**, and **60/60** reads completed with three upstream services unavailable. All **260/260** expected ranking signals were observed in the reference tests.
 
-**Security and architecture:** Merged OAuth2/OIDC Authorization Server, Authorization Code + PKCE, Auth→User provisioning, verified Gateway token relay, RS256/JWKS validation, and architecture fitness functions in CI/CD for boundaries, event contracts, and recommendation read autonomy; final SPA/Google cutover remains separate.
+**Security and architecture:** OAuth2/OIDC with Authorization Code + PKCE, RS256/JWKS, identity provisioning, verified Gateway token relay, and architecture fitness functions protecting service boundaries and distributed behavior.
 
-**Observability:** A versioned local Grafana stack unifies **Micrometer/Prometheus metrics**, **structured JSON logs via Alloy/Loki**, and **OpenTelemetry traces via Alloy/Tempo**, with dashboards, alerts, and operational runbooks. End-to-end ingestion validation and instrumentation of the newer Auth service remain tracked gaps, not completed production claims. [Stack and validation scope](https://github.com/Luca5Eckert/VellumHub/blob/main/docs/OBSERVABILITY.md).
+**Operations:** Instrumented the architecture with **Micrometer, OpenTelemetry and Grafana Stack** to connect service metrics, structured logs and traces to incident diagnosis and reliability decisions. [Technical details](https://github.com/Luca5Eckert/VellumHub/blob/main/docs/OBSERVABILITY.md).
 
 **Reliability:** Selected Catalog/Engagement Transactional Outbox streams merged in [#295](https://github.com/Luca5Eckert/VellumHub/pull/295), [#296](https://github.com/Luca5Eckert/VellumHub/pull/296) and [#297](https://github.com/Luca5Eckert/VellumHub/pull/297). [#299](https://github.com/Luca5Eckert/VellumHub/pull/299) then merged transactional consumer idempotency for canonical Book, Reading Progress, Rating and Reaction streams using durable event identities and revision checkpoints. Durable quarantine and ordered consumer recovery are implemented in [#301](https://github.com/Luca5Eckert/VellumHub/pull/301). Physical Kafka delivery remains at-least-once; merge does not establish coordinated production cutover, universal exactly-once semantics.
 
