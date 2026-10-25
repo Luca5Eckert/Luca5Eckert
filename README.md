@@ -1,79 +1,74 @@
 # Lucas Eckert
 
-Backend developer focused on Java, Spring Boot, event-driven systems, and observability.
+**Backend Software Developer · Java / Spring Boot · Distributed & Data-Intensive Systems**
 
-I work on backend systems where data ownership, state transitions, integration contracts, and failure visibility are explicit.
+I build and evolve backend services from problem discovery through design, implementation, testing, and delivery. Java/Spring and PostgreSQL are my core tools; distributed systems, event-driven integration, and data-intensive applications are where I develop deeper expertise.
 
-[Portfolio](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
+Influenced by *Designing Data-Intensive Applications* and *A Philosophy of Software Design*, I favor clear ownership, manageable complexity, small verification cycles, and evidence-based trade-offs. Tests establish expected behavior; observability helps understand what happens when systems actually run.
 
-## Evidence
+[Portfolio & technical writing](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
-- **Portal Conecta:** backend technical reference for the central Hub Core; one team release was validated by **682 Maven tests with 0 failures and 0 errors**.
-- **VellumHub:** **478 Maven tests passing**; local recommendation benchmark moved from approximately **300-500 ms to 80-120 ms** after replacing a Python sidecar with in-process JVM embeddings and pgvector.
-- **Kairos:** latest local run executed **244 tests with 0 failures and 0 errors**; JaCoCo reports **86.77% line coverage and 74.54% branch coverage**.
+## Engineering approach
 
-The Portal Conecta test total is a team-system result. VellumHub latency is a local project benchmark, not a production SLA. Kairos coverage measures implementation quality, not retrieval relevance.
+- **Keep systems understandable:** define explicit data ownership, useful abstractions, and boundaries that contain change rather than spread it. Prefer a modular monolith or distributed services based on real constraints, not fashion.
+- **Make decisions testable:** encode important invariants with integration tests, Testcontainers, architecture fitness functions, and documented failure experiments. Iterate in small cycles that expose regressions early.
+- **Observe before optimizing:** correlate structured logs, metrics, and distributed traces to infer internal behavior from external signals; use evidence of latency, errors, resource pressure, and event lag to justify a cache, query change, or reliability mechanism.
+- **Report scope and uncertainty:** a CI pass is not a production rollout; a benchmark is not a service-level objective; instrumented does not necessarily mean end-to-end verified.
 
-## Current work
+## Professional engineering
 
-I am completing the WEG/CentroWEG-SENAI Systems Development Apprenticeship Program, combining technical coursework with applied team delivery.
+As a Software Developer in industrial software engineering, I work across requirements, domain modeling, Java/Spring backend implementation, integration, automated tests, delivery, and support. My contributions include shared backend capabilities, PostgreSQL optimization, contextual authorization, optimistic concurrency across APIs and batch processing, and CI/CD verification.
 
-My strongest work is concentrated in:
+I also develop **cross-application observability**: structured JSON events, W3C trace context, service/JVM metrics and correlated investigations through **OpenTelemetry/Collector, Grafana, Prometheus, Loki and Tempo**, with a **Go BFF** for the investigation interface. I use HTTP failures, latency and resource-pressure signals to support incidents and guide measured changes, while keeping identity context validated and telemetry labels low-cardinality. This is an operational engineering responsibility alongside backend design and delivery.
 
-- backend APIs and domain rules;
-- authentication and contextual authorization;
-- service and data ownership boundaries;
-- Kafka and RabbitMQ messaging;
-- API Gateway, structured logging, traces, metrics, and dashboards;
-- PostgreSQL/pgvector and Neo4j-backed retrieval.
+**Selected measured results:** a hierarchical query path improved from **630 to 60–70 ms**, a separate PostgreSQL lookup from **988 to 215 ms**, and a critical interaction in a large audit flow from **1.5 s to 45 ms**. These figures refer to their respective measured scenarios, not system-wide SLAs. I do not disclose employer-owned product names or proprietary details.
 
-## Selected projects
+## Open engineering projects
 
-### [Portal Conecta](https://github.com/Portal-Conecta)
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub) — Event-driven recommendation platform
 
-A modular academic platform whose central backend owns shared identity, academic structure, permissions, service contracts, and operational concerns.
+**Problem:** Serving recommendations by querying multiple upstream services synchronously couples availability and latency to all of them.
 
-**My scope:** Hub Core boundaries, selected domain flows, API Gateway behavior, reusable request logging, RabbitMQ integration, OpenAPI contracts, and Grafana/Loki/Prometheus/Tempo/Alloy observability.
+**Decision:** Five Java/Spring services own their data and collaborate through Kafka domain facts. Recommendation materializes local PostgreSQL/pgvector read models for autonomous reads. Catalog keeps current reading progress canonical for read-your-write; Engagement receives history asynchronously.
 
-**Concrete delivery:** administrative user and class imports in CSV/XLSX with dry-run and `REJECT`/`SKIP` policies, reusing existing use cases to preserve authorization, validation, and domain events.
+**Evidence:** In controlled distributed runs, interaction-to-ranking freshness was **553–751 ms p95**, converged reads **15.98–19.86 ms p95**, and **60/60** reads completed with three upstream services unavailable. All **260/260** expected ranking signals were observed in the reference tests.
 
-[Read the case study](case-studies/portal-conecta.md).
+**Security and architecture:** OAuth2/OIDC with Authorization Code + PKCE, RS256/JWKS, identity provisioning, verified Gateway token relay, and architecture fitness functions protecting service boundaries and distributed behavior.
 
-### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
+**Observability design:** The five Java/Spring application services export **Micrometer/Prometheus metrics**, **JSON container logs collected by Alloy into Loki**, and **OpenTelemetry Java Agent traces forwarded through Alloy to Tempo**. Grafana provides versioned HTTP, JVM/database, Kafka-flow and recommendation-health dashboards, alert rules and incident runbooks. Keeping the three collection paths distinct avoids duplicating metric/log export, while low-cardinality labels and log redaction control diagnostic cost and exposure. The local stack is configured; end-to-end collection verification and newer Auth instrumentation are tracked separately. [Architecture and runbooks](https://github.com/Luca5Eckert/VellumHub/blob/main/docs/OBSERVABILITY.md).
 
-An event-driven recommendation backend where serving reads from recommendation-owned state instead of synchronously calling catalog, user, and engagement services.
+**Reliability:** Selected Catalog/Engagement Transactional Outbox streams merged in [#295](https://github.com/Luca5Eckert/VellumHub/pull/295), [#296](https://github.com/Luca5Eckert/VellumHub/pull/296) and [#297](https://github.com/Luca5Eckert/VellumHub/pull/297). [#299](https://github.com/Luca5Eckert/VellumHub/pull/299) then merged transactional consumer idempotency for canonical Book, Reading Progress, Rating and Reaction streams using durable event identities and revision checkpoints. Durable quarantine and ordered consumer recovery are implemented in [#301](https://github.com/Luca5Eckert/VellumHub/pull/301). Physical Kafka delivery remains at-least-once; merge does not establish coordinated production cutover, universal exactly-once semantics.
 
-**Decision:** propagate upstream changes through Kafka and materialize local PostgreSQL/pgvector read models.
+**Stack:** Java 21 · Spring Boot · Kafka · PostgreSQL/pgvector · Redis · Testcontainers
 
-**Result:** zero synchronous upstream fan-out in the recommendation hot path, 478 passing Maven tests, and a local benchmark improvement from roughly 300-500 ms to 80-120 ms after removing a Python sidecar.
+[Architecture, tests and trade-offs](https://github.com/Luca5Eckert/VellumHub) · [Transactional Outbox article](https://lucas-eckert.vercel.app/en/writing/transactional-outbox-tradeoffs)
 
-`Java 21 · Spring Boot · Kafka · PostgreSQL · pgvector · Redis · OpenTelemetry · Prometheus · Grafana · Loki · Tempo`
+### [Kairos](https://github.com/Luca5Eckert/Kairos) — Graph-augmented retrieval engine
 
-### [Kairos](https://github.com/Luca5Eckert/Kairos)
+**Problem:** Vector similarity can retrieve relevant passages while ranking multi-hop evidence poorly.
 
-A JVM-native graph-augmented retrieval backend combining dense passage recall, triple recall, constrained Recognition Memory, and user-scoped Personalized PageRank.
+**Decision:** PostgreSQL/pgvector owns durable sources and retrieval history; Neo4j GDS is a derived graph projection. Local ONNX embeddings and weighted Personalized PageRank combine semantic anchors with relational propagation.
 
-**Decision:** replace isolated concept candidates with triple-based recognition seeds while keeping graph expansion stable.
+**Evidence:** In a controlled **60-query** offline evaluation, multi-hop **nDCG@10 increased from 0.6498 to 0.9593 (+47.6%)**; retrieval p95 also increased from **19.03 ms to 418.36 ms**. This is a measurable quality/latency trade-off, not a production SLA.
 
-**Result:** retrieval returns ranked chunks plus activated triples as evidence. Latest local verification: 244 tests, 86.77% line coverage, and 74.54% branch coverage.
+**Current limitation:** Reconciliation and full automated graph rebuild/fallback are not yet proven end to end; the system is experimental.
 
-`Java 21 · Spring Boot · ONNX Runtime · PostgreSQL · pgvector · Neo4j GDS · Spring AI · Gemini`
+**Stack:** Java 21 · Spring Boot · PostgreSQL/pgvector · Neo4j GDS · ONNX Runtime
 
-### [OpenIt](https://github.com/Luca5Eckert/OpenIt)
+[Methodology and limitations](https://github.com/Luca5Eckert/Kairos/blob/main/docs/evaluation/retrieval-benchmark.md)
 
-An IoT payment and access-control flow integrating ESP32, MQTT, Node-RED, Spring WebFlux, MySQL, Mercado Pago, and SSE.
+## Collaborative and complementary projects
 
-**Core rule:** the gate opens only after payment confirmation has been persisted and validated by the backend.
+**[Portal Conecta](https://github.com/Portal-Conecta/core-backend):** As a backend technical lead in a collaborative academic project, I worked on the [local Grafana/Prometheus/Loki/Tempo/Alloy observability stack](https://github.com/Portal-Conecta/observability), [Spring Cloud Gateway/WebFlux](https://github.com/Portal-Conecta/api-gateway), correlation IDs, trace propagation, and [reusable structured logging](https://github.com/Portal-Conecta/portal-logging). This is a documented local/academic implementation, not a claim of production monitoring.
 
-## Technical focus
+[Portal Conecta — backend engineering case study](case-studies/portal-conecta.md)
 
-**Backend:** Java 17/21, Spring Boot, Spring MVC, Spring WebFlux, Spring Security, REST, OpenAPI  
-**Data:** PostgreSQL, pgvector, MySQL, Neo4j GDS, Redis  
-**Messaging:** Kafka, RabbitMQ, MQTT  
-**Quality:** JUnit 5, Mockito, Testcontainers, JaCoCo, Maven, Flyway  
-**Operations:** Docker, GitHub Actions, OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Alloy  
-**Retrieval:** ONNX Runtime, Spring AI, Gemini, vector search, graph-augmented retrieval
+**[Trama](https://github.com/Luca5Eckert/trama):** A Go/PostgreSQL modular monolith based on an atelier workflow, with explicit domain invariants and transactional writes.
 
-## What I am looking for
+## Technical interests
 
-Junior backend or software engineering roles where Java, system boundaries, messaging, data modeling, testing, and operational visibility matter.
+**Core:** Java/JVM · Spring Boot · PostgreSQL · domain and API design · concurrency · consistency · distributed systems
+
+**Supporting:** Kafka · Redis · Testcontainers · Docker/Kubernetes · OpenTelemetry · graph/vector retrieval
+
+My [portfolio](https://lucas-eckert.vercel.app) contains longer explanations and articles. All public architectural claims are tied to open projects; private employer implementation details remain private.

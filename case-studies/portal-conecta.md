@@ -1,6 +1,6 @@
 # Portal Conecta - Backend Case Study
 
-Portal Conecta is a modular academic platform developed by multiple teams in the WEG/CentroWEG-SENAI Systems Development Apprenticeship Program.
+Portal Conecta is a modular academic platform developed by multiple teams during a collaborative SENAI/SC Systems Development training program.
 
 My work was concentrated on the central backend and shared platform concerns rather than claiming ownership of every feature module.
 
