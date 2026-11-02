@@ -21,7 +21,7 @@ As a Software Developer in industrial software engineering, I work across requir
 
 I also develop **cross-application observability**: structured JSON events, W3C trace context, service/JVM metrics and correlated investigations through **OpenTelemetry/Collector, Grafana, Prometheus, Loki and Tempo**, with a **Go BFF** for the investigation interface. I use HTTP failures, latency and resource-pressure signals to support incidents and guide measured changes, while keeping identity context validated and telemetry labels low-cardinality. This is an operational engineering responsibility alongside backend design and delivery.
 
-**Selected measured results:** a hierarchical query path improved from **630 to 60–70 ms**, a separate PostgreSQL lookup from **988 to 215 ms**, and a critical interaction in a large audit flow from **1.5 s to 45 ms**. These figures refer to their respective measured scenarios, not system-wide SLAs. I do not disclose employer-owned product names or proprietary details.
+**Verified backend evidence:** a dated Java/Spring delivery validation recorded **1,227 executed tests**, including **180 PostgreSQL integrations**. Contextual authorization and revocable session flows are backed by separate integration-test reports. These are scoped engineering validation results, not user-adoption or production-impact claims. Historical performance estimates are under primary-source review; I do not disclose employer-owned system names or sensitive details.
 
 ## Open engineering projects
 
@@ -69,4 +69,4 @@ I also develop **cross-application observability**: structured JSON events, W3C 
 
 **Supporting:** Kafka · Redis · Testcontainers · Docker/Kubernetes · OpenTelemetry · graph/vector retrieval
 
-My [portfolio](https://lucas-eckert.vercel.app) contains longer explanations and articles. All public architectural claims are tied to open projects; private employer implementation details remain private.
+My [portfolio](https://lucas-eckert.vercel.app) contains longer explanations and articles. Public claims are reviewed against source-backed evidence; detailed open-project claims link to source code, while employer-specific implementation details remain private.
