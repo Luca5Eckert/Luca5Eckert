@@ -10,6 +10,8 @@ I build backend services with **Java, Spring Boot and PostgreSQL**, focusing on 
 
 At **WEG**, I design and develop a shared modular backend for identity and authorization, giving applications reusable authentication contracts and organization-aware access rules.
 
+I created and evolved backend CI/CD validation with PostgreSQL integration tests, ArchUnit architecture rules, static analysis and minimum coverage gates, turning design constraints into repeatable checks.
+
 I also built an **observability platform**: a Kubernetes/OpenTelemetry pipeline deployed in staging for a Java/Spring pilot, plus a Go backend and investigation interface that bring logs, metrics and traces together for service-level diagnosis.
 
 ## Selected projects
@@ -17,7 +19,7 @@ I also built an **observability platform**: a Kubernetes/OpenTelemetry pipeline 
 ### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
 **Event-driven reading and recommendation platform**
 
-I develop a platform where reading activity and preferences feed personalized recommendations. Kafka-fed local read models let recommendation queries work independently of upstream services, a behavior exercised in controlled integration tests. Transactional Outbox and idempotent consumers address publication and redelivery in selected flows; asynchronous projections introduce eventual consistency.
+I develop a platform where reading activity and preferences feed personalized recommendations. Kafka-fed local read models let recommendation queries work independently of upstream services, a behavior exercised in controlled integration tests. Transactional Outbox and idempotent consumers address publication and redelivery in selected flows; asynchronous projections introduce eventual consistency. Architecture fitness functions and distributed tests check the boundaries and failure behavior behind these decisions.
 
 ### [Kairos](https://github.com/Luca5Eckert/Kairos)
 **Hybrid knowledge retrieval backend**
@@ -26,6 +28,7 @@ I develop a Java backend that retrieves knowledge using both semantic similarity
 
 ## How I work
 
-I translate requirements into clear contracts and acceptance criteria, review architectural trade-offs and validate changes with integration tests and CI/CD. AI coding agents support this workflow through versioned context, Git worktrees and human review.
+I turn requirements into specifications and acceptance criteria, and review architectural trade-offs before implementation. I use Orca to orchestrate coding agents in Git worktrees, with versioned context and human review. CI quality gates provide feedback on changes; I remain responsible for reviewing the evidence and accepting the result.
 
 Explore the project repositories for architecture and tests, or the [portfolio](https://lucas-eckert.vercel.app) for longer case studies and technical articles.
+
