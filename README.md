@@ -1,23 +1,34 @@
 # Lucas Eckert
 
-**Backend Software Developer · Java / Spring Boot · Distributed & Data-Intensive Systems**
+**Backend Software Developer · Java & Spring Boot · Distributed Systems**
 
-I build and evolve backend software, from understanding a problem to designing, implementing, testing, and delivering a solution. I'm particularly interested in what makes systems difficult to change: unclear ownership, distributed state, integration boundaries, and the gap between expected and observed behavior.
+I build backend services with **Java, Spring Boot and PostgreSQL**, focusing on how applications share data, enforce access rules and communicate across service boundaries.
 
-Java, Spring Boot, and PostgreSQL are my foundation. Distributed systems, event-driven architectures, and data-intensive applications are areas where I deepen that practice. I prefer choosing an approach for the problem it solves, not for the technologies it introduces.
+[Portfolio & writing](https://lucas-eckert.vercel.app) · [LinkedIn](https://www.linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
 
-[Portfolio & technical writing](https://lucas-eckert.vercel.app) · [LinkedIn](https://linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
+## Engineering work
 
-## Professional experience
+At **WEG**, I design and develop a shared modular backend for identity and authorization, giving applications reusable authentication contracts and organization-aware access rules.
 
-At **WEG**, I develop backend software for industrial applications, from requirements and domain modeling to implementation and validation. My work includes implementing contextual authorization across applications, groups, and organizational hierarchies, as well as HTTP observability with structured logs and OpenTelemetry tracing. A recurring challenge is evolving shared capabilities while preserving the contracts existing applications depend on.
+I created and evolved backend CI/CD validation with PostgreSQL integration tests, ArchUnit architecture rules, static analysis and minimum coverage gates, turning design constraints into repeatable checks.
 
-## Projects that shape my approach
+I also built an **observability platform**: a Kubernetes/OpenTelemetry pipeline deployed in staging for a Java/Spring pilot, plus a Go backend and investigation interface that bring logs, metrics and traces together for service-level diagnosis.
 
-**[VellumHub](https://github.com/Luca5Eckert/VellumHub)** is an event-driven recommendation platform built around independent service boundaries and Kafka-fed read models. In controlled distributed tests, **60/60 authenticated recommendation reads succeeded with three upstream services unavailable**. The project lets me explore how event-driven systems maintain useful behavior through failures, retries, and eventual consistency.
+## Selected projects
 
-**[Kairos](https://github.com/Luca5Eckert/Kairos)** is a hybrid retrieval engine combining vector search with graph-based ranking. In a controlled offline evaluation, **multi-hop nDCG@10 improved from 0.65 to 0.96**. It reflects my interest in making retrieval decisions with measured relevance quality rather than relying on architectural intuition alone.
+### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
+**Event-driven reading and recommendation platform**
 
-I've also worked on **[Portal Conecta](https://github.com/Portal-Conecta/core-backend)**, a collaborative academic platform where I contributed to backend architecture, an API gateway, and observability, and **[Trama](https://github.com/Luca5Eckert/trama)**, a Go/PostgreSQL project exploring modular design and domain boundaries.
+I develop a platform where reading activity and preferences feed personalized recommendations. Kafka-fed local read models let recommendation queries work independently of upstream services, a behavior exercised in controlled integration tests. Transactional Outbox and idempotent consumers address publication and redelivery in selected flows; asynchronous projections introduce eventual consistency. Architecture fitness functions and distributed tests check the boundaries and failure behavior behind these decisions.
 
-The [portfolio](https://lucas-eckert.vercel.app) contains the deeper case studies, technical articles, and methodology behind these projects.
+### [Kairos](https://github.com/Luca5Eckert/Kairos)
+**Hybrid knowledge retrieval backend**
+
+I develop a Java backend that retrieves knowledge using both semantic similarity and relationships between concepts. PostgreSQL/pgvector and Neo4j graph propagation support the two retrieval paths, compared through reproducible offline evaluation of ranking quality and query cost. Embeddings run locally inside the JVM with ONNX Runtime.
+
+## How I work
+
+I turn requirements into specifications and acceptance criteria, and review architectural trade-offs before implementation. I use Orca to orchestrate coding agents in Git worktrees, with versioned context and human review. CI quality gates provide feedback on changes; I remain responsible for reviewing the evidence and accepting the result.
+
+Explore the project repositories for architecture and tests, or the [portfolio](https://lucas-eckert.vercel.app) for longer case studies and technical articles.
+
