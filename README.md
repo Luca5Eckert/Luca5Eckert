@@ -1,34 +1,16 @@
 # Lucas Eckert
 
-**Backend Software Developer · Java & Spring Boot · Distributed Systems**
+**Backend Software Developer at WEG · Java, Spring Boot, PostgreSQL and Kafka**
 
-I build backend services with **Java, Spring Boot and PostgreSQL**, focusing on how applications share data, enforce access rules and communicate across service boundaries.
+I design APIs and domain models for industrial applications. At WEG, I helped deliver a shared identity and authorization platform to production and lead the gradual move to shared APIs while legacy contracts remain available.
 
-[Portfolio & writing](https://lucas-eckert.vercel.app) · [LinkedIn](https://www.linkedin.com/in/lucas-ismael-eckert) · [Email](mailto:lucasismaeleckert@gmail.com)
+[Portfolio](https://lucas-eckert.vercel.app/en) · [Professional experience](https://lucas-eckert.vercel.app/en/experience) · [LinkedIn](https://www.linkedin.com/in/lucas-ismael-eckert)
 
-## Engineering work
+## Projects you can inspect
 
-At **WEG**, I helped architect and deliver a shared **Java/Spring identity and authorization platform to production** with PostgreSQL, a web frontend and Kubernetes. Its initial data load populated 51 tables with nearly one million records. I own a staged transition of legacy identity and organizational capabilities to shared contracts; migration across all consumers and interfaces is **still in progress**.
+- **[VellumHub](https://github.com/Luca5Eckert/VellumHub)** — Kafka-fed projections let recommendations read from local PostgreSQL/pgvector state. In a controlled CI run, all 30 authenticated reads succeeded with three upstream services unavailable. [Case study](https://lucas-eckert.vercel.app/en/projects/vellumhub) · [Distributed benchmark](https://github.com/Luca5Eckert/VellumHub/tree/main/services/recommendation-service/benchmark)
+- **[Kairos](https://github.com/Luca5Eckert/Kairos)** — Java retrieval backend combining pgvector with Neo4j graph propagation. Its offline evaluation compares ranking quality and latency, and embeddings run locally in the JVM. [Case study](https://lucas-eckert.vercel.app/en/projects/kairos)
 
-I also created and evolved backend CI/CD validation with PostgreSQL integration tests, ArchUnit architecture rules, static analysis and minimum coverage gates, turning design constraints into repeatable checks.
+## Writing
 
-Separately, I built an **observability platform**: a Kubernetes/OpenTelemetry pipeline deployed in staging for a Java/Spring pilot, plus a Go backend and investigation interface that bring logs, metrics and traces together for service-level diagnosis.
-
-## Selected projects
-
-### [VellumHub](https://github.com/Luca5Eckert/VellumHub)
-**Event-driven reading and recommendation platform**
-
-I develop a platform where reading activity and preferences feed personalized recommendations. Kafka-fed local read models let recommendation queries work independently of upstream services, a behavior exercised in controlled integration tests. Transactional Outbox and idempotent consumers address publication and redelivery in selected flows; asynchronous projections introduce eventual consistency. Architecture fitness functions and distributed tests check the boundaries and failure behavior behind these decisions.
-
-### [Kairos](https://github.com/Luca5Eckert/Kairos)
-**Hybrid knowledge retrieval backend**
-
-I develop a Java backend that retrieves knowledge using both semantic similarity and relationships between concepts. PostgreSQL/pgvector and Neo4j graph propagation support the two retrieval paths, compared through reproducible offline evaluation of ranking quality and query cost. Embeddings run locally inside the JVM with ONNX Runtime.
-
-## How I work
-
-I turn requirements into specifications and acceptance criteria, and review architectural trade-offs before implementation. I use Orca to orchestrate coding agents in Git worktrees, with versioned context and human review. CI quality gates provide feedback on changes; I remain responsible for reviewing the evidence and accepting the result.
-
-Explore the project repositories for architecture and tests, or the [portfolio](https://lucas-eckert.vercel.app) for longer case studies and technical articles.
-
+[Architecture you can verify](https://lucas-eckert.vercel.app/en/writing/architecture-as-evidence) explains how I translate architectural boundaries into automated checks.
