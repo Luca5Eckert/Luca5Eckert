@@ -8,11 +8,11 @@ I build backend services with **Java, Spring Boot and PostgreSQL**, focusing on 
 
 ## Engineering work
 
-At **WEG**, I design and develop a shared modular backend for identity and authorization, giving applications reusable authentication contracts and organization-aware access rules.
+At **WEG**, I helped architect and deliver a shared **Java/Spring identity and authorization platform to production** with PostgreSQL, a web frontend and Kubernetes. Its initial data load populated 51 tables with nearly one million records. I own a staged transition of legacy identity and organizational capabilities to shared contracts; migration across all consumers and interfaces is **still in progress**.
 
-I created and evolved backend CI/CD validation with PostgreSQL integration tests, ArchUnit architecture rules, static analysis and minimum coverage gates, turning design constraints into repeatable checks.
+I also created and evolved backend CI/CD validation with PostgreSQL integration tests, ArchUnit architecture rules, static analysis and minimum coverage gates, turning design constraints into repeatable checks.
 
-I also built an **observability platform**: a Kubernetes/OpenTelemetry pipeline deployed in staging for a Java/Spring pilot, plus a Go backend and investigation interface that bring logs, metrics and traces together for service-level diagnosis.
+Separately, I built an **observability platform**: a Kubernetes/OpenTelemetry pipeline deployed in staging for a Java/Spring pilot, plus a Go backend and investigation interface that bring logs, metrics and traces together for service-level diagnosis.
 
 ## Selected projects
 
